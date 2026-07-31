@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrl xmlns="http://www.xbrl.org/2003/instance"
+      xmlns:dei="http://xbrl.sec.gov/dei/2023"
+      xmlns:us-gaap="http://fasb.org/us-gaap/2023">
+  <context id="Q3FY2024">
+    <entity>
+      <identifier scheme="https://www.sec.gov/CIK">0000066740</identifier>
+    </entity>
+    <period>
+      <startDate>2024-07-01</startDate>
+      <endDate>2024-09-30</endDate>
+    </period>
+  </context>
+  <unit id="percent">
+    <measure>percent</measure>
+  </unit>
+  <dei:EntityRegistrantName contextRef="Q3FY2024">Acme Corp</dei:EntityRegistrantName>
+  <dei:DocumentType contextRef="Q3FY2024">10-Q</dei:DocumentType>
+  <dei:DocumentPeriodEndDate contextRef="Q3FY2024">2024-09-30</dei:DocumentPeriodEndDate>
+  <us-gaap:GrossMarginPercentage contextRef="Q3FY2024" unitRef="percent" decimals="1">21.5</us-gaap:GrossMarginPercentage>
+</xbrl>

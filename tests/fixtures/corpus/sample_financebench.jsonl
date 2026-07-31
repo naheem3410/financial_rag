@@ -1,0 +1,3 @@
+{"financebench_id": "sample_001", "doc_name": "3M_2018_10K", "question": "What was 3M's net sales in FY2018?", "evidence": [{"evidence_doc_name": "3M_2018_10K", "evidence_page_num": 33, "evidence_text": "Net sales were $32.2 billion."}]}
+{"financebench_id": "sample_002", "doc_name": "3M_2018_10K", "question": "What was 3M's operating margin in FY2018?", "evidence": [{"evidence_doc_name": "3M_2018_10K", "evidence_page_num": 34, "evidence_text": "Operating margin was 18.2 percent."}]}
+{"financebench_id": "sample_003", "doc_name": "ADOBE_2015_10K", "question": "What was Adobe's revenue in FY2015?", "evidence": [{"evidence_doc_name": "ADOBE_2015_10K", "evidence_page_num": 12, "evidence_text": "Revenue was $4.8 billion."}]}

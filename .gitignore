@@ -1,0 +1,63 @@
+# Corpus data: binary FinanceBench filings (Financial_RAG_System_Architecture.md §8A.1).
+# The repo carries the required-doc filenames, not the PDF files themselves. Only this
+# subdirectory is ignored — metric_axis_required_docs.txt, primary_required_docs.txt, and
+# every other file directly under data/ are NOT covered by this rule and must stay tracked.
+/data/pdfs/
+
+# Vector index binaries: rebuilt from the PDFs via offline.full_build (README §7-8).
+# Large (~130MB combined) and fully regeneratable — not needed to review the code or the
+# already-computed result files, only to re-run indexing yourself.
+/data/index/
+
+# Build/eval resume-state checkpoints: per-batch progress caches written by
+# offline.full_build and the evaluation/run_c*_gate.py / self_consistency.py scripts so an
+# interrupted run can resume without re-billing completed work. Disposable — a fresh run
+# regenerates them. The final *_results*.json / full_build_manifest*.json files next to
+# these are the ones that matter and are NOT covered by this rule.
+data/*checkpoint*.json
+data/*.bak
+# ...except pilot_checkpoint.json, which despite the name is a completed timing-baseline
+# record cited in the docs, not build resume-state.
+!data/pilot_checkpoint.json
+
+# Superseded investigation artifacts: earlier or alternate-parameter runs kept during
+# development (old vs. rebuilt index, rerank@10 vs. default, 5-run noise-floor check,
+# pre-rescore intermediates) that were superseded by the final result files above and are
+# not cited by name anywhere in the docs. Listed explicitly, not by pattern, so nothing
+# that IS cited gets caught by accident.
+data/c1_gate_results.json
+data/c1_gate_results_rerank10.json
+data/c1_k3_results_oldindex_currentkey.json
+data/c1_k3_results_oldindex_rescored.json
+data/c1_k3_results_oldindex_rescored2.json
+data/c1_k3_results_v2.json
+data/c1_k3_results_v2_rescored.json
+data/c1_noise_results_run1.json
+data/c1_noise_results_run2.json
+data/c1_noise_results_run3.json
+data/c1_noise_results_run4.json
+data/c1_noise_results_run5.json
+data/c2_k3_results_oldindex_rescored2.json
+data/c2_k3_results_v2.json
+data/c2_k3_results_v2_rescored2.json
+data/c4_k3_results.json
+data/answer_grounded_gate_new.json
+data/answer_grounded_gate_old.json
+data/retrieval_gate_results.json
+data/retrieval_gate_results_rerank10_new.json
+data/retrieval_gate_results_rerank10_old.json
+data/retrieval_gate_results_v2.json
+# Stale duplicate of the real gold key (evaluation/data/financebench_collision_metric_axis.jsonl)
+# — zero references anywhere in code/docs, kept only to avoid a confusing near-identical file.
+evaluation/data/financebench_collision_metric_axis_old.jsonl
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+
+# Local dev environment
+.venv/
+venv/
+.claude/settings.local.json

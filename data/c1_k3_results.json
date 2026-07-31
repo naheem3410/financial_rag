@@ -1,0 +1,4444 @@
+{
+  "summary": {
+    "n_questions": 37,
+    "k": 3,
+    "n_verified": 37,
+    "n_unverified_annotation_pending": 0,
+    "n_verified_but_consensus_abstained": 8,
+    "n_scored": 29,
+    "exact_match_accuracy_verified_and_answered_only": 0.4827586206896552,
+    "negative_rejection_rate": 0.21621621621621623,
+    "total_cost_usd": 0.1514424,
+    "questions_with_non_unanimous_abstain_vote": [
+      "fbc_metric_pri_0021",
+      "fbc_metric_pri_0022",
+      "fbc_metric_pri_0048",
+      "fbc_metric_pri_0058",
+      "fbc_metric_pri_0060"
+    ],
+    "questions_with_tied_exact_match_vote": []
+  },
+  "build_id": "72626703b149eadd",
+  "k": 3,
+  "config": {
+    "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+    "generator_model": "gpt-4.1-mini-2025-04-14",
+    "rerank_top_k": 10
+  },
+  "per_question": [
+    {
+      "collision_id": "fbc_temporal_pri_0002",
+      "question": "What were 3M's capital expenditure in FY2018 and FY2017? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": true,
+      "abstain_vote": "abstain 3-0",
+      "exact_match": null,
+      "exact_match_vote": null,
+      "total_cost_usd": 0.00355,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_temporal_pri_0002",
+          "question": "What were 3M's capital expenditure in FY2018 and FY2017? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2169,
+          "output_tokens": 201,
+          "cost_usd": 0.0011892,
+          "elapsed_seconds": 42.425132900010794
+        },
+        {
+          "collision_id": "fbc_temporal_pri_0002",
+          "question": "What were 3M's capital expenditure in FY2018 and FY2017? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2169,
+          "output_tokens": 195,
+          "cost_usd": 0.0011796,
+          "elapsed_seconds": 8.980312200030312
+        },
+        {
+          "collision_id": "fbc_temporal_pri_0002",
+          "question": "What were 3M's capital expenditure in FY2018 and FY2017? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2169,
+          "output_tokens": 196,
+          "cost_usd": 0.0011812,
+          "elapsed_seconds": 8.22982680000132
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_temporal_pri_0006",
+      "question": "What were Adobe's operating income in FY2015 and FY2016? Report both figures separately. (in USD thousands)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0044116,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_temporal_pri_0006",
+          "question": "What were Adobe's operating income in FY2015 and FY2016? Report both figures separately. (in USD thousands)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "operating income",
+              "value": "$903,095 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "operating income",
+              "value": "$1,493,602 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's operating income was $903,095 thousand in FY2015 and $1,493,602 thousand in FY2016.",
+          "citations": [
+            {
+              "proposition_id": "p_953e75826c4a",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_7cf282a57508",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2255,
+          "output_tokens": 346,
+          "cost_usd": 0.0014556,
+          "elapsed_seconds": 9.593491300009191
+        },
+        {
+          "collision_id": "fbc_temporal_pri_0006",
+          "question": "What were Adobe's operating income in FY2015 and FY2016? Report both figures separately. (in USD thousands)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "operating income",
+              "value": "$903,095 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "operating income",
+              "value": "$1,493,602 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's operating income was $903,095 thousand in FY2015 and $1,493,602 thousand in FY2016.",
+          "citations": [
+            {
+              "proposition_id": "p_953e75826c4a",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_7cf282a57508",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2255,
+          "output_tokens": 360,
+          "cost_usd": 0.0014780000000000001,
+          "elapsed_seconds": 12.29902650002623
+        },
+        {
+          "collision_id": "fbc_temporal_pri_0006",
+          "question": "What were Adobe's operating income in FY2015 and FY2016? Report both figures separately. (in USD thousands)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "operating income",
+              "value": "$903,095 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "operating income",
+              "value": "$1,493,602 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's operating income was $903,095 thousand in FY2015 and $1,493,602 thousand in FY2016.",
+          "citations": [
+            {
+              "proposition_id": "p_953e75826c4a",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_7cf282a57508",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2255,
+          "output_tokens": 360,
+          "cost_usd": 0.0014780000000000001,
+          "elapsed_seconds": 10.063107299967669
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0021",
+      "question": "What were 3M's accounts payable and accounts receivable for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 2-1",
+      "exact_match": false,
+      "exact_match_vote": "no_match 2-0",
+      "total_cost_usd": 0.0042504000000000005,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0021",
+          "question": "What were 3M's accounts payable and accounts receivable for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts receivable - net of allowances",
+              "value": "$5,020 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts receivable for FY2018 was $5,020 million. There is no information on accounts payable for FY2018.",
+          "citations": [
+            {
+              "proposition_id": "p_7f699a1969c5",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2210,
+          "output_tokens": 308,
+          "cost_usd": 0.0013768,
+          "elapsed_seconds": 6.347583600028884
+        },
+        {
+          "collision_id": "fbc_metric_pri_0021",
+          "question": "What were 3M's accounts payable and accounts receivable for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2219,
+          "output_tokens": 286,
+          "cost_usd": 0.0013452000000000002,
+          "elapsed_seconds": 6.120210699969903
+        },
+        {
+          "collision_id": "fbc_metric_pri_0021",
+          "question": "What were 3M's accounts payable and accounts receivable for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts receivable - net of allowances",
+              "value": "$5,020 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts receivable for FY2018 was $5,020 million. There is no information on accounts payable for FY2018.",
+          "citations": [
+            {
+              "proposition_id": "p_7f699a1969c5",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2281,
+          "output_tokens": 385,
+          "cost_usd": 0.0015284,
+          "elapsed_seconds": 7.136912400019355
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0022",
+      "question": "What were 3M's net income and total revenue for FY2022? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": true,
+      "abstain_vote": "abstain 2-1",
+      "exact_match": null,
+      "exact_match_vote": null,
+      "total_cost_usd": 0.0039492,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0022",
+          "question": "What were 3M's net income and total revenue for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "3M's net income for FY2022 was $5,777 million. The total revenue for FY2022 is not provided in the facts.",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2291,
+          "output_tokens": 243,
+          "cost_usd": 0.0013052,
+          "elapsed_seconds": 6.156892899947707
+        },
+        {
+          "collision_id": "fbc_metric_pri_0022",
+          "question": "What were 3M's net income and total revenue for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "net income attributable to 3M",
+              "value": "$5,777 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's net income for FY2022 was $5,777 million. The total revenue for FY2022 is not provided in the facts.",
+          "citations": [
+            {
+              "proposition_id": "p_86eac7c1cfd8",
+              "source_uri": "3M_2022_10K",
+              "filing_type": "10-K",
+              "filing_date": "2022-12-31",
+              "page": 47,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2291,
+          "output_tokens": 263,
+          "cost_usd": 0.0013372000000000002,
+          "elapsed_seconds": 5.949921599996742
+        },
+        {
+          "collision_id": "fbc_metric_pri_0022",
+          "question": "What were 3M's net income and total revenue for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "3M's net income for FY2022 was $5,777 million. The total revenue for FY2022 is not provided in the facts.",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2291,
+          "output_tokens": 244,
+          "cost_usd": 0.0013068,
+          "elapsed_seconds": 6.435123499948531
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0023",
+      "question": "What were 3M's accounts payable and inventories for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": true,
+      "abstain_vote": "abstain 3-0",
+      "exact_match": null,
+      "exact_match_vote": null,
+      "total_cost_usd": 0.0019076000000000002,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0023",
+          "question": "What were 3M's accounts payable and inventories for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "No supporting facts were retrieved for this question.",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 1343,
+          "output_tokens": 60,
+          "cost_usd": 0.0006332,
+          "elapsed_seconds": 2.6072940999874845
+        },
+        {
+          "collision_id": "fbc_metric_pri_0023",
+          "question": "What were 3M's accounts payable and inventories for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "No supporting facts were retrieved for this question.",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 1343,
+          "output_tokens": 60,
+          "cost_usd": 0.0006332,
+          "elapsed_seconds": 2.3607454000157304
+        },
+        {
+          "collision_id": "fbc_metric_pri_0023",
+          "question": "What were 3M's accounts payable and inventories for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "No supporting facts were retrieved for this question.",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 1343,
+          "output_tokens": 65,
+          "cost_usd": 0.0006412000000000001,
+          "elapsed_seconds": 2.842340800038073
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0024",
+      "question": "What were Activision Blizzard's net income and operating income for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.004610400000000001,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0024",
+          "question": "What were Activision Blizzard's net income and operating income for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "net income",
+              "value": "$1,848 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "operating income",
+              "value": "$1,988 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "Activision Blizzard's net income for FY2018 was $1,848 million and operating income was $1,988 million.",
+          "citations": [
+            {
+              "proposition_id": "p_4dbc61b78b81",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_af66fa82e406",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2266,
+          "output_tokens": 394,
+          "cost_usd": 0.0015368,
+          "elapsed_seconds": 8.223154100007378
+        },
+        {
+          "collision_id": "fbc_metric_pri_0024",
+          "question": "What were Activision Blizzard's net income and operating income for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "net income",
+              "value": "$1,848 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "operating income",
+              "value": "$1,988 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "Activision Blizzard's net income for FY2018 was $1,848 million and operating income was $1,988 million.",
+          "citations": [
+            {
+              "proposition_id": "p_4dbc61b78b81",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_af66fa82e406",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2266,
+          "output_tokens": 394,
+          "cost_usd": 0.0015368,
+          "elapsed_seconds": 7.807967500004452
+        },
+        {
+          "collision_id": "fbc_metric_pri_0024",
+          "question": "What were Activision Blizzard's net income and operating income for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "net income",
+              "value": "$1,848 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "operating income",
+              "value": "$1,988 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "Activision Blizzard's net income for FY2018 was $1,848 million and operating income was $1,988 million.",
+          "citations": [
+            {
+              "proposition_id": "p_4dbc61b78b81",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_af66fa82e406",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2266,
+          "output_tokens": 394,
+          "cost_usd": 0.0015368,
+          "elapsed_seconds": 8.56726300000446
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0025",
+      "question": "What were 3M's accounts receivable and inventories for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.0038215999999999997,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0025",
+          "question": "What were 3M's accounts receivable and inventories for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts receivable - net of allowances",
+              "value": "$5,020 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts receivable for FY2018 was $5,020 million. The inventories figure for FY2018 is not provided.",
+          "citations": [
+            {
+              "proposition_id": "p_7f699a1969c5",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2218,
+          "output_tokens": 233,
+          "cost_usd": 0.00126,
+          "elapsed_seconds": 5.427418700011913
+        },
+        {
+          "collision_id": "fbc_metric_pri_0025",
+          "question": "What were 3M's accounts receivable and inventories for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts receivable - net of allowances",
+              "value": "$5,020 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts receivable for FY2018 was $5,020 million. The inventories figure for FY2018 is not provided.",
+          "citations": [
+            {
+              "proposition_id": "p_7f699a1969c5",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2218,
+          "output_tokens": 246,
+          "cost_usd": 0.0012808,
+          "elapsed_seconds": 6.150091600022279
+        },
+        {
+          "collision_id": "fbc_metric_pri_0025",
+          "question": "What were 3M's accounts receivable and inventories for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts receivable - net of allowances",
+              "value": "$5,020 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts receivable for FY2018 was $5,020 million. The inventories figure for FY2018 is not provided.",
+          "citations": [
+            {
+              "proposition_id": "p_7f699a1969c5",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2218,
+          "output_tokens": 246,
+          "cost_usd": 0.0012808,
+          "elapsed_seconds": 5.42721850000089
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0026",
+      "question": "What were Activision Blizzard's net income and total revenue for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.004338000000000001,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0026",
+          "question": "What were Activision Blizzard's net income and total revenue for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "net income",
+              "value": "$1,848 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total revenue",
+              "value": "$7,500 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "Activision Blizzard's net income for FY2018 was $1,848 million and total revenue was $7,500 million.",
+          "citations": [
+            {
+              "proposition_id": "p_4dbc61b78b81",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_125606daad87",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 36,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2279,
+          "output_tokens": 346,
+          "cost_usd": 0.0014652000000000003,
+          "elapsed_seconds": 6.599708300025668
+        },
+        {
+          "collision_id": "fbc_metric_pri_0026",
+          "question": "What were Activision Blizzard's net income and total revenue for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "net income",
+              "value": "$1,848 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total revenue",
+              "value": "$7,500 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "Activision Blizzard's net income for FY2018 was $1,848 million and total revenue was $7,500 million.",
+          "citations": [
+            {
+              "proposition_id": "p_4dbc61b78b81",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_125606daad87",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 36,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2279,
+          "output_tokens": 323,
+          "cost_usd": 0.0014284000000000002,
+          "elapsed_seconds": 6.648611800046638
+        },
+        {
+          "collision_id": "fbc_metric_pri_0026",
+          "question": "What were Activision Blizzard's net income and total revenue for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "net income",
+              "value": "$1,848 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total revenue",
+              "value": "$7,500 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "Activision Blizzard's net income for FY2018 was $1,848 million and total revenue was $7,500 million.",
+          "citations": [
+            {
+              "proposition_id": "p_4dbc61b78b81",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_125606daad87",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 36,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2279,
+          "output_tokens": 333,
+          "cost_usd": 0.0014444000000000002,
+          "elapsed_seconds": 6.504192500025965
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0027",
+      "question": "What were Activision Blizzard's operating income and total revenue for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.0040076,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0027",
+          "question": "What were Activision Blizzard's operating income and total revenue for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "operating income",
+              "value": "$1,988 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "Activision Blizzard's operating income for FY2018 was $1,988 million. The total revenue for FY2018 is not provided in the facts.",
+          "citations": [
+            {
+              "proposition_id": "p_af66fa82e406",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_aec2707350e1",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 36,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2272,
+          "output_tokens": 281,
+          "cost_usd": 0.0013584,
+          "elapsed_seconds": 7.052715300000273
+        },
+        {
+          "collision_id": "fbc_metric_pri_0027",
+          "question": "What were Activision Blizzard's operating income and total revenue for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "operating income",
+              "value": "$1,988 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "Activision Blizzard's operating income for FY2018 was $1,988 million. The total revenue for FY2018 is not provided in the facts.",
+          "citations": [
+            {
+              "proposition_id": "p_af66fa82e406",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_aec2707350e1",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 36,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2272,
+          "output_tokens": 282,
+          "cost_usd": 0.00136,
+          "elapsed_seconds": 6.667664900014643
+        },
+        {
+          "collision_id": "fbc_metric_pri_0027",
+          "question": "What were Activision Blizzard's operating income and total revenue for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "operating income",
+              "value": "$1,988 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "Activision Blizzard's operating income for FY2018 was $1,988 million. Total revenue for FY2018 is not provided.",
+          "citations": [
+            {
+              "proposition_id": "p_af66fa82e406",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2215,
+          "output_tokens": 252,
+          "cost_usd": 0.0012892000000000001,
+          "elapsed_seconds": 6.3898213999927975
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0028",
+      "question": "What were Activision Blizzard's net income and operating income for FY2017? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0043236,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0028",
+          "question": "What were Activision Blizzard's net income and operating income for FY2017? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "net income",
+              "value": "$273 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "operating income",
+              "value": "$1,309 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "Activision Blizzard's net income for FY2017 was $273 million and operating income was $1,309 million.",
+          "citations": [
+            {
+              "proposition_id": "p_a7372e844fae",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 70,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_debf766cccb6",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2267,
+          "output_tokens": 335,
+          "cost_usd": 0.0014428000000000002,
+          "elapsed_seconds": 6.93861300003482
+        },
+        {
+          "collision_id": "fbc_metric_pri_0028",
+          "question": "What were Activision Blizzard's net income and operating income for FY2017? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "net income",
+              "value": "$273 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "operating income",
+              "value": "$1,309 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "Activision Blizzard's net income for FY2017 was $273 million and operating income was $1,309 million.",
+          "citations": [
+            {
+              "proposition_id": "p_a7372e844fae",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 70,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_debf766cccb6",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2267,
+          "output_tokens": 335,
+          "cost_usd": 0.0014428000000000002,
+          "elapsed_seconds": 6.319886999961454
+        },
+        {
+          "collision_id": "fbc_metric_pri_0028",
+          "question": "What were Activision Blizzard's net income and operating income for FY2017? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "net income",
+              "value": "$273 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "operating income",
+              "value": "$1,309 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "Activision Blizzard's net income for FY2017 was $273 million and operating income was $1,309 million.",
+          "citations": [
+            {
+              "proposition_id": "p_a7372e844fae",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 70,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_debf766cccb6",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2267,
+          "output_tokens": 332,
+          "cost_usd": 0.001438,
+          "elapsed_seconds": 6.713263700017706
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0029",
+      "question": "What were 3M's accounts payable and total current assets for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.0040352,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0029",
+          "question": "What were 3M's accounts payable and total current assets for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "total current assets",
+              "value": "$13,709 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's total current assets for FY2018 were $13,709 million. The accounts payable figure for FY2018 is not provided.",
+          "citations": [
+            {
+              "proposition_id": "p_64c187edf872",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2176,
+          "output_tokens": 310,
+          "cost_usd": 0.0013664,
+          "elapsed_seconds": 6.4852265999652445
+        },
+        {
+          "collision_id": "fbc_metric_pri_0029",
+          "question": "What were 3M's accounts payable and total current assets for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "total current assets",
+              "value": "$13,709 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's total current assets for FY2018 were $13,709 million. The accounts payable figure for FY2018 is not available in the provided facts.",
+          "citations": [
+            {
+              "proposition_id": "p_64c187edf872",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2176,
+          "output_tokens": 288,
+          "cost_usd": 0.0013312,
+          "elapsed_seconds": 6.94349560001865
+        },
+        {
+          "collision_id": "fbc_metric_pri_0029",
+          "question": "What were 3M's accounts payable and total current assets for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "total current assets",
+              "value": "$13,709 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's total current assets for FY2018 were $13,709 million. The accounts payable figure for FY2018 is not available in the provided facts.",
+          "citations": [
+            {
+              "proposition_id": "p_64c187edf872",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2176,
+          "output_tokens": 292,
+          "cost_usd": 0.0013376,
+          "elapsed_seconds": 6.6127740000374615
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0030",
+      "question": "What were Activision Blizzard's net income and total revenue for FY2017? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0045452,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0030",
+          "question": "What were Activision Blizzard's net income and total revenue for FY2017? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "net income",
+              "value": "$273 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total revenue",
+              "value": "$7,017 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "Activision Blizzard's net income for FY2017 was $273 million and total revenue was $7,017 million.",
+          "citations": [
+            {
+              "proposition_id": "p_a7372e844fae",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 70,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_41128711cddd",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2277,
+          "output_tokens": 402,
+          "cost_usd": 0.001554,
+          "elapsed_seconds": 7.816305099986494
+        },
+        {
+          "collision_id": "fbc_metric_pri_0030",
+          "question": "What were Activision Blizzard's net income and total revenue for FY2017? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "net income",
+              "value": "$273 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total revenue",
+              "value": "$7,017 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "Activision Blizzard's net income for FY2017 was $273 million, and total revenue was $7,017 million.",
+          "citations": [
+            {
+              "proposition_id": "p_a7372e844fae",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 70,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_41128711cddd",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2277,
+          "output_tokens": 327,
+          "cost_usd": 0.001434,
+          "elapsed_seconds": 7.243968200054951
+        },
+        {
+          "collision_id": "fbc_metric_pri_0030",
+          "question": "What were Activision Blizzard's net income and total revenue for FY2017? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "net income",
+              "value": "$273 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total revenue",
+              "value": "$7,017 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "Activision Blizzard's net income for FY2017 was $273 million and total revenue was $7,017 million.",
+          "citations": [
+            {
+              "proposition_id": "p_a7372e844fae",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 70,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_41128711cddd",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2277,
+          "output_tokens": 404,
+          "cost_usd": 0.0015572000000000001,
+          "elapsed_seconds": 7.134644399979152
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0031",
+      "question": "What were 3M's accounts payable and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.0038536000000000004,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0031",
+          "question": "What were 3M's accounts payable and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "total current liabilities",
+              "value": "$7,244 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's total current liabilities for FY2018 were $7,244 million. The accounts payable figure for FY2018 is not provided.",
+          "citations": [
+            {
+              "proposition_id": "p_7def5c470456",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 43,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2170,
+          "output_tokens": 263,
+          "cost_usd": 0.0012888,
+          "elapsed_seconds": 7.800863999989815
+        },
+        {
+          "collision_id": "fbc_metric_pri_0031",
+          "question": "What were 3M's accounts payable and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "total current liabilities",
+              "value": "$7,244 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's total current liabilities for FY2018 were $7,244 million. The accounts payable figure for FY2018 is not provided.",
+          "citations": [
+            {
+              "proposition_id": "p_7def5c470456",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 43,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2170,
+          "output_tokens": 255,
+          "cost_usd": 0.0012760000000000002,
+          "elapsed_seconds": 5.655716000008397
+        },
+        {
+          "collision_id": "fbc_metric_pri_0031",
+          "question": "What were 3M's accounts payable and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "total current liabilities",
+              "value": "$7,244 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M Company's total current liabilities for FY2018 were $7,244 million. The accounts payable figure for FY2018 is not provided.",
+          "citations": [
+            {
+              "proposition_id": "p_7def5c470456",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 43,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2170,
+          "output_tokens": 263,
+          "cost_usd": 0.0012888,
+          "elapsed_seconds": 5.848435799998697
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0032",
+      "question": "What were Activision Blizzard's operating income and total revenue for FY2017? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.00447,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0032",
+          "question": "What were Activision Blizzard's operating income and total revenue for FY2017? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "operating income",
+              "value": "$1,309 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total revenue",
+              "value": "$7,017 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "Activision Blizzard's operating income for FY2017 was $1,309 million and total revenue was $7,017 million.",
+          "citations": [
+            {
+              "proposition_id": "p_debf766cccb6",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_028d3702ab4a",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 103,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2297,
+          "output_tokens": 347,
+          "cost_usd": 0.001474,
+          "elapsed_seconds": 7.220467199978884
+        },
+        {
+          "collision_id": "fbc_metric_pri_0032",
+          "question": "What were Activision Blizzard's operating income and total revenue for FY2017? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "operating income",
+              "value": "$1,309 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total consolidated net revenues",
+              "value": "$7,017 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "Activision Blizzard's operating income for FY2017 was $1,309 million. Its total consolidated net revenues for FY2017 were $7,017 million.",
+          "citations": [
+            {
+              "proposition_id": "p_debf766cccb6",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_028d3702ab4a",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 103,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2297,
+          "output_tokens": 359,
+          "cost_usd": 0.0014932,
+          "elapsed_seconds": 7.08314890001202
+        },
+        {
+          "collision_id": "fbc_metric_pri_0032",
+          "question": "What were Activision Blizzard's operating income and total revenue for FY2017? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "operating income",
+              "value": "$1,309 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total consolidated net revenues",
+              "value": "$7,017 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "Activision Blizzard's operating income for FY2017 was $1,309 million and total revenue was $7,017 million.",
+          "citations": [
+            {
+              "proposition_id": "p_debf766cccb6",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 69,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_028d3702ab4a",
+              "source_uri": "ACTIVISIONBLIZZARD_2019_10K",
+              "filing_type": "10-K",
+              "filing_date": "2019-12-31",
+              "page": 103,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2297,
+          "output_tokens": 365,
+          "cost_usd": 0.0015027999999999999,
+          "elapsed_seconds": 7.119861200044397
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0033",
+      "question": "What were Adobe's gross profit and net income for FY2015? Report both figures separately. (in USD thousands)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.004621200000000001,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0033",
+          "question": "What were Adobe's gross profit and net income for FY2015? Report both figures separately. (in USD thousands)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "gross profit",
+              "value": "$4,051,194 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "net income",
+              "value": "$629,551 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's gross profit for FY2015 was $4,051,194 thousand and net income was $629,551 thousand.",
+          "citations": [
+            {
+              "proposition_id": "p_a60adc56d8e0",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 35,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_19c7813dc756",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2235,
+          "output_tokens": 403,
+          "cost_usd": 0.0015388,
+          "elapsed_seconds": 8.450265500054229
+        },
+        {
+          "collision_id": "fbc_metric_pri_0033",
+          "question": "What were Adobe's gross profit and net income for FY2015? Report both figures separately. (in USD thousands)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "gross profit",
+              "value": "$4,051,194 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "net income",
+              "value": "$629,551 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's gross profit for FY2015 was $4,051,194 thousand and net income was $629,551 thousand.",
+          "citations": [
+            {
+              "proposition_id": "p_a60adc56d8e0",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 35,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_19c7813dc756",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2235,
+          "output_tokens": 406,
+          "cost_usd": 0.0015436,
+          "elapsed_seconds": 6.974772500048857
+        },
+        {
+          "collision_id": "fbc_metric_pri_0033",
+          "question": "What were Adobe's gross profit and net income for FY2015? Report both figures separately. (in USD thousands)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "gross profit",
+              "value": "$4,051,194 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "net income",
+              "value": "$629,551 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's gross profit for FY2015 was $4,051,194 thousand and net income was $629,551 thousand.",
+          "citations": [
+            {
+              "proposition_id": "p_a60adc56d8e0",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 35,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_19c7813dc756",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2235,
+          "output_tokens": 403,
+          "cost_usd": 0.0015388,
+          "elapsed_seconds": 8.013974000001326
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0034",
+      "question": "What were 3M's accounts receivable and total current assets for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0044224,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0034",
+          "question": "What were 3M's accounts receivable and total current assets for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts receivable - net of allowances",
+              "value": "$5,020 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total current assets",
+              "value": "$13,709 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts receivable for FY2018 was $5,020 million and total current assets were $13,709 million.",
+          "citations": [
+            {
+              "proposition_id": "p_7f699a1969c5",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_64c187edf872",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2260,
+          "output_tokens": 355,
+          "cost_usd": 0.001472,
+          "elapsed_seconds": 6.805608999973629
+        },
+        {
+          "collision_id": "fbc_metric_pri_0034",
+          "question": "What were 3M's accounts receivable and total current assets for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts receivable - net of allowances",
+              "value": "$5,020 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total current assets",
+              "value": "$13,709 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts receivable for FY2018 was $5,020 million and total current assets were $13,709 million.",
+          "citations": [
+            {
+              "proposition_id": "p_7f699a1969c5",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_64c187edf872",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2260,
+          "output_tokens": 356,
+          "cost_usd": 0.0014735999999999998,
+          "elapsed_seconds": 6.721426200005226
+        },
+        {
+          "collision_id": "fbc_metric_pri_0034",
+          "question": "What were 3M's accounts receivable and total current assets for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts receivable - net of allowances",
+              "value": "$5,020 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total current assets",
+              "value": "$13,709 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts receivable for FY2018 was $5,020 million and total current assets were $13,709 million.",
+          "citations": [
+            {
+              "proposition_id": "p_7f699a1969c5",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_64c187edf872",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2260,
+          "output_tokens": 358,
+          "cost_usd": 0.0014768,
+          "elapsed_seconds": 6.485840699984692
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0035",
+      "question": "What were Adobe's gross profit and operating income for FY2015? Report both figures separately. (in USD thousands)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0045912,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0035",
+          "question": "What were Adobe's gross profit and operating income for FY2015? Report both figures separately. (in USD thousands)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "gross profit",
+              "value": "$4,051,194 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "operating income",
+              "value": "$903,095 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's gross profit for FY2015 was $4,051,194 thousand and operating income was $903,095 thousand.",
+          "citations": [
+            {
+              "proposition_id": "p_a60adc56d8e0",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 35,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_953e75826c4a",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2242,
+          "output_tokens": 391,
+          "cost_usd": 0.0015224000000000001,
+          "elapsed_seconds": 7.475147099990863
+        },
+        {
+          "collision_id": "fbc_metric_pri_0035",
+          "question": "What were Adobe's gross profit and operating income for FY2015? Report both figures separately. (in USD thousands)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "gross profit",
+              "value": "$4,051,194 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "operating income",
+              "value": "$903,095 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's gross profit for FY2015 was $4,051,194 thousand and operating income was $903,095 thousand.",
+          "citations": [
+            {
+              "proposition_id": "p_a60adc56d8e0",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 35,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_953e75826c4a",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2242,
+          "output_tokens": 409,
+          "cost_usd": 0.0015512000000000002,
+          "elapsed_seconds": 7.201361500017811
+        },
+        {
+          "collision_id": "fbc_metric_pri_0035",
+          "question": "What were Adobe's gross profit and operating income for FY2015? Report both figures separately. (in USD thousands)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "gross profit",
+              "value": "$4,051,194 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "operating income",
+              "value": "$903,095 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's gross profit for FY2015 was $4,051,194 thousand and operating income was $903,095 thousand.",
+          "citations": [
+            {
+              "proposition_id": "p_a60adc56d8e0",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 35,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_953e75826c4a",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2242,
+          "output_tokens": 388,
+          "cost_usd": 0.0015176,
+          "elapsed_seconds": 8.278663199977018
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0036",
+      "question": "What were 3M's accounts receivable and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0046824,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0036",
+          "question": "What were 3M's accounts receivable and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts receivable - net of allowances",
+              "value": "$5,020 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total current liabilities",
+              "value": "$7,244 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts receivable for FY2018 was $5,020 million and total current liabilities were $7,244 million.",
+          "citations": [
+            {
+              "proposition_id": "p_7f699a1969c5",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_14b0e4db1c83",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2266,
+          "output_tokens": 410,
+          "cost_usd": 0.0015623999999999998,
+          "elapsed_seconds": 12.402371299976949
+        },
+        {
+          "collision_id": "fbc_metric_pri_0036",
+          "question": "What were 3M's accounts receivable and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts receivable - net of allowances",
+              "value": "$5,020 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total current liabilities",
+              "value": "$7,244 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts receivable for FY2018 was $5,020 million and total current liabilities were $7,244 million.",
+          "citations": [
+            {
+              "proposition_id": "p_7f699a1969c5",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_14b0e4db1c83",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2266,
+          "output_tokens": 413,
+          "cost_usd": 0.0015672,
+          "elapsed_seconds": 6.951077500008978
+        },
+        {
+          "collision_id": "fbc_metric_pri_0036",
+          "question": "What were 3M's accounts receivable and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts receivable - net of allowances",
+              "value": "$5,020 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total current liabilities",
+              "value": "$7,244 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts receivable for FY2018 was $5,020 million and total current liabilities were $7,244 million.",
+          "citations": [
+            {
+              "proposition_id": "p_7f699a1969c5",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_14b0e4db1c83",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2266,
+          "output_tokens": 404,
+          "cost_usd": 0.0015528,
+          "elapsed_seconds": 8.860556100029498
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0037",
+      "question": "What were Adobe's gross profit and total revenue for FY2015? Report both figures separately. (in USD thousands)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.004788800000000001,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0037",
+          "question": "What were Adobe's gross profit and total revenue for FY2015? Report both figures separately. (in USD thousands)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "gross profit",
+              "value": "$4,051,194 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "total revenue",
+              "value": "$4,795,511 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's gross profit for FY2015 was $4,051,194 thousand and total revenue was $4,795,511 thousand.",
+          "citations": [
+            {
+              "proposition_id": "p_a60adc56d8e0",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 35,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_befcf0eb8e85",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2244,
+          "output_tokens": 436,
+          "cost_usd": 0.0015952000000000002,
+          "elapsed_seconds": 6.927420599968173
+        },
+        {
+          "collision_id": "fbc_metric_pri_0037",
+          "question": "What were Adobe's gross profit and total revenue for FY2015? Report both figures separately. (in USD thousands)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "gross profit",
+              "value": "$4,051,194 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "total revenue",
+              "value": "$4,795,511 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's gross profit for FY2015 was $4,051,194 thousand and total revenue was $4,795,511 thousand.",
+          "citations": [
+            {
+              "proposition_id": "p_a60adc56d8e0",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 35,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_befcf0eb8e85",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2244,
+          "output_tokens": 438,
+          "cost_usd": 0.0015984000000000003,
+          "elapsed_seconds": 9.050311799976043
+        },
+        {
+          "collision_id": "fbc_metric_pri_0037",
+          "question": "What were Adobe's gross profit and total revenue for FY2015? Report both figures separately. (in USD thousands)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "gross profit",
+              "value": "$4,051,194 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "total revenue",
+              "value": "$4,795,511 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's gross profit for FY2015 was $4,051,194 thousand and total revenue was $4,795,511 thousand.",
+          "citations": [
+            {
+              "proposition_id": "p_a60adc56d8e0",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 35,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_befcf0eb8e85",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2244,
+          "output_tokens": 436,
+          "cost_usd": 0.0015952000000000002,
+          "elapsed_seconds": 10.346175400016364
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0038",
+      "question": "What were 3M's inventories and total current assets for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0045116,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0038",
+          "question": "What were 3M's inventories and total current assets for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "total inventories",
+              "value": "$4,366 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total current assets",
+              "value": "$13,709 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's inventories for FY2018 were $4,366 million and total current assets were $13,709 million.",
+          "citations": [
+            {
+              "proposition_id": "p_41124acf3db0",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_ebc0886fd09b",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 43,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2197,
+          "output_tokens": 383,
+          "cost_usd": 0.0014916,
+          "elapsed_seconds": 7.946944200026337
+        },
+        {
+          "collision_id": "fbc_metric_pri_0038",
+          "question": "What were 3M's inventories and total current assets for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "total inventories",
+              "value": "$4,366 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total current assets",
+              "value": "$13,709 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's inventories for FY2018 were $4,366 million and total current assets were $13,709 million.",
+          "citations": [
+            {
+              "proposition_id": "p_41124acf3db0",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_ebc0886fd09b",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 43,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2197,
+          "output_tokens": 393,
+          "cost_usd": 0.0015076000000000002,
+          "elapsed_seconds": 8.291517799952999
+        },
+        {
+          "collision_id": "fbc_metric_pri_0038",
+          "question": "What were 3M's inventories and total current assets for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "total inventories",
+              "value": "$4,366 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total current assets",
+              "value": "$13,709 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's inventories for FY2018 were $4,366 million and total current assets were $13,709 million.",
+          "citations": [
+            {
+              "proposition_id": "p_41124acf3db0",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_ebc0886fd09b",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 43,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2197,
+          "output_tokens": 396,
+          "cost_usd": 0.0015124000000000001,
+          "elapsed_seconds": 8.050340200017672
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0039",
+      "question": "What were Adobe's net income and operating income for FY2015? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.0045764,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0039",
+          "question": "What were Adobe's net income and operating income for FY2015? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "net income",
+              "value": "$629,551 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "operating income",
+              "value": "$903,095 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's net income for FY2015 was $629,551 thousand and operating income was $903,095 thousand.",
+          "citations": [
+            {
+              "proposition_id": "p_19c7813dc756",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_953e75826c4a",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2235,
+          "output_tokens": 386,
+          "cost_usd": 0.0015116,
+          "elapsed_seconds": 7.4511779000167735
+        },
+        {
+          "collision_id": "fbc_metric_pri_0039",
+          "question": "What were Adobe's net income and operating income for FY2015? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "net income",
+              "value": "$629,551 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "operating income",
+              "value": "$903,095 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's net income for FY2015 was $629,551 thousand and operating income was $903,095 thousand.",
+          "citations": [
+            {
+              "proposition_id": "p_19c7813dc756",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_953e75826c4a",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2235,
+          "output_tokens": 405,
+          "cost_usd": 0.001542,
+          "elapsed_seconds": 7.38286050001625
+        },
+        {
+          "collision_id": "fbc_metric_pri_0039",
+          "question": "What were Adobe's net income and operating income for FY2015? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "net income",
+              "value": "$629,551 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "operating income",
+              "value": "$903,095 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's net income for FY2015 was $629,551 thousand and operating income was $903,095 thousand.",
+          "citations": [
+            {
+              "proposition_id": "p_19c7813dc756",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_953e75826c4a",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2235,
+          "output_tokens": 393,
+          "cost_usd": 0.0015228000000000002,
+          "elapsed_seconds": 8.05759979999857
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0040",
+      "question": "What were 3M's inventories and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.004520400000000001,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0040",
+          "question": "What were 3M's inventories and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "total inventories",
+              "value": "$4,366 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total current liabilities",
+              "value": "$7,244 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's inventories for FY2018 were $4,366 million and total current liabilities were $7,244 million.",
+          "citations": [
+            {
+              "proposition_id": "p_41124acf3db0",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_14b0e4db1c83",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2223,
+          "output_tokens": 383,
+          "cost_usd": 0.0015020000000000003,
+          "elapsed_seconds": 7.2767764999880455
+        },
+        {
+          "collision_id": "fbc_metric_pri_0040",
+          "question": "What were 3M's inventories and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "total inventories",
+              "value": "$4,366 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total current liabilities",
+              "value": "$7,244 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's inventories for FY2018 were $4,366 million. 3M's total current liabilities for FY2018 were $7,244 million.",
+          "citations": [
+            {
+              "proposition_id": "p_41124acf3db0",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_14b0e4db1c83",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2223,
+          "output_tokens": 397,
+          "cost_usd": 0.0015244000000000002,
+          "elapsed_seconds": 8.660067000018898
+        },
+        {
+          "collision_id": "fbc_metric_pri_0040",
+          "question": "What were 3M's inventories and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "total inventories",
+              "value": "$4,366 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total current liabilities",
+              "value": "$7,244 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's inventories for FY2018 were $4,366 million and total current liabilities were $7,244 million.",
+          "citations": [
+            {
+              "proposition_id": "p_41124acf3db0",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_14b0e4db1c83",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2223,
+          "output_tokens": 378,
+          "cost_usd": 0.001494,
+          "elapsed_seconds": 7.604929399967659
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0041",
+      "question": "What were Adobe's net income and total revenue for FY2015? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.0046996,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0041",
+          "question": "What were Adobe's net income and total revenue for FY2015? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "net income",
+              "value": "$629,551 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "total revenue",
+              "value": "$4,795,511 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's net income for FY2015 was $629,551 thousand and total revenue was $4,795,511 thousand.",
+          "citations": [
+            {
+              "proposition_id": "p_19c7813dc756",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_befcf0eb8e85",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2239,
+          "output_tokens": 363,
+          "cost_usd": 0.0014764,
+          "elapsed_seconds": 8.156667800038122
+        },
+        {
+          "collision_id": "fbc_metric_pri_0041",
+          "question": "What were Adobe's net income and total revenue for FY2015? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "net income",
+              "value": "$629,551 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "total revenue",
+              "value": "$4,795,511 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's net income for FY2015 was $629,551 thousand and total revenue was $4,795,511 thousand.",
+          "citations": [
+            {
+              "proposition_id": "p_eaa4cff7f87e",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 35,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_befcf0eb8e85",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2291,
+          "output_tokens": 482,
+          "cost_usd": 0.0016876,
+          "elapsed_seconds": 9.711442599946167
+        },
+        {
+          "collision_id": "fbc_metric_pri_0041",
+          "question": "What were Adobe's net income and total revenue for FY2015? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "net income",
+              "value": "$629,551 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "total revenue",
+              "value": "$4,795,511 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's net income for FY2015 was $629,551 thousand and total revenue was $4,795,511 thousand.",
+          "citations": [
+            {
+              "proposition_id": "p_19c7813dc756",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_befcf0eb8e85",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2239,
+          "output_tokens": 400,
+          "cost_usd": 0.0015356000000000002,
+          "elapsed_seconds": 17.080082900007255
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0042",
+      "question": "What were 3M's total current assets and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0043668,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0042",
+          "question": "What were 3M's total current assets and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "total current assets",
+              "value": "$13,709 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total current liabilities",
+              "value": "$7,244 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's total current assets for FY2018 were $13,709 million and total current liabilities were $7,244 million.",
+          "citations": [
+            {
+              "proposition_id": "p_64c187edf872",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_14b0e4db1c83",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2251,
+          "output_tokens": 344,
+          "cost_usd": 0.0014508,
+          "elapsed_seconds": 7.747636499989312
+        },
+        {
+          "collision_id": "fbc_metric_pri_0042",
+          "question": "What were 3M's total current assets and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "total current assets",
+              "value": "$13,709 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total current liabilities",
+              "value": "$7,244 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's total current assets for FY2018 were $13,709 million and total current liabilities were $7,244 million.",
+          "citations": [
+            {
+              "proposition_id": "p_64c187edf872",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_14b0e4db1c83",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2251,
+          "output_tokens": 353,
+          "cost_usd": 0.0014652,
+          "elapsed_seconds": 8.117825300025288
+        },
+        {
+          "collision_id": "fbc_metric_pri_0042",
+          "question": "What were 3M's total current assets and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": true,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "total current assets",
+              "value": "$13,709 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "total current liabilities",
+              "value": "$7,244 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's total current assets for FY2018 were $13,709 million and total current liabilities were $7,244 million.",
+          "citations": [
+            {
+              "proposition_id": "p_64c187edf872",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_14b0e4db1c83",
+              "source_uri": "3M_2018_10K",
+              "filing_type": "10-K",
+              "filing_date": "2018-12-31",
+              "page": 57,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2251,
+          "output_tokens": 344,
+          "cost_usd": 0.0014508,
+          "elapsed_seconds": 7.021940299950074
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0043",
+      "question": "What were Adobe's operating income and total revenue for FY2015? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.004628800000000001,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0043",
+          "question": "What were Adobe's operating income and total revenue for FY2015? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "operating income",
+              "value": "$903,095 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "total revenue",
+              "value": "$4,795,511 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's operating income for FY2015 was $903,095 thousand and total revenue was $4,795,511 thousand.",
+          "citations": [
+            {
+              "proposition_id": "p_953e75826c4a",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_befcf0eb8e85",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2248,
+          "output_tokens": 400,
+          "cost_usd": 0.0015392000000000001,
+          "elapsed_seconds": 8.475349400017876
+        },
+        {
+          "collision_id": "fbc_metric_pri_0043",
+          "question": "What were Adobe's operating income and total revenue for FY2015? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "operating income",
+              "value": "$903,095 thousand",
+              "unit": "USD thousands"
+            },
+            {
+              "metric": "total revenue",
+              "value": "$4,795,511 thousand",
+              "unit": "USD thousands"
+            }
+          ],
+          "answer_text": "Adobe's operating income for FY2015 was $903,095 thousand and total revenue was $4,795,511 thousand.",
+          "citations": [
+            {
+              "proposition_id": "p_953e75826c4a",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_befcf0eb8e85",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2248,
+          "output_tokens": 400,
+          "cost_usd": 0.0015392000000000001,
+          "elapsed_seconds": 8.393891500018071
+        },
+        {
+          "collision_id": "fbc_metric_pri_0043",
+          "question": "What were Adobe's operating income and total revenue for FY2015? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "operating income",
+              "value": "$903,095 thousand",
+              "unit": "USD"
+            },
+            {
+              "metric": "total revenue",
+              "value": "$4,795,511 thousand",
+              "unit": "USD"
+            }
+          ],
+          "answer_text": "Adobe's operating income for FY2015 was $903,095 thousand and total revenue was $4,795,511 thousand.",
+          "citations": [
+            {
+              "proposition_id": "p_953e75826c4a",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_befcf0eb8e85",
+              "source_uri": "ADOBE_2016_10K",
+              "filing_type": "10-K",
+              "filing_date": "2016-12-02",
+              "page": 61,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2248,
+          "output_tokens": 407,
+          "cost_usd": 0.0015504000000000002,
+          "elapsed_seconds": 7.790548600023612
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0044",
+      "question": "What were 3M's accounts payable and accounts receivable for FY2022? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.0052188,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0044",
+          "question": "What were 3M's accounts payable and accounts receivable for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts payable",
+              "value": "$3,183 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "accounts receivable",
+              "value": "$174 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts payable for FY2022 was $3,183 million and accounts receivable was $174 million.",
+          "citations": [
+            {
+              "proposition_id": "p_0b25b5374e9f",
+              "source_uri": "3M_2023Q2_10Q",
+              "filing_type": "10-Q",
+              "filing_date": "2023-06-30",
+              "page": 4,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_6dcf6e606c19",
+              "source_uri": "3M_2022_10K",
+              "filing_type": "10-K",
+              "filing_date": "2022-12-31",
+              "page": 49,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2304,
+          "output_tokens": 519,
+          "cost_usd": 0.001752,
+          "elapsed_seconds": 9.944852099986747
+        },
+        {
+          "collision_id": "fbc_metric_pri_0044",
+          "question": "What were 3M's accounts payable and accounts receivable for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts payable",
+              "value": "$3,183 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "accounts receivable - net of allowances",
+              "value": "$174 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts payable for FY2022 was $3,183 million and accounts receivable was $174 million.",
+          "citations": [
+            {
+              "proposition_id": "p_0b25b5374e9f",
+              "source_uri": "3M_2023Q2_10Q",
+              "filing_type": "10-Q",
+              "filing_date": "2023-06-30",
+              "page": 4,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_6dcf6e606c19",
+              "source_uri": "3M_2022_10K",
+              "filing_type": "10-K",
+              "filing_date": "2022-12-31",
+              "page": 49,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2249,
+          "output_tokens": 498,
+          "cost_usd": 0.0016964,
+          "elapsed_seconds": 8.995758200006094
+        },
+        {
+          "collision_id": "fbc_metric_pri_0044",
+          "question": "What were 3M's accounts payable and accounts receivable for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts payable",
+              "value": "$3,183 million",
+              "unit": "USD millions"
+            },
+            {
+              "metric": "accounts receivable - net of allowances",
+              "value": "$174 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts payable for FY2022 was $3,183 million. Its accounts receivable (net of allowances) for FY2022 was $174 million.",
+          "citations": [
+            {
+              "proposition_id": "p_0b25b5374e9f",
+              "source_uri": "3M_2023Q2_10Q",
+              "filing_type": "10-Q",
+              "filing_date": "2023-06-30",
+              "page": 4,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_a32a873c0b79",
+              "source_uri": "3M_2022_10K",
+              "filing_type": "10-K",
+              "filing_date": "2022-12-31",
+              "page": 49,
+              "provenance_tier": "retrieved"
+            },
+            {
+              "proposition_id": "p_6dcf6e606c19",
+              "source_uri": "3M_2022_10K",
+              "filing_type": "10-K",
+              "filing_date": "2022-12-31",
+              "page": 49,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2302,
+          "output_tokens": 531,
+          "cost_usd": 0.0017704,
+          "elapsed_seconds": 18.67577460000757
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0046",
+      "question": "What were 3M's accounts payable and inventories for FY2022? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.0037636,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0046",
+          "question": "What were 3M's accounts payable and inventories for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts payable",
+              "value": "$3,183 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts payable for FY2022 was $3,183 million. There is no information on inventories for FY2022.",
+          "citations": [
+            {
+              "proposition_id": "p_0b25b5374e9f",
+              "source_uri": "3M_2023Q2_10Q",
+              "filing_type": "10-Q",
+              "filing_date": "2023-06-30",
+              "page": 4,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2183,
+          "output_tokens": 241,
+          "cost_usd": 0.0012588,
+          "elapsed_seconds": 6.298423899977934
+        },
+        {
+          "collision_id": "fbc_metric_pri_0046",
+          "question": "What were 3M's accounts payable and inventories for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts payable",
+              "value": "$3,183 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts payable for FY2022 was $3,183 million. There is no information on inventories for FY2022.",
+          "citations": [
+            {
+              "proposition_id": "p_0b25b5374e9f",
+              "source_uri": "3M_2023Q2_10Q",
+              "filing_type": "10-Q",
+              "filing_date": "2023-06-30",
+              "page": 4,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2183,
+          "output_tokens": 245,
+          "cost_usd": 0.0012652000000000002,
+          "elapsed_seconds": 6.124630200036336
+        },
+        {
+          "collision_id": "fbc_metric_pri_0046",
+          "question": "What were 3M's accounts payable and inventories for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts payable",
+              "value": "$3,183 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts payable for FY2022 was $3,183 million. Inventories for FY2022 are not provided.",
+          "citations": [
+            {
+              "proposition_id": "p_0b25b5374e9f",
+              "source_uri": "3M_2023Q2_10Q",
+              "filing_type": "10-Q",
+              "filing_date": "2023-06-30",
+              "page": 4,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2183,
+          "output_tokens": 229,
+          "cost_usd": 0.0012396,
+          "elapsed_seconds": 6.098737199965399
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0048",
+      "question": "What were 3M's accounts payable and total current assets for FY2022? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": true,
+      "abstain_vote": "abstain 2-1",
+      "exact_match": null,
+      "exact_match_vote": null,
+      "total_cost_usd": 0.004426,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0048",
+          "question": "What were 3M's accounts payable and total current assets for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts payable",
+              "value": "$3,183 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts payable for FY2022 was $3,183 million. The total current assets for FY2022 is not provided in the facts.",
+          "citations": [
+            {
+              "proposition_id": "p_a32a873c0b79",
+              "source_uri": "3M_2022_10K",
+              "filing_type": "10-K",
+              "filing_date": "2022-12-31",
+              "page": 49,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2171,
+          "output_tokens": 342,
+          "cost_usd": 0.0014156000000000001,
+          "elapsed_seconds": 10.55601860000752
+        },
+        {
+          "collision_id": "fbc_metric_pri_0048",
+          "question": "What were 3M's accounts payable and total current assets for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2225,
+          "output_tokens": 379,
+          "cost_usd": 0.0014964000000000002,
+          "elapsed_seconds": 8.05005879997043
+        },
+        {
+          "collision_id": "fbc_metric_pri_0048",
+          "question": "What were 3M's accounts payable and total current assets for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2225,
+          "output_tokens": 390,
+          "cost_usd": 0.0015140000000000002,
+          "elapsed_seconds": 8.36393389996374
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0050",
+      "question": "What were 3M's accounts receivable and inventories for FY2022? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.0039824,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0050",
+          "question": "What were 3M's accounts receivable and inventories for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts receivable - net of allowances",
+              "value": "$174 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts receivable for FY2022 was $174 million. The inventories figure for FY2022 is not provided.",
+          "citations": [
+            {
+              "proposition_id": "p_6dcf6e606c19",
+              "source_uri": "3M_2022_10K",
+              "filing_type": "10-K",
+              "filing_date": "2022-12-31",
+              "page": 49,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2250,
+          "output_tokens": 259,
+          "cost_usd": 0.0013144,
+          "elapsed_seconds": 7.130121099995449
+        },
+        {
+          "collision_id": "fbc_metric_pri_0050",
+          "question": "What were 3M's accounts receivable and inventories for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts receivable - net of allowances",
+              "value": "$174 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts receivable for FY2022 was $174 million. There is no information provided about inventories for FY2022.",
+          "citations": [
+            {
+              "proposition_id": "p_6dcf6e606c19",
+              "source_uri": "3M_2022_10K",
+              "filing_type": "10-K",
+              "filing_date": "2022-12-31",
+              "page": 49,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2247,
+          "output_tokens": 273,
+          "cost_usd": 0.0013356,
+          "elapsed_seconds": 6.8406458999961615
+        },
+        {
+          "collision_id": "fbc_metric_pri_0050",
+          "question": "What were 3M's accounts receivable and inventories for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts receivable - net of allowances",
+              "value": "$174 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts receivable for FY2022 was $174 million. There is no information provided about inventories for FY2022.",
+          "citations": [
+            {
+              "proposition_id": "p_6dcf6e606c19",
+              "source_uri": "3M_2022_10K",
+              "filing_type": "10-K",
+              "filing_date": "2022-12-31",
+              "page": 49,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2247,
+          "output_tokens": 271,
+          "cost_usd": 0.0013323999999999999,
+          "elapsed_seconds": 8.377985800034367
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0052",
+      "question": "What were 3M's accounts receivable and total current assets for FY2022? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.0041324000000000005,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0052",
+          "question": "What were 3M's accounts receivable and total current assets for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts receivable - net of allowances",
+              "value": "$174 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts receivable for FY2022 was $174 million. The total current assets figure for FY2022 is not provided.",
+          "citations": [
+            {
+              "proposition_id": "p_6dcf6e606c19",
+              "source_uri": "3M_2022_10K",
+              "filing_type": "10-K",
+              "filing_date": "2022-12-31",
+              "page": 49,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2210,
+          "output_tokens": 318,
+          "cost_usd": 0.0013928,
+          "elapsed_seconds": 7.636981800023932
+        },
+        {
+          "collision_id": "fbc_metric_pri_0052",
+          "question": "What were 3M's accounts receivable and total current assets for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts receivable - net of allowances",
+              "value": "$174 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts receivable for FY2022 was $174 million. The total current assets figure for FY2022 is not provided.",
+          "citations": [
+            {
+              "proposition_id": "p_6dcf6e606c19",
+              "source_uri": "3M_2022_10K",
+              "filing_type": "10-K",
+              "filing_date": "2022-12-31",
+              "page": 49,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2210,
+          "output_tokens": 309,
+          "cost_usd": 0.0013784000000000001,
+          "elapsed_seconds": 7.686916399979964
+        },
+        {
+          "collision_id": "fbc_metric_pri_0052",
+          "question": "What were 3M's accounts receivable and total current assets for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts receivable - net of allowances",
+              "value": "$174 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts receivable for FY2022 was $174 million. The total current assets figure for FY2022 is not provided.",
+          "citations": [
+            {
+              "proposition_id": "p_6dcf6e606c19",
+              "source_uri": "3M_2022_10K",
+              "filing_type": "10-K",
+              "filing_date": "2022-12-31",
+              "page": 49,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2207,
+          "output_tokens": 299,
+          "cost_usd": 0.0013612000000000001,
+          "elapsed_seconds": 6.4650443000136875
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0054",
+      "question": "What were 3M's inventories and total current assets for FY2022? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.0039208,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0054",
+          "question": "What were 3M's inventories and total current assets for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "total current assets",
+              "value": "$14,688 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's total current assets for FY2022 were $14,688 million. The inventories figure is not provided.",
+          "citations": [
+            {
+              "proposition_id": "p_756f590f7c09",
+              "source_uri": "3M_2022_10K",
+              "filing_type": "10-K",
+              "filing_date": "2022-12-31",
+              "page": 49,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2157,
+          "output_tokens": 285,
+          "cost_usd": 0.0013188000000000002,
+          "elapsed_seconds": 6.440378800034523
+        },
+        {
+          "collision_id": "fbc_metric_pri_0054",
+          "question": "What were 3M's inventories and total current assets for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "total current assets",
+              "value": "$14,688 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's total current assets for FY2022 were $14,688 million. The inventories figure for FY2022 is not provided.",
+          "citations": [
+            {
+              "proposition_id": "p_756f590f7c09",
+              "source_uri": "3M_2022_10K",
+              "filing_type": "10-K",
+              "filing_date": "2022-12-31",
+              "page": 49,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2157,
+          "output_tokens": 272,
+          "cost_usd": 0.0012980000000000001,
+          "elapsed_seconds": 6.494213500001933
+        },
+        {
+          "collision_id": "fbc_metric_pri_0054",
+          "question": "What were 3M's inventories and total current assets for FY2022? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "total current assets",
+              "value": "$14,688 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's total current assets for FY2022 were $14,688 million. The inventories figure for FY2022 is not provided.",
+          "citations": [
+            {
+              "proposition_id": "p_756f590f7c09",
+              "source_uri": "3M_2022_10K",
+              "filing_type": "10-K",
+              "filing_date": "2022-12-31",
+              "page": 49,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2152,
+          "output_tokens": 277,
+          "cost_usd": 0.001304,
+          "elapsed_seconds": 7.130476500024088
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0056",
+      "question": "What were 3M's accounts payable and accounts receivable for FY2023? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.0041376,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0056",
+          "question": "What were 3M's accounts payable and accounts receivable for FY2023? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts payable",
+              "value": "$3,231 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts payable for FY2023 was $3,231 million. There is no information on accounts receivable for FY2023.",
+          "citations": [
+            {
+              "proposition_id": "p_74c16cd2647c",
+              "source_uri": "3M_2023Q2_10Q",
+              "filing_type": "10-Q",
+              "filing_date": "2023-06-30",
+              "page": 4,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2192,
+          "output_tokens": 313,
+          "cost_usd": 0.0013776,
+          "elapsed_seconds": 7.243180999998003
+        },
+        {
+          "collision_id": "fbc_metric_pri_0056",
+          "question": "What were 3M's accounts payable and accounts receivable for FY2023? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts payable",
+              "value": "$3,231 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts payable for FY2023 was $3,231 million. There is no information on accounts receivable for FY2023.",
+          "citations": [
+            {
+              "proposition_id": "p_74c16cd2647c",
+              "source_uri": "3M_2023Q2_10Q",
+              "filing_type": "10-Q",
+              "filing_date": "2023-06-30",
+              "page": 4,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2196,
+          "output_tokens": 321,
+          "cost_usd": 0.001392,
+          "elapsed_seconds": 7.343666700005997
+        },
+        {
+          "collision_id": "fbc_metric_pri_0056",
+          "question": "What were 3M's accounts payable and accounts receivable for FY2023? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts payable",
+              "value": "$3,231 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts payable for FY2023 was $3,231 million. There is no information on accounts receivable for FY2023.",
+          "citations": [
+            {
+              "proposition_id": "p_74c16cd2647c",
+              "source_uri": "3M_2023Q2_10Q",
+              "filing_type": "10-Q",
+              "filing_date": "2023-06-30",
+              "page": 4,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2192,
+          "output_tokens": 307,
+          "cost_usd": 0.001368,
+          "elapsed_seconds": 6.956159199995454
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0058",
+      "question": "What were 3M's accounts payable and inventories for FY2023? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": true,
+      "abstain_vote": "abstain 2-1",
+      "exact_match": null,
+      "exact_match_vote": null,
+      "total_cost_usd": 0.0039208,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0058",
+          "question": "What were 3M's accounts payable and inventories for FY2023? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2186,
+          "output_tokens": 231,
+          "cost_usd": 0.001244,
+          "elapsed_seconds": 5.904302700015251
+        },
+        {
+          "collision_id": "fbc_metric_pri_0058",
+          "question": "What were 3M's accounts payable and inventories for FY2023? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "3M's accounts payable as of June 30, 2023 was $3,231 million. There is no information on inventories for FY2023.",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2186,
+          "output_tokens": 300,
+          "cost_usd": 0.0013544,
+          "elapsed_seconds": 7.0404241000069305
+        },
+        {
+          "collision_id": "fbc_metric_pri_0058",
+          "question": "What were 3M's accounts payable and inventories for FY2023? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts payable",
+              "value": "$3,231 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts payable for FY2023 was $3,231 million. There is no information on inventories for FY2023.",
+          "citations": [
+            {
+              "proposition_id": "p_74c16cd2647c",
+              "source_uri": "3M_2023Q2_10Q",
+              "filing_type": "10-Q",
+              "filing_date": "2023-06-30",
+              "page": 4,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2182,
+          "output_tokens": 281,
+          "cost_usd": 0.0013224,
+          "elapsed_seconds": 6.940896200016141
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0060",
+      "question": "What were 3M's accounts payable and total current assets for FY2023? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": false,
+      "abstain_vote": "answered 2-1",
+      "exact_match": false,
+      "exact_match_vote": "no_match 2-0",
+      "total_cost_usd": 0.004103600000000001,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0060",
+          "question": "What were 3M's accounts payable and total current assets for FY2023? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "3M's accounts payable for June 30, 2023 was $3,231 million. Total current assets for FY2023 is not provided.",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2169,
+          "output_tokens": 305,
+          "cost_usd": 0.0013556,
+          "elapsed_seconds": 7.869306900014635
+        },
+        {
+          "collision_id": "fbc_metric_pri_0060",
+          "question": "What were 3M's accounts payable and total current assets for FY2023? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts payable",
+              "value": "$3,231 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts payable for FY2023 was $3,231 million. The total current assets for FY2023 is not provided in the facts.",
+          "citations": [
+            {
+              "proposition_id": "p_74c16cd2647c",
+              "source_uri": "3M_2023Q2_10Q",
+              "filing_type": "10-Q",
+              "filing_date": "2023-06-30",
+              "page": 4,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2169,
+          "output_tokens": 305,
+          "cost_usd": 0.0013556,
+          "elapsed_seconds": 7.7598152999999
+        },
+        {
+          "collision_id": "fbc_metric_pri_0060",
+          "question": "What were 3M's accounts payable and total current assets for FY2023? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": false,
+          "answerable": true,
+          "answers": [
+            {
+              "metric": "accounts payable",
+              "value": "$3,231 million",
+              "unit": "USD millions"
+            }
+          ],
+          "answer_text": "3M's accounts payable for FY2023 was $3,231 million. There is no information on total current assets for FY2023.",
+          "citations": [
+            {
+              "proposition_id": "p_74c16cd2647c",
+              "source_uri": "3M_2023Q2_10Q",
+              "filing_type": "10-Q",
+              "filing_date": "2023-06-30",
+              "page": 4,
+              "provenance_tier": "retrieved"
+            }
+          ],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2169,
+          "output_tokens": 328,
+          "cost_usd": 0.0013924000000000002,
+          "elapsed_seconds": 7.940197000047192
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0061",
+      "question": "What were 3M's accounts payable and total current liabilities for FY2023? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": true,
+      "abstain_vote": "abstain 3-0",
+      "exact_match": null,
+      "exact_match_vote": null,
+      "total_cost_usd": 0.0034656,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0061",
+          "question": "What were 3M's accounts payable and total current liabilities for FY2023? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "No supporting facts were retrieved for this question.",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 1322,
+          "output_tokens": 273,
+          "cost_usd": 0.0009656,
+          "elapsed_seconds": 5.623138600029051
+        },
+        {
+          "collision_id": "fbc_metric_pri_0061",
+          "question": "What were 3M's accounts payable and total current liabilities for FY2023? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "No supporting facts were retrieved for this question.",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 2644,
+          "output_tokens": 432,
+          "cost_usd": 0.0017488,
+          "elapsed_seconds": 8.90419709996786
+        },
+        {
+          "collision_id": "fbc_metric_pri_0061",
+          "question": "What were 3M's accounts payable and total current liabilities for FY2023? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "No supporting facts were retrieved for this question.",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 1322,
+          "output_tokens": 139,
+          "cost_usd": 0.0007512,
+          "elapsed_seconds": 3.8426738000125624
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0062",
+      "question": "What were 3M's accounts receivable and inventories for FY2023? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": true,
+      "abstain_vote": "abstain 3-0",
+      "exact_match": null,
+      "exact_match_vote": null,
+      "total_cost_usd": 0.0019456,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0062",
+          "question": "What were 3M's accounts receivable and inventories for FY2023? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "No supporting facts were retrieved for this question.",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 1384,
+          "output_tokens": 84,
+          "cost_usd": 0.000688,
+          "elapsed_seconds": 3.1643509999848902
+        },
+        {
+          "collision_id": "fbc_metric_pri_0062",
+          "question": "What were 3M's accounts receivable and inventories for FY2023? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "No supporting facts were retrieved for this question.",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 1384,
+          "output_tokens": 48,
+          "cost_usd": 0.0006304,
+          "elapsed_seconds": 2.9415194999892265
+        },
+        {
+          "collision_id": "fbc_metric_pri_0062",
+          "question": "What were 3M's accounts receivable and inventories for FY2023? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "No supporting facts were retrieved for this question.",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 1384,
+          "output_tokens": 46,
+          "cost_usd": 0.0006272000000000001,
+          "elapsed_seconds": 2.617682500043884
+        }
+      ]
+    },
+    {
+      "collision_id": "fbc_metric_pri_0063",
+      "question": "What were 3M's accounts receivable and total current assets for FY2023? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "k": 3,
+      "abstained": true,
+      "abstain_vote": "abstain 3-0",
+      "exact_match": null,
+      "exact_match_vote": null,
+      "total_cost_usd": 0.0019416,
+      "raw_runs": [
+        {
+          "collision_id": "fbc_metric_pri_0063",
+          "question": "What were 3M's accounts receivable and total current assets for FY2023? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "No supporting facts were retrieved for this question.",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 1370,
+          "output_tokens": 53,
+          "cost_usd": 0.0006328,
+          "elapsed_seconds": 3.253648300014902
+        },
+        {
+          "collision_id": "fbc_metric_pri_0063",
+          "question": "What were 3M's accounts receivable and total current assets for FY2023? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "No supporting facts were retrieved for this question.",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 1370,
+          "output_tokens": 63,
+          "cost_usd": 0.0006487999999999999,
+          "elapsed_seconds": 3.2149329999811016
+        },
+        {
+          "collision_id": "fbc_metric_pri_0063",
+          "question": "What were 3M's accounts receivable and total current assets for FY2023? Report both figures separately. (in USD millions)",
+          "verification_status": "verified",
+          "exact_match": false,
+          "abstained": true,
+          "answerable": false,
+          "answers": [],
+          "answer_text": "No supporting facts were retrieved for this question.",
+          "citations": [],
+          "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+          "generator_model": "gpt-4.1-mini-2025-04-14",
+          "input_tokens": 1370,
+          "output_tokens": 70,
+          "cost_usd": 0.00066,
+          "elapsed_seconds": 2.88013669999782
+        }
+      ]
+    }
+  ]
+}

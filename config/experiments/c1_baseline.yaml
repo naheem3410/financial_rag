@@ -1,0 +1,75 @@
+# C1 — Baseline: hybrid + metadata filter + rerank, NPCE off, CoVe off.
+# Shares the retrieval core defined here with C2-C4.
+experiment_id: c1_baseline
+enable_npce: false
+enable_cove: false
+retrieval:
+  mode: hybrid
+  top_k: 20
+  rerank_top_k: 10  # a rerank_top_k=5 window was a real capacity confound for two-metric
+  # questions (both needed propositions have to survive one reranked window); 10 fixed 3 clean
+  # flips from wrong-partial to correct with zero regressions. Fixed for all five cells, one
+  # shared retrieval core. Widening it isn't a substitute for period-aware retrieval constraints
+  # though -- it can turn an unconstrained temporal collision from a safe abstention into a
+  # confident wrong-year answer, which is more dangerous, not less.
+  enable_reranker: true
+  time_weighting: true
+indexing:
+  granularity: proposition
+llm:
+  defaults:
+    temperature: 0.0
+    structured_output: true
+  call_sites:
+    proposition_segmenter:
+      provider: openai
+      model: "gpt-4.1-mini-2025-04-14"  # pinned snapshot, not the floating "gpt-4.1-mini" alias
+      concurrency: 16
+      include_reasoning_field: false  # mechanical instruction-following, not reasoning -- pure cost otherwise
+    proposition_segmenter_escalation:
+      provider: openai
+      model: "gpt-5.6-luna"  # used only for the one batch whose table-row completeness check
+      # fails (offline/propositions/segmenter_llm.py:_table_rows_complete), not the whole corpus.
+      # gpt-4.1-mini can unreliably separate a balance-sheet row's real value from a number
+      # embedded in the row's own label (e.g. "net of allowances of $174"); gpt-5.6-luna is the
+      # fallback for that specific failure mode.
+    numeric_qualifier_resolver:
+      provider: openai
+      model: "<pinned-version>"
+    query_splitter:
+      provider: openai
+      model: "<pinned-version>"
+    fff_rewriter:
+      provider: openai
+      model: "gpt-4.1-mini-2025-04-14"
+    generator:
+      provider: openai
+      model: "gpt-4.1-mini-2025-04-14"
+    cove_verification:
+      provider: openai
+      model: "gpt-4.1-mini-2025-04-14"  # gpt-5.6-luna forces temperature=1 (a reasoning model
+      # that rejects temperature=0), which was root-caused as the source of CoVe verdict
+      # instability on identical evidence. gpt-4.1-mini runs at genuine temperature=0, same as
+      # every other call site. Irrelevant here since enable_cove is false in C1, kept in sync for
+      # consistency.
+  providers:
+    openai:
+      api_key_env: OPENAI_API_KEY
+      rpm: 500
+      rpd: 10000
+      tpm: 200000
+    anthropic:
+      api_key_env: ANTHROPIC_API_KEY
+    ollama:
+      base_url: "http://localhost:11434"
+      seed: 42
+embedding:
+  model: "BAAI/bge-base-en-v1.5"
+  revision: "a5beb1e3e68b9ab74eb54cfd186867f64f240e1a"
+  dimension: 768
+corpus:
+  pdf_dir: "data/pdfs"
+  required_docs_file: "data/required_docs.txt"
+guards:
+  numeric_verbatim: true
+  deterministic_numeric_comparison: true

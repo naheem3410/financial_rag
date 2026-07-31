@@ -1,0 +1,22 @@
+{
+  "build_id": "cfdaad73481a65f2",
+  "proposition_count": 1699,
+  "embedder_model_name": "BAAI/bge-base-en-v1.5",
+  "embedder_revision": "a5beb1e3e68b9ab74eb54cfd186867f64f240e1a",
+  "embedder_dimension": 768,
+  "indexed_doc_names": [
+    "3M_2018_10K",
+    "3M_2022_10K",
+    "3M_2023Q2_10Q",
+    "ACTIVISIONBLIZZARD_2019_10K",
+    "ADOBE_2016_10K"
+  ],
+  "skipped_pages_by_reason": {
+    "cover": 6,
+    "table_of_contents": 12,
+    "certification": 17,
+    "signatures": 9,
+    "risk_factors_item_1a": 44,
+    "exhibit_index": 1
+  }
+}

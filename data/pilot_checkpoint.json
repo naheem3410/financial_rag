@@ -1,0 +1,47 @@
+{
+  "completed": {
+    "3M_2018_10K": {
+      "doc_name": "3M_2018_10K",
+      "pages_total": 160,
+      "pages_skipped": {
+        "0": "cover",
+        "1": "table_of_contents",
+        "2": "table_of_contents",
+        "131": "certification",
+        "133": "signatures",
+        "154": "signatures",
+        "155": "certification",
+        "156": "certification",
+        "157": "certification",
+        "158": "certification"
+      },
+      "pages_segmented": 150,
+      "llm_requests": 73,
+      "input_tokens": 162086,
+      "output_tokens": 437516,
+      "propositions": 5138,
+      "elapsed_seconds": 4825.836427100003,
+      "cost_usd": 0.76486
+    },
+    "ADOBE_2015_10K": {
+      "doc_name": "ADOBE_2015_10K",
+      "pages_total": 116,
+      "pages_skipped": {
+        "0": "cover",
+        "1": "table_of_contents",
+        "63": "cover",
+        "104": "table_of_contents",
+        "105": "table_of_contents",
+        "106": "signatures",
+        "107": "signatures"
+      },
+      "pages_segmented": 109,
+      "llm_requests": 60,
+      "input_tokens": 129067,
+      "output_tokens": 496061,
+      "propositions": 2984,
+      "elapsed_seconds": 5445.437819100043,
+      "cost_usd": 0.8453244
+    }
+  }
+}

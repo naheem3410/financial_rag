@@ -1,0 +1,390 @@
+{
+  "summary": {
+    "n_questions": 37,
+    "k": 3,
+    "n_verified": 37,
+    "n_unverified_annotation_pending": 0,
+    "n_verified_but_consensus_abstained": 5,
+    "n_scored": 32,
+    "exact_match_accuracy_verified_and_answered_only": 0.71875,
+    "negative_rejection_rate": 0.13513513513513514,
+    "total_cost_usd": 0.1829224,
+    "questions_with_non_unanimous_abstain_vote": [
+      "fbc_metric_pri_0056",
+      "fbc_metric_pri_0060"
+    ],
+    "questions_with_tied_exact_match_vote": []
+  },
+  "per_question": [
+    {
+      "collision_id": "fbc_temporal_pri_0002",
+      "question": "What were 3M's capital expenditure in FY2018 and FY2017? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": true,
+      "abstain_vote": "abstain 3-0",
+      "exact_match": null,
+      "exact_match_vote": null,
+      "total_cost_usd": 0.0038935999999999997
+    },
+    {
+      "collision_id": "fbc_temporal_pri_0006",
+      "question": "What were Adobe's operating income in FY2015 and FY2016? Report both figures separately. (in USD thousands)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0051816
+    },
+    {
+      "collision_id": "fbc_metric_pri_0021",
+      "question": "What were 3M's accounts payable and accounts receivable for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": true,
+      "abstain_vote": "abstain 3-0",
+      "exact_match": null,
+      "exact_match_vote": null,
+      "total_cost_usd": 0.0052028000000000005
+    },
+    {
+      "collision_id": "fbc_metric_pri_0022",
+      "question": "What were 3M's net income and total revenue for FY2022? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.0037543999999999998
+    },
+    {
+      "collision_id": "fbc_metric_pri_0023",
+      "question": "What were 3M's accounts payable and inventories for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.005198400000000001
+    },
+    {
+      "collision_id": "fbc_metric_pri_0024",
+      "question": "What were Activision Blizzard's net income and operating income for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.004114
+    },
+    {
+      "collision_id": "fbc_metric_pri_0025",
+      "question": "What were 3M's accounts receivable and inventories for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": true,
+      "abstain_vote": "abstain 3-0",
+      "exact_match": null,
+      "exact_match_vote": null,
+      "total_cost_usd": 0.0050828
+    },
+    {
+      "collision_id": "fbc_metric_pri_0026",
+      "question": "What were Activision Blizzard's net income and total revenue for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.0040736
+    },
+    {
+      "collision_id": "fbc_metric_pri_0027",
+      "question": "What were Activision Blizzard's operating income and total revenue for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.0041140000000000005
+    },
+    {
+      "collision_id": "fbc_metric_pri_0028",
+      "question": "What were Activision Blizzard's net income and operating income for FY2017? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.0044024
+    },
+    {
+      "collision_id": "fbc_metric_pri_0029",
+      "question": "What were 3M's accounts payable and total current assets for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.005250000000000001
+    },
+    {
+      "collision_id": "fbc_metric_pri_0030",
+      "question": "What were Activision Blizzard's net income and total revenue for FY2017? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.004446
+    },
+    {
+      "collision_id": "fbc_metric_pri_0031",
+      "question": "What were 3M's accounts payable and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": true,
+      "abstain_vote": "abstain 3-0",
+      "exact_match": null,
+      "exact_match_vote": null,
+      "total_cost_usd": 0.0050572
+    },
+    {
+      "collision_id": "fbc_metric_pri_0032",
+      "question": "What were Activision Blizzard's operating income and total revenue for FY2017? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 3-0",
+      "total_cost_usd": 0.0040212
+    },
+    {
+      "collision_id": "fbc_metric_pri_0033",
+      "question": "What were Adobe's gross profit and net income for FY2015? Report both figures separately. (in USD thousands)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.004754800000000001
+    },
+    {
+      "collision_id": "fbc_metric_pri_0034",
+      "question": "What were 3M's accounts receivable and total current assets for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0052816
+    },
+    {
+      "collision_id": "fbc_metric_pri_0035",
+      "question": "What were Adobe's gross profit and operating income for FY2015? Report both figures separately. (in USD thousands)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0048976
+    },
+    {
+      "collision_id": "fbc_metric_pri_0036",
+      "question": "What were 3M's accounts receivable and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0052912
+    },
+    {
+      "collision_id": "fbc_metric_pri_0037",
+      "question": "What were Adobe's gross profit and total revenue for FY2015? Report both figures separately. (in USD thousands)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.004702400000000001
+    },
+    {
+      "collision_id": "fbc_metric_pri_0038",
+      "question": "What were 3M's inventories and total current assets for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.005300000000000001
+    },
+    {
+      "collision_id": "fbc_metric_pri_0039",
+      "question": "What were Adobe's net income and operating income for FY2015? Report both figures separately. (in USD thousands)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.004886
+    },
+    {
+      "collision_id": "fbc_metric_pri_0040",
+      "question": "What were 3M's inventories and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.005332
+    },
+    {
+      "collision_id": "fbc_metric_pri_0041",
+      "question": "What were Adobe's net income and total revenue for FY2015? Report both figures separately. (in USD thousands)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0047056
+    },
+    {
+      "collision_id": "fbc_metric_pri_0042",
+      "question": "What were 3M's total current assets and total current liabilities for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0052848
+    },
+    {
+      "collision_id": "fbc_metric_pri_0043",
+      "question": "What were Adobe's operating income and total revenue for FY2015? Report both figures separately. (in USD thousands)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0051708
+    },
+    {
+      "collision_id": "fbc_metric_pri_0044",
+      "question": "What were 3M's accounts payable and accounts receivable for FY2022? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.004645600000000001
+    },
+    {
+      "collision_id": "fbc_metric_pri_0046",
+      "question": "What were 3M's accounts payable and inventories for FY2022? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.005216
+    },
+    {
+      "collision_id": "fbc_metric_pri_0048",
+      "question": "What were 3M's accounts payable and total current assets for FY2022? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0051284
+    },
+    {
+      "collision_id": "fbc_metric_pri_0050",
+      "question": "What were 3M's accounts receivable and inventories for FY2022? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.005072
+    },
+    {
+      "collision_id": "fbc_metric_pri_0052",
+      "question": "What were 3M's accounts receivable and total current assets for FY2022? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0053312
+    },
+    {
+      "collision_id": "fbc_metric_pri_0054",
+      "question": "What were 3M's inventories and total current assets for FY2022? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0052088
+    },
+    {
+      "collision_id": "fbc_metric_pri_0056",
+      "question": "What were 3M's accounts payable and accounts receivable for FY2023? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 2-1",
+      "exact_match": false,
+      "exact_match_vote": "no_match 2-0",
+      "total_cost_usd": 0.0047004
+    },
+    {
+      "collision_id": "fbc_metric_pri_0058",
+      "question": "What were 3M's accounts payable and inventories for FY2023? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0054532
+    },
+    {
+      "collision_id": "fbc_metric_pri_0060",
+      "question": "What were 3M's accounts payable and total current assets for FY2023? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": true,
+      "abstain_vote": "abstain 2-1",
+      "exact_match": null,
+      "exact_match_vote": null,
+      "total_cost_usd": 0.005725200000000001
+    },
+    {
+      "collision_id": "fbc_metric_pri_0061",
+      "question": "What were 3M's accounts payable and total current liabilities for FY2023? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.0054316
+    },
+    {
+      "collision_id": "fbc_metric_pri_0062",
+      "question": "What were 3M's accounts receivable and inventories for FY2023? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": true,
+      "exact_match_vote": "match 3-0",
+      "total_cost_usd": 0.00576
+    },
+    {
+      "collision_id": "fbc_metric_pri_0063",
+      "question": "What were 3M's accounts receivable and total current assets for FY2023? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "abstained": false,
+      "abstain_vote": "answered 3-0",
+      "exact_match": false,
+      "exact_match_vote": "no_match 2-1",
+      "total_cost_usd": 0.0058512
+    }
+  ]
+}

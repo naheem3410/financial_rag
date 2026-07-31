@@ -1,0 +1,4 @@
+company,ticker,metric,fiscal_year,quarter,value,unit,filing_type,filing_date,source_uri
+Acme Corp,ACME,operating_margin,2024,3,18.2,percent,10-Q,2024-11-05,acme_10q_2024q3.csv
+Acme Corp,ACME,net_profit_margin,2024,3,12.4,percent,10-Q,2024-11-05,acme_10q_2024q3.csv
+Beta Inc,BETA,operating_margin,2024,3,15.9,percent,10-Q,2024-11-06,beta_10q_2024q3.csv
