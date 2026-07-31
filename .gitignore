@@ -61,3 +61,12 @@ __pycache__/
 .venv/
 venv/
 .claude/settings.local.json
+
+# Internal working documents: kept locally, not published to the repo.
+/CLAUDE.md
+/Financial_RAG_Architecture_Diagram.pdf
+/Financial_RAG_Block_Diagram.pdf
+/Financial_RAG_ER_Diagram.pdf
+/Financial_RAG_Query_Flowchart.pdf
+/Financial_RAG_System_Architecture.md
+/Findings_and_Conclusion.md

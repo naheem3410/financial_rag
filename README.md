@@ -242,15 +242,13 @@ signature for the exact client list, or `online/pipeline_c4.py` for the full set
 ## 10. Reproduce the evaluation results
 
 The gold-key evaluation set is `evaluation/data/financebench_collision_metric_axis.jsonl`
-(37 questions derived from FinanceBench's own gold evidence — see
-`Financial_RAG_System_Architecture.md` §8A for how it was built and why). Each cell has a
-matching gate script, `evaluation/run_c{0,1,2,3,4}_gate.py`, which runs every question
-through that cell's real pipeline and scores it by value against the gold key. For the
-self-consistency (k=3 majority vote) numbers reported in `Findings_and_Conclusion.md`, use
-`evaluation/self_consistency.py:run_self_consistency` wrapping the same gate's
-`run_c*_question_once` function. These are also real-money, checkpointed, potentially
-long-running operations — read the module docstrings before running one against the full
-set.
+(37 questions derived from FinanceBench's own gold evidence). Each cell has a matching gate
+script, `evaluation/run_c{0,1,2,3,4}_gate.py`, which runs every question through that cell's
+real pipeline and scores it by value against the gold key. For k=3 majority-vote
+self-consistency, use `evaluation/self_consistency.py:run_self_consistency` wrapping the
+same gate's `run_c*_question_once` function. These are also real-money, checkpointed,
+potentially long-running operations — read the module docstrings before running one against
+the full set.
 
 ## 11. Known limitations (stated plainly)
 
@@ -260,5 +258,3 @@ set.
   filings.
 - Primary results are reported on 37 questions over 5 documents (3 companies) — promising,
   not yet confirmed at the scale of the full 84-document FinanceBench corpus.
-- See `Financial_RAG_System_Architecture.md` §8A and `Findings_and_Conclusion.md` for the
-  complete, honest accounting of what was and wasn't validated.
