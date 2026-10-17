@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --line: #e1e5ea;
+  --ink: #0f1a2b;
+  --muted: #5a6779;
+  --brand: #0b5c5a;
+  --brand-soft: #e2f0ef;
+  --ok: #11694a;
+  --ok-soft: #e3f4ec;
+  --warn: #8f5500;
+  --warn-soft: #faefd9;
+  --bad: #b3261e;
+  --bad-soft: #fbe5e3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0a111d;
+    --surface: #101a2b;
+    --line: #22314a;
+    --ink: #e8edf5;
+    --muted: #93a1b8;
+    --brand: #55c7c0;
+    --brand-soft: #123231;
+    --ok: #5fd6a2;
+    --ok-soft: #0f2a20;
+    --warn: #f0b95a;
+    --warn-soft: #30240e;
+    --bad: #ff8f86;
+    --bad-soft: #351719;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-brand: var(--brand);
+  --color-brand-soft: var(--brand-soft);
+  --color-ok: var(--ok);
+  --color-ok-soft: var(--ok-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise {
+  animation: rise 0.35s ease-out both;
+}
+
+@keyframes sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(350%);
+  }
+}
+
+.sweep {
+  animation: sweep 1.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  .sweep {
+    animation: none;
+  }
+}

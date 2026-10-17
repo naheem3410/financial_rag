@@ -1,0 +1,35 @@
+# Master's Project Deliverables — Mapping to Objectives, Thesis Sections, Enterprise Platform Phasing, and User Interface
+
+This document maps the four development phases of the Master's project (Section 3.3 of the
+proposal) to their deliverable type, concrete artifact, the objective each satisfies, the thesis
+section it lands in, the corresponding phase of the full Enterprise Platform build
+(`implementation_plan/PART_22_IMPLEMENTATION_PHASING.md`, Phases 0–7) where applicable, and the
+user interface (if any) that accompanies each phase.
+
+---
+
+| Phase | Deliverable type | Concrete artifact | Objective it satisfies | Thesis section it lands in | Corresponding Enterprise Platform Phase (Part 22) | User Interface (if applicable) |
+|---|---|---|---|---|---|---|
+| **Phase 1 — Benchmark extension** | Data | The extended FinanceBench-Collision dataset — new cross-period and cross-company collision items, each traced to a FinanceBench evidence string, hand-verified, units normalised | Objective 2 | Methodology (derivation) + an appendix (the dataset itself) | **Not directly mapped.** This is evaluation-asset curation using the existing research codebase's tooling (`evaluation/` directory conventions), not platform engineering — it precedes and parallels the platform's own phasing rather than sitting inside it. If a nearest analogue is needed, it is closest in spirit to the evaluation-harness work described under Part 22 Phase 2, but requires none of that phase's infrastructure to exist. | **None.** Offline data curation and hand-verification only — no UI is built or required for this phase. |
+| **Phase 2 — Pipeline extension and re-evaluation** | Code + empirical results + minimal UI | The Extended System (C4+) implementation — NPCE, CoVe, and the Query Router's expansion/decomposition logic, integrated; the three-way comparison results (Extended System vs. plain LLM vs. naive RAG) on the extended benchmark, broken out by collision type; and a minimal query interface for interacting with the Extended System directly, outside the batch evaluation harness | Objective 2 (extension) and the first half of Objective 5 (evaluation) | Results chapter, Section 3.5 | **Part 22 Phase 2 (Data / Document / RAG Foundation).** This is the exact phase where NPCE's collision detection, slot parsing, the deterministic Query Router, and the ported CoVe Orchestrator are built — the Master's project's Extended System is a direct instance of this phase's core deliverable, run against the extended benchmark rather than (only) the original research corpus. | **This is where the minimal demonstration interface originates.** A simple query input/response view: a question is submitted, and the response, the CoVe verification trace, the supporting citations (traceability), and the confidence score are all shown for that single answer. Built here primarily to interact with and sanity-check the Extended System directly, outside the batch evaluation harness — this same interface is carried forward and extended in Phase 4, not rebuilt from scratch. |
+| **Phase 3 — Enterprise architecture design** | Design artefact only — **no code** | The system architecture specification itself: five-pillar structure, orchestration lanes, multi-tenancy/identity model, privacy/connector isolation, audit/escalation design, Nigeria regulatory mapping | Objective 3 | Chapter 3, Section 3.4 | **All of Part 22 (Phases 0–7), collectively.** This phase does not implement any single platform phase — it *is* the design blueprint that Part 22's eight phases are the build order for. Its relationship to Part 22 is one of authorship, not execution: Part 22 exists because this design phase specified it. | **None built.** The design specifies, but does not implement, the Bank Admin Portal (Part 1 §2.43) and Platform Admin Console (Part 1 §2.44) conceptually — both remain design artefacts within this phase, not interfaces a user can open. |
+| **Phase 4 — Prototype implementation and evaluation** | Code + empirical results | The working prototype — retrieval, the Extended System, and audit logging, wired to a basic multi-tenant data model and access-control checks; plus its end-to-end evaluation against the same two baselines, supplemented by RAGAS, plus the governing-principle checks (tenant isolation under a basic penetration-style test, audit-trace correctness, fail-closed behavior) | Objective 4 and the second half of Objective 5 | Implementation + Results chapters | **Partial: draws from Part 22 Phases 1–3.** Specifically: the Tenant/Identity core (Phase 1, for the "basic multi-tenant data model and access-control checks" named in Section 1.4's scope), the Data/Document/RAG Foundation (Phase 2, for retrieval and the Extended System), and the Audit Service wiring (Phase 3, for governance/audit logging). This phase does **not** draw on Part 22 Phases 4–7 (Connector Framework, Controlled Modules beyond Document Intelligence, Agentic Capabilities, or Enterprise Hardening/Deployment) — those remain explicitly out of scope per Section 1.4. | **The same minimal demonstration interface introduced in Phase 2, extended rather than rebuilt** — now reflecting the multi-tenant data model and access-control checks wired in at this phase, so a query's response, verification trace, citations, and confidence are shown consistent with whichever tenant/identity context the query was submitted under. Still not the full Bank Admin Portal or Platform Admin Console specified for the enterprise platform (those belong to Part 22 Phase 7 and are out of scope here); it exists solely to demonstrate the architecture end-to-end on realistic financial-document queries, per Objective 4's own wording. |
+
+---
+
+**The one thing worth stating plainly to a committee, since it's easy to gloss over:** only Phases
+2 and 4 produce running software. Phase 1 produces a dataset, and Phase 3 produces a design
+document — deliberately, per Section 1.4's own scope statement, since the full five-pillar
+platform is designed but not built, and only Document Intelligence + AI Governance's core
+(retrieval, Extended System, audit logging) is actually implemented. If asked "what will you have
+built by the end," the honest answer is: an extended benchmark, an extended and re-evaluated
+NPCE+CoVe+Query-Router pipeline, a finished architecture specification for the full platform, and
+a working prototype of one module's core plus its governance layer — not the enterprise platform
+itself.
+
+**On the user interface specifically:** it is not a Phase-4-only addition. The minimal
+demonstration interface — submit a question, see the response, the CoVe verification trace, the
+supporting citations, and the confidence score — is introduced in Phase 2, as soon as the Extended
+System exists to interact with, and is only extended (not rebuilt) in Phase 4 once the multi-tenant
+and access-control wiring is added. Phases 1 and 3 have no interface at all: one is offline data
+curation, the other is a design document.

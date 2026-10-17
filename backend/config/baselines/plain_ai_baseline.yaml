@@ -1,0 +1,71 @@
+# Plain AI baseline (step 5.1, decision 1, owner's yes given 2026-10-10).
+# Not one of the five C0-C4 cells -- kept in config/baselines/, not
+# config/experiments/, so test_config_schema.py's "exactly five experiment
+# yamls" check is untouched. No retrieval at all: the model answers from
+# its own training knowledge only. Every call site below except
+# plain_ai_baseline itself is unreachable for this setup (kept configured,
+# like c0_naive.yaml's unused slots, only because the schema requires all
+# seven to be present regardless of which pipeline actually runs).
+experiment_id: plain_ai_baseline
+enable_npce: false
+enable_cove: false
+retrieval:
+  mode: hybrid
+  top_k: 20
+  rerank_top_k: 10
+  enable_reranker: true
+  time_weighting: true
+indexing:
+  granularity: proposition
+llm:
+  defaults:
+    temperature: 0.0
+    structured_output: true
+  call_sites:
+    proposition_segmenter:
+      provider: openai
+      model: "<pinned-version>"
+    numeric_qualifier_resolver:
+      provider: openai
+      model: "<pinned-version>"
+    query_splitter:
+      provider: openai
+      model: "<pinned-version>"
+    step_planner:
+      provider: openai
+      model: "<pinned-version>"
+    fff_rewriter:
+      provider: openai
+      model: "<pinned-version>"
+    generator:
+      provider: openai
+      model: "<pinned-version>"
+    cove_verification:
+      provider: openai
+      model: "<pinned-version>"
+    plain_ai_baseline:
+      provider: openai
+      model: "gpt-4.1-mini-2025-04-14"  # matches the model used everywhere else in C0-C4 so the
+      # comparison isn't confounded by a different model choice on top of the real "no retrieval
+      # at all" difference being measured
+  providers:
+    openai:
+      api_key_env: OPENAI_API_KEY
+      rpm: 500
+      rpd: 10000
+      tpm: 200000
+    anthropic:
+      api_key_env: ANTHROPIC_API_KEY
+    ollama:
+      base_url: "http://localhost:11434"
+      seed: 42
+embedding:
+  model: "BAAI/bge-base-en-v1.5"
+  revision: "a5beb1e3e68b9ab74eb54cfd186867f64f240e1a"
+  dimension: 768
+corpus:
+  pdf_dir: "data/pdfs"
+  required_docs_file: "data/required_docs.txt"
+guards:
+  numeric_verbatim: true
+  deterministic_numeric_comparison: true
