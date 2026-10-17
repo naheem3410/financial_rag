@@ -2009,3 +2009,276 @@ Not built yet: everything marked "decided, not built" above, plus Phase 2 runs a
   Next: get Docker Desktop running again, then continue with step 5.2 (the C0 and C4+ run configs for
   the three-setup comparison) -- or, if preferred, a first live check of this step's call site once
   Docker is back.
+- 2026-10-17: Docker Desktop back up (confirmed with `docker ps` -- Postgres/Mongo/Redis all healthy).
+  Re-checked the production database directly first: still exactly 21,913 facts, untouched over the
+  gap. Owner asked to pick up the one open loose end inside step 2.2 (the free-text dictionary's thin
+  content) before continuing work package 5.
+  Expanded `offline/labeling/metric_labeler.py`'s `DEFAULT_METRIC_ALIASES` from 28 to 38 phrases across
+  the existing 19 metrics -- standard financial English (GAAP/IFRS and common British/Nigerian usage:
+  "turnover", "topline", "profit after tax", "trade payables/receivables", "trade creditors/debtors",
+  "capital spending", "stock-in-trade", "operating profit", "pat margin"), not copied from any one
+  glossary, and shown to the owner before being seeded live rather than silently expanded. This is the
+  one shared dictionary both the rule-based labeler (`label_metrics`) and the free-text MongoDB/Redis
+  lookup (step 2.2's infra) read from, so both improve from one change.
+  Found and fixed three real collisions while writing the tests for the first draft, the same class of
+  issue the module's own existing "non-GAAP also matches GAAP" test already documents: "operating profit
+  margin" and "gross profit margin" each literally contain another metric's own phrase ("operating
+  profit", "gross profit") and would have double-labelled; "sales revenue" literally contains "revenue"
+  and would have too. All three dropped from the final list rather than patched around, with the reason
+  recorded directly in the dictionary's own comment so a future addition doesn't repeat the same mistake.
+  Also deliberately left out, for the same reason: bare "stock" for inventories (collides with equity
+  stock), bare "receivables"/"payables"/"debtors"/"creditors" (too generic), and "EBIT" for
+  operating_income (not always the same figure -- a real accounting difference, not just a naming one).
+  13 new tests in test_metric_labeler.py (each new phrase labels correctly; three tests specifically
+  proving the dropped collision candidates do NOT mislabel -- "sales revenue" labels as revenue only,
+  "net profit margin" labels as net_profit_margin only not also net_income, "gross profit" labels as
+  gross_profit only not also gross_margin; and a bare "stock" sentence about equity correctly stays
+  unlabelled). All 35 tests in the file pass, including the 22 already there.
+  Also ran test_dictionary.py (infra/dictionary.py's own 12 tests, against the real Mongo/Redis boxes):
+  all pass unchanged -- the seed/lookup machinery itself needed no changes, only the content it seeds.
+  Live-verified for real: re-seeded the actual MongoDB dictionary and reloaded the actual Redis copy --
+  41 phrases now loaded (was 28) -- then looked up 11 of the new phrases directly ("turnover",
+  "topline", "total sales", "profit after tax", "bottom line", "operating profit", "trade payables",
+  "trade receivables", "capital spending", "stock-in-trade", "pat margin") and every one resolved to the
+  correct metric through the real pipeline, not just the fakes.
+  Verified twice: full suite run twice back to back with Docker up throughout, 1124 passed, 3 skipped
+  both times, no regressions.
+  Honest note, not yet decided: the 21,913 facts already in production were labelled under the OLD,
+  28-phrase dictionary at ingestion time. Expanding the dictionary does not retroactively relabel them
+  -- `offline/labeling/backfill_metrics.py` would need to be re-run against production for any of these
+  21,913 facts to pick up a newly-recognized phrase (e.g. a fact whose text says "turnover" instead of
+  "revenue"). Checked: still exactly 2,752 facts labelled (unchanged), confirming nothing was silently
+  touched. Whether to re-run the backfill against production, and when, is the owner's call -- not done
+  without asking, since it writes to the real 21,913-fact table.
+  Step 2.2's dictionary-content loose end is now closed (content is real and reviewed, not exhaustive --
+  more sources can always be added later, but nothing invented or rushed here either).
+- 2026-10-17 (later): Owner said yes to re-running the backfill against production ("yes, do that now").
+  Ran `offline/labeling/backfill_metrics.py` for real against `financial_rag_v2`, rules only
+  (`llm_client=None`, the default) -- no model call, no cost, exactly the dictionary-driven relabelling
+  the owner approved, not a separate spend decision.
+  Checked the module's own 12 tests against the real test Postgres box first, all passing, before
+  touching production.
+  Real result: 21,913 facts in, 21,913 facts out (the fact count itself never changes, by the module's
+  own design -- only the `metrics` field on existing rows can change). Labelled share rose from 2,752 to
+  2,986 facts (237 rows changed this run) -- 234 more facts now correctly recognize a metric purely from
+  the new dictionary phrases, at zero model cost. Re-ran it a second time immediately after: 0 facts
+  changed, confirming the module's own "safe to run twice" promise for real, not just in the tests.
+  Verified twice: full suite run twice back to back after the real backfill, 1124 passed, 3 skipped both
+  times, no regressions. Production re-checked directly a final time: 21,913 facts, 2,986 now labelled.
+  Step 2.2 is now fully closed, content gathered, reviewed, seeded, and backfilled into the real
+  database.
+- 2026-10-17 (later): Owner asked about a faster way to grow the dictionary than hand-drafting each
+  phrase -- word2vec/GloVe vs a cheap LLM. Decided not to build either now; recorded here as a later
+  optimization, not forgotten.
+  The comparison, for whenever this is picked up: word2vec/GloVe give words that appear in SIMILAR
+  SENTENCES, not words that mean the SAME THING -- "revenue" and "cost" sit close together in that kind
+  of embedding space precisely because they show up in the same sentences constantly, which would
+  suggest exactly the wrong pairing. They also won't reliably know finance-specific shorthand ("PAT") or
+  regional terms ("turnover") unless those happened to appear often in whatever the embeddings were
+  trained on. A cheap LLM, asked directly for common/regional synonyms of each of the 19 known metrics,
+  would very likely do better with far less manual correction -- but it is still a new place something
+  would talk to the AI model, even as a one-off offline list-building script, not a live call site, so
+  it needs the owner's own specific yes first, the same standing rule as everywhere else. Not done now;
+  owner said no, not yet, just record it.
+- 2026-10-17 (later): Step 5.5 (non-finance test set) started. Owner asked for real sources to download
+  -- searched the web rather than guess at URLs (the standing "never generate/guess URLs" rule), found
+  real, verifiable links: four CBN (Central Bank of Nigeria) regulatory PDFs and two real bank
+  account-opening terms documents. Owner downloaded four of these into
+  `backend/data/plainBankPdfs/`: `CBN Consumer Protection Regulations.pdf` (39 pages), `Consumer
+  Protection Framework (Final).pdf` (33 pages), `Draft Guidelines on Responsible Business Conduct.pdf`
+  (11 pages), `BUSINESS BANKING REVISED Ts and Cs JUNE 17 2021.pdf` (5 pages, a real Standard Bank
+  Nigeria business banking terms document).
+  Checked all four directly with `pypdf` before trusting them (a PDF with no real text layer -- a
+  scanned image with no OCR -- would silently produce nothing for the policy chunker to work with):
+  every one has real, cleanly extractable text, and the three CBN documents are structured exactly the
+  way the policy chunker expects -- numbered Parts, clauses, and sub-clauses ("PART TWO - FAIR TREATMENT
+  OF CONSUMERS", "3.2.4 Promptly oblige consumers...").
+  Not yet done: actually ingesting these four real documents through the real upload pipeline so they
+  become searchable PolicyFacts (none of this is in the database yet -- these are just files on disk
+  right now), and gathering the 40-60 real questions, their gold answers, and a few real Nigerian-phrasing
+  examples from the owner, none of which exist yet either.
+- 2026-10-17 (later): Owner gave the yes to ingest the four real documents with the antecedent-extraction
+  fallback on ("with that AI step on (small real cost, better results), now"). Ran them through the real
+  production upload path (submit_upload + run_ingest_step, the same machinery a real browser upload
+  uses, not a shortcut) against `financial_rag_v2`.
+  Dry-run first: the chunker produced 445 real rule blocks across the 4 documents (218 + 136 + 62 + 29).
+  Real cost estimated beforehand from that real count (~$0.10-0.15 at gpt-4.1-mini rates for ~445 short
+  calls) before spending anything.
+  Real result: all 4 documents marked indexed; 447 policy facts total (445 new + the 2 from an earlier
+  test fixture); 151 facts (about a third) got a real, model-found antecedent, the rest honestly stayed
+  None rather than guessed; financial propositions unchanged at 21,913.
+  Spot-checked the actual content afterward, not just the counts -- and found a real, significant
+  problem: across all four documents, a meaningful share of the 445 facts were junk -- stray page
+  numbers stored as their own "fact" (`'2'`, `'3'`, `'4'`), sentence fragments with no real heading
+  context, and on the Standard Bank document specifically, text with two columns interleaved into one
+  garbled line (e.g. "balance requirements for my/our account(s) for or the charges relating to
+  17.Commission and charges shall be levied in a"). Reported this honestly rather than treat the
+  ingestion as "done" just because it ran without crashing -- a test set built on this data would have
+  been testing garbage text, not real policy rules.
+  Root-caused with the owner: `offline/documents/policy_chunker.py`'s heading detector matches on
+  NUMBERING patterns in the text itself (e.g. "4.2.1 Title"), which is exactly as easily matched by a
+  lone page number as by a real heading; and each page was chunked in total isolation, so a rule
+  spanning a page break got cut into two incomplete pieces. The garbled text itself traced one level
+  deeper, into the shared `offline/parsers/layout_parser.py`: `page.extract_text()` reads a page by
+  vertical position only, with no awareness that two side-by-side columns exist, so it interleaves them.
+  Owner proposed the real fix directly: stop using numbers as the heading signal at all -- use visual
+  cues instead (bold, font size) -- and let a rule block continue onto the next page instead of always
+  resetting. Owner also asked whether a technique called "late chunking" (an embeddings technique that
+  keeps a whole document's context inside each chunk's vector by embedding the full document before
+  slicing) would help. Explained why it would not: late chunking operates entirely downstream, on
+  embeddings for search ranking -- it cannot fix text that was extracted in the wrong order, and it does
+  not decide where a chunk's boundary is in the first place, which are the two things actually broken
+  here. Agreed: set late chunking aside, fix the two real root causes directly.
+  Before writing any code, confirmed with the owner that `pdfplumber` (already in use) does NOT provide
+  multi-column reading order on its own -- checked directly: its own `layout=True` text mode still reads
+  top-to-bottom in original order, just with whitespace padding, so the same two columns still
+  interleave. It does give per-word position and font/size data, which is what the real fix is built on.
+  Built the first half: `offline/parsers/layout_parser.py` (the module shared with the financial
+  pipeline -- handled carefully given 21,913 real facts already depend on it being correct).
+  New `Line` dataclass (text + vertical position + font size + bold flag) and a new `ParsedPage.lines`
+  field, additive only -- the existing `.text` field financial extraction depends on is completely
+  unchanged for the common, single-column case, which still takes the exact same single
+  `page.extract_text()` call as before this step.
+  New column-split detection, calibrated against the real documents rather than guessed, through several
+  real wrong turns worth recording honestly: a first attempt (biggest gap between individual words' raw
+  start positions) failed on the real document -- its real gutter was only the 4th-widest gap, not the
+  widest, because a word at the end of one column's line can start almost anywhere, polluting the
+  comparison. A second attempt (a histogram of word-start positions merged across the whole page) also
+  failed -- single-column pages have large "empty" stretches too, purely from how individual lines
+  happen to wrap, with no column involved at all; tested directly against a real single-column page and
+  it produced gaps up to 85pt wide with nothing meaningful behind them. The working version instead
+  checks, per 5pt band across the page, what share of actual LINES (not raw word positions) have any
+  word crossing that band -- a real gutter is empty for nearly every line, not just empty in the
+  aggregate word count. Two more real false positives turned up once that worked: a genuine ruled table
+  (Annexure D) produced a gap just as real as a true column break, fixed by skipping column-detection
+  entirely on any page pdfplumber's own table extractor already resolved; and a table of contents
+  (title, then a single trailing page number) produced a centred gap exactly like a real second column,
+  fixed by requiring each side to have several lines of genuine multi-word prose, not just a trailing
+  token. Final check also requires the gutter to sit roughly in the middle of the page (30%-70%), since a
+  real two-column layout has two similarly-sized columns -- an indent after a short list number (another
+  real false positive found) sits nowhere near the middle and is excluded by this alone.
+  20 tests in test_layout_parser.py (all 13 existing ones still pass unchanged, plus 7 new: a genuine
+  two-column layout detected, an ordinary single-column page never split, a page with a real table never
+  split, a table of contents never split, an off-centre gap never treated as a column, too few words
+  never split, and reading order coming out left-column-then-right-column correctly).
+  Verified against the real documents directly, not just synthetic tests: the previously-garbled
+  Standard Bank page now reads in correct order end to end; a full sweep of every page across all 4 real
+  documents found splits only on the 4 pages that are genuinely two-column, and correctly found none
+  anywhere else, including the exact table and table-of-contents pages that broke the first two attempts.
+  Not yet done: `offline/documents/policy_chunker.py` itself still needs the matching rewrite (visual
+  heading detection instead of numbering, and letting a rule block span a page break) -- `.lines` exists
+  now but nothing reads it yet. The 445 facts already in production from the flawed run have not been
+  touched yet either; they will need removing and re-ingesting once the chunker side is done, which means
+  a second real round of the antecedent-extraction call, a cost the owner should be told about again
+  before it happens even though it was already approved once for the first (flawed) run.
+- 2026-10-17 (later): Finished the second half: `offline/documents/policy_chunker.py` itself, rewritten
+  to match the owner's own agreed plan -- heading detection by how a line LOOKS (bold, or a font size
+  meaningfully bigger than the document's own body text), never by matching a number in the line's own
+  text, and a rule block now carries straight across a page break instead of being cut off at every
+  page boundary.
+  Public shape kept stable on purpose: `chunk_document_into_rule_blocks(parsed: ParsedDocument)` is the
+  only function `offline/documents/policy_ingestor.py` ever called, and still takes the same input and
+  returns the same `RuleBlockDraft` shape `offline/documents/rule_extractor.py` already depends on --
+  nothing downstream needed to change. The old per-page, number-driven internals were fully replaced,
+  not patched around.
+  A number in a heading's own text is still read -- just no longer as the admission test, only to help
+  decide DEPTH (how nested a heading is) once something has already qualified as a heading by how it
+  looks. No number present still means depth 1, the same simplification unnumbered headings already had
+  before this step (never told apart by depth) -- not a new limitation, carried over honestly.
+  Two more real, concrete bugs found and fixed by actually reading the real output, not just trusting
+  the block count:
+  - A table of contents (which repeats the real headings almost verbatim, each followed by a dot-leader
+    and a page number -- "1. OBJECTIVES.......... 4") was being chunked as if it were real rule content.
+    Fixed by dropping any line containing a dot-leader (3+ dots, or the real ellipsis character a broken
+    one sometimes decodes to) from a block's body outright, rather than trusting it as real text.
+  - A single large decorative glyph (a bullet-like "o" rendered at 2.5x the document's own body-text
+    size) satisfied the size-based heading check and was mistaken for a heading titled "o". Fixed with a
+    minimum heading length (3 characters) -- a real heading is never just one decorative character,
+    however big it happens to be rendered.
+  Also carried over, deliberately unchanged, the original junk-short-body filter from the first half of
+  this step (a flushed block with no real letters, under 15 characters, is dropped, not stored as a
+  fact) -- still catches stray page-number footers that leak into a block's body rather than becoming
+  their own heading.
+  Honest, deliberately un-fixed limitation found and left as-is: a few real numbered sub-clauses (found
+  in the CBN Regulations' own "1.1 From unfair and exploitative practices... 1.2 From unethical...")
+  are bold enumerated list items whose "heading" text is actually the start of a sentence that continues
+  as the block's body -- visually indistinguishable from a true heading without actually reading and
+  understanding the sentence, which no rule-based check can do. The content itself is not lost or
+  garbled, just split at a slightly early boundary (the heading captures the sentence's opening clause,
+  the body captures its tail). Not fixed now: doing so properly would need a model to judge, which is
+  new scope beyond what was agreed, not a quick rule fix -- flagged honestly rather than either silently
+  shipped as "perfect" or used as an excuse to add a new call site without asking first.
+  20 tests in test_policy_chunker.py, entirely rewritten (the old 13 tested plain-text/numbering
+  behaviour that no longer exists) to build synthetic `Line` objects directly: bold and bigger-font
+  headings recognized, a bold-but-too-long line treated as body not a heading, a lone page number never
+  a heading however it is styled, a single decorative glyph never a heading however big, a table-of-
+  contents dot-leader entry dropped, a stray short numeric fragment dropped, the existing hierarchy/
+  sibling/pop-on-shallower-heading behaviour all still correct, a rule block now genuinely spanning a
+  page break (and still citing the page its heading started on, not where it ends), a new heading on the
+  next page still closing the previous block correctly, full document-level chunking through the real
+  `ParsedDocument` shape, and the `.txt` fallback (no font information exists there at all) still using
+  the original text-pattern approach unchanged.
+  Verified against the real documents directly after each fix, not just the synthetic tests: block
+  counts dropped from the flawed run's 445 to 192 clean blocks (81->76, 136->86, 62->14, 29->16 after the
+  glyph fix) with zero junk, zero TOC artifacts, and zero bad single-character section titles, confirmed
+  by scanning every block's actual text and section path, not just counting them.
+  Verified twice: full suite run twice back to back after both halves of this step (layout_parser.py and
+  policy_chunker.py together), 1139 passed, 3 skipped both times, no regressions anywhere, including the
+  financial path that depends on the same shared parser module.
+  Owner then said yes to the real, second clean-up-and-reingest ("go ahead"). Removed all 445 facts and
+  all 4 document rows from the flawed first run, then re-ingested the same 4 real PDFs through the same
+  real production upload path, antecedent-extraction on again -- a second real but smaller spend
+  (~192 short calls this time, not ~445, since the fixed chunker produces fewer, cleaner, more complete
+  blocks).
+  Real result, verified directly against the database: 194 policy facts total (192 new + the 2 from the
+  unrelated, pre-existing sample_policy.txt test fixture, left alone); 105 facts (54%, a higher real
+  share than the flawed run's 34%, since each block is now more complete and gives the model more real
+  context to find an antecedent from) got a real model-found antecedent; zero junk facts; zero dot-
+  leader/TOC-looking facts; financial propositions unchanged at 21,913.
+  Verified twice more: full suite run twice back to back after the real re-ingestion itself, 1139
+  passed, 3 skipped both times.
+  Step 5.5's document side is now genuinely done: 4 real documents, cleanly chunked, really ingested,
+  antecedents really extracted where the model could find one honestly. Still outstanding for step 5.5
+  at that point: the 40-60 real test questions, their gold answers, and a few real Nigerian-phrasing
+  examples.
+- 2026-10-17 (later): Owner changed direction on who writes the test questions: "create the file,
+  use standard phrasing, verification_status should be verified, go over it 3 times separately." So
+  this one file (standard phrasing only, no Nigerian examples yet) was written by me, not supplied by
+  the owner -- a deliberate, explicit exception to this project's usual "never invent eval data" rule,
+  made because every question/answer/excerpt is grounded in real text already sitting in the real
+  production database, not invented content.
+  Built `evaluation/data/nonfinance_policy_test_set.jsonl`, 46 questions (46, inside the owner's
+  40-60 range), fields: test_id, question, phrasing_style, expected_behavior, document_title,
+  gold_answer_text, gold_excerpt, gold_citation, verification_status, notes. phrasing_style is
+  "standard" throughout (Nigerian phrasing deferred, per the owner's own instruction for this file).
+  verification_status is "verified" throughout, per instruction. expected_behavior mix: 28 "straight"
+  (single-fact lookups), 10 "must_not_split" (multi-clause questions a router might wrongly split, but
+  are each answered by one single real fact), 8 "must_split" (questions that genuinely need two facts
+  from two different documents, e.g. comparing the Guidelines' and the Regulations' debt-collection or
+  sanctions wording). Spread across all 4 real documents (7 to 18 questions each, matching each
+  document's real share of the 192 facts). For "must_split" items, document_title/gold_excerpt/
+  gold_citation are 2-item parallel arrays instead of single strings, since the question needs both
+  documents.
+  Before writing any question, read the real text of (effectively) all 192 real facts straight from
+  `facts_condensed.json`, not from memory of an earlier summary -- the earlier conversation's summary
+  only described topics, not exact wording, and exact wording is what gold_excerpt needs.
+  Ran 3 separate, independent review passes before reporting back, as instructed:
+  1. Programmatic verbatim check -- wrote a throwaway script, queried the real `policy_facts.data->>
+     'text'` column for every fact_id named in each item's notes, and asserted every gold_excerpt is
+     an exact Python substring of the real stored text. Found and fixed one real error this way: item
+     nonfin_045 (CBN Consumer Protection Regulations, Objectives) had cited the wrong one of two
+     neighbouring facts (1.1 "the consumers;" instead of 1.2 "confidence in the use of financial
+     products and services;") -- a plain copy mistake while drafting, not a chunker bug. Re-ran after
+     the fix: all 46 passed.
+  2. Logical/coherence re-read -- for the trickiest cross-document and multi-clause items, re-fetched
+     the full (non-truncated) real stored text directly from the database and checked every claim in
+     gold_answer_text against it word for word, not just against the 300-char condensed dump used
+     while drafting (which had silently truncated some of the real sentences, e.g. "toll-free" only
+     appears after the condensed dump's cut-off point for one Framework complaints-channel fact).
+  3. Structural/coverage check -- confirmed all 46 lines are valid JSON, no duplicate test_id or
+     question text, all 10 required fields present on every item, verification_status and
+     phrasing_style correct on all 46, the must_split items are structured as matched 2-item arrays,
+     and the expected_behavior/document coverage matches the plan above.
+  Not done yet: the Nigerian-phrasing examples (explicitly deferred -- the owner asked for standard
+  phrasing in this file only), and the owner's own promised check of the file ("when I have the time,
+  I will also check it").
