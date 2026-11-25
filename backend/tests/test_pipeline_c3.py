@@ -84,7 +84,7 @@ class _FakeBundle:
 
 
 class _FakeReranker:
-    def rerank(self, sq, props, k):
+    def rerank(self, sq, props, k, ctx=None):
         return list(props[:k])
 
 

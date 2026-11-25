@@ -70,6 +70,7 @@ export interface AskResponse {
   answers: AnswerValue[];
   citations: Citation[];
   verification: Verification;
+  confidence_score: number;
   pipeline: PipelineInfo;
   how_it_happened: HowItHappened;
 }
@@ -99,4 +100,92 @@ export interface DocumentEventsResponse {
   events: DocumentEvent[];
   done: boolean;
   failed: boolean;
+}
+
+// ---- Experiment Results tab (static, from public/results/full366.json) ----
+
+export type SetupName = "plain_ai" | "c0" | "c4_plus";
+export type CollisionAxis = "entity" | "metric" | "temporal";
+export type Outcome = "correct" | "incorrect" | "abstained";
+
+export interface CIStat {
+  value: number;
+  lo: number;
+  hi: number;
+}
+
+export interface AxisMetricsCI {
+  n: number;
+  correct: number;
+  incorrect: number;
+  abstained: number;
+  precision: CIStat | null;
+  recall: CIStat | null;
+  coverage: CIStat | null;
+  confidently_wrong: CIStat | null;
+}
+
+export interface RagasMetric {
+  valid: number;
+  total: number;
+  mean: number | null;
+}
+
+export interface RagasSummary {
+  faithfulness: RagasMetric;
+  answer_relevancy: RagasMetric;
+}
+
+export interface ResultCitation {
+  proposition_id: string;
+  source_uri: string;
+  filing_type: string;
+  filing_date: string;
+  page: number | null;
+  evidence: string;
+}
+
+export interface ResultVerificationClaim {
+  claim_id: string;
+  claim_text: string;
+  verdict: Verdict;
+  is_numeric: boolean;
+}
+
+export interface SetupPipelineInfo {
+  sub_query_count?: number;
+  fff_count?: number;
+  retrieved_chunk_count?: number;
+  models: Record<string, string>;
+}
+
+export interface SetupAnswer {
+  outcome: Outcome | null;
+  answer_text: string;
+  answers: AnswerValue[];
+  citations: ResultCitation[];
+  cost_usd: number;
+  pipeline: SetupPipelineInfo;
+  verification_trace?: ResultVerificationClaim[];
+  confidence_score?: number | null;
+  ragas?: { faithfulness: number | null; answer_relevancy: number | null };
+}
+
+export interface ResultQuestion {
+  collision_id: string;
+  question: string;
+  axis: CollisionAxis;
+  scale: string | null;
+  gold_answers: Record<string, number> | null;
+  setups: Partial<Record<SetupName, SetupAnswer>>;
+}
+
+export interface ResultsData {
+  generated_at: string;
+  n_questions: number;
+  overall: Record<SetupName, AxisMetricsCI>;
+  by_axis: Record<CollisionAxis, Partial<Record<SetupName, AxisMetricsCI>>>;
+  ragas: RagasSummary | null;
+  cost: Record<SetupName | "ragas", number>;
+  questions: ResultQuestion[];
 }

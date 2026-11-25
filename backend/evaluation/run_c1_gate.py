@@ -47,6 +47,20 @@ def _scale_key(scale: str) -> str:
 
 
 def gold_values_in_base_units(gold_answers: dict[str, Optional[float]], scale: str) -> set[Decimal]:
+    """`scale == "mixed_by_period"` (financebench_collision_extended.jsonl's
+    own sentinel for a cross-filing-era item, e.g. FY2015 reported in
+    thousands pre-split, FY2021 in millions) means each entry carries its
+    own {"value": ..., "scale": ...} instead of a bare number -- the row's
+    `scale` string doesn't apply to all of them uniformly. Without this
+    branch, Decimal(str(v)) crashes on the dict itself."""
+    if _scale_key(scale) == "mixed_by_period":
+        values: set[Decimal] = set()
+        for entry in gold_answers.values():
+            if entry is None:
+                continue
+            entry_multiplier = _SCALE_MULTIPLIER.get(_scale_key(entry["scale"]), Decimal(1))
+            values.add(Decimal(str(entry["value"])) * entry_multiplier)
+        return values
     multiplier = _SCALE_MULTIPLIER.get(_scale_key(scale), Decimal(1))
     return {Decimal(str(v)) * multiplier for v in gold_answers.values() if v is not None}
 

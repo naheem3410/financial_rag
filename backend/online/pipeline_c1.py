@@ -62,7 +62,7 @@ def answer_question(
 
     sub_query = PassthroughQueryTransformer().transform(question, ctx)[0]
     if config.retrieval.enable_reranker and fused_props:
-        reranked_props = list(reranker.rerank(sub_query, fused_props[:top_k], k=rerank_top_k))
+        reranked_props = list(reranker.rerank(sub_query, fused_props[:top_k], k=rerank_top_k, ctx=ctx))
     else:
         reranked_props = fused_props[:rerank_top_k]
 

@@ -64,7 +64,7 @@ class _FakeReranker:
     """Returns input order truncated to k, isolating retrieval/fusion wiring
     from reranking logic (covered by test_reranker.py)."""
 
-    def rerank(self, sq, props, k):
+    def rerank(self, sq, props, k, ctx=None):
         return list(props[:k])
 
 

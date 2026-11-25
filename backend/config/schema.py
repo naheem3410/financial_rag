@@ -61,6 +61,36 @@ class RetrievalConfig(_Strict):
     # company/year. Off by default so every existing config keeps behaving
     # exactly as before; only the new C4+ setup (5.2) turns it on.
     enable_metric_filter: bool = False
+    # Decision 25/26: label an unlabelled candidate's metric on the spot
+    # (rules first, model only for what rules miss), instead of a blanket
+    # offline backfill. Decision 25 hooked this into the raw metadata-filter
+    # pool; decision 26 moved it to the reranked candidates in pipeline_c4.py
+    # instead (see that file) because the raw pool can run into the hundreds,
+    # unordered by relevance, which made a small call cap a near-random
+    # sample. Off by default so every existing config/test keeps behaving
+    # exactly as before; only config/comparison/c4_plus.yaml turns it on --
+    # deliberately not in c4_full.yaml or any C0-C3 cell, which are already-
+    # reported-on ablation cells that must not silently change.
+    enable_ondemand_metric_labeling: bool = False
+    # Deterministic layers on the reranker's order (online/retrieval/reranker.py's
+    # RerankOptions). All off by default; only the C4+ comparison config may turn them on.
+    rerank_tie_break_logit_margin: Optional[float] = None
+    rerank_tag_passages: bool = False
+    rerank_blend_kind_weight: float = 0.0
+    rerank_blend_year_weight: float = 0.0
+    # Last-chance check after labeling: drop candidates that are clearly the wrong
+    # kind or year, as long as at least one candidate that fits is left.
+    enable_ask_match_guard: bool = False
+    # The "several versions" check only counts a second fact as a real rival when
+    # its reranker logit sits within this much of the first. None keeps plain top 2.
+    near_identical_logit_margin: Optional[float] = None
+
+    @field_validator("rerank_tie_break_logit_margin", "near_identical_logit_margin")
+    @classmethod
+    def _margin_is_non_negative(cls, v: Optional[float]) -> Optional[float]:
+        if v is not None and v < 0:
+            raise ValueError("retrieval.rerank_tie_break_logit_margin must be >= 0")
+        return v
 
 
 class IndexingConfig(_Strict):

@@ -20,6 +20,7 @@ from online.analysis.query_splitter import PassthroughQueryTransformer
 from online.curation.fff_rewriter import rewrite_to_ffts
 from online.output.abstention_gate import decide
 from online.output.citation_binder import bind_citations
+from online.output.confidence_score import compute as compute_confidence
 from online.output.generator import AnswerValue, generate_answer
 from online.verification.cove_orchestrator import CoVeVerifier
 
@@ -40,6 +41,7 @@ class C2AnswerResult:
     generator_model: str
     cove_verification_model: str
     verification_trace: list[dict[str, Any]]
+    confidence_score: float = 0.0
 
 
 def answer_question(
@@ -68,7 +70,7 @@ def answer_question(
 
     sub_query = PassthroughQueryTransformer().transform(question, ctx)[0]
     if config.retrieval.enable_reranker and fused_props:
-        reranked_props = list(reranker.rerank(sub_query, fused_props[:top_k], k=rerank_top_k))
+        reranked_props = list(reranker.rerank(sub_query, fused_props[:top_k], k=rerank_top_k, ctx=ctx))
     else:
         reranked_props = fused_props[:rerank_top_k]
 
@@ -89,6 +91,7 @@ def answer_question(
         trace = verified.verification_trace
 
     decision = decide(trace)
+    confidence_score = compute_confidence(trace)
 
     fff_by_id = {f.fff_id: f for f in ffts}
     prop_by_id = {p.proposition_id: p for p in reranked_props}
@@ -123,4 +126,5 @@ def answer_question(
             }
             for c in trace
         ],
+        confidence_score=confidence_score,
     )

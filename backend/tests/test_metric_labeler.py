@@ -191,6 +191,69 @@ def test_pat_margin_maps_to_net_profit_margin():
     assert label_metrics(text) == ("net_profit_margin",)
 
 
+# --- decision 39: a balance-sheet metric is "as of" a date, never "for" a period ---
+
+
+def test_cash_flow_reconciliation_line_is_not_labelled_as_the_balance():
+    """Real 3M shape: the cash-flow statement's working-capital-change line
+    reads just like a balance ("accounts payable ... were $111 million")
+    but is phrased "for the year ended", not "as of" -- a different fact."""
+    text = "3M Company's accounts payable for the year ended December 31, 2022 were $111 million."
+
+    assert label_metrics(text) == ()
+
+
+def test_the_actual_balance_sheet_line_is_still_labelled():
+    text = "3M Company had accounts payable of $3,183 million as of December 31, 2022."
+
+    assert label_metrics(text) == ("accounts_payable",)
+
+
+def test_inventories_for_the_year_ended_is_also_excluded():
+    text = "Inventories for the year ended December 31, 2022 were $0 million."
+
+    assert label_metrics(text) == ()
+
+
+def test_total_current_liabilities_as_of_a_date_is_still_labelled():
+    text = "Total current liabilities were $7,817 million as of February 2, 2019."
+
+    assert label_metrics(text) == ("total_current_liabilities",)
+
+
+def test_capital_expenditure_for_the_year_ended_is_not_excluded():
+    """Capital expenditure is genuinely a period figure -- the "as of"
+    exclusion only applies to the five point-in-time balance metrics."""
+    text = "Capital expenditure for the year ended December 31, 2022 was $1,577 million."
+
+    assert label_metrics(text) == ("capital_expenditure",)
+
+
+def test_net_income_for_the_year_ended_is_not_excluded():
+    text = "Net income for the year ended December 31, 2022 was $5,777 million."
+
+    assert label_metrics(text) == ("net_income",)
+
+
+def test_trade_payables_increased_during_the_period_is_still_labelled():
+    """"during the period" without "ended" is not the cash-flow reconciliation
+    phrasing -- the existing trade-payables test must keep passing."""
+    text = "Trade payables increased during the period."
+
+    assert label_metrics(text) == ("accounts_payable",)
+
+
+def test_llm_fallback_also_drops_a_cash_flow_line_mislabelled_as_the_balance():
+    """The model never sees the as-of rule, so it would otherwise relabel
+    exactly the sentence tier 1 deliberately left unlabelled."""
+    client = _SequencedClient([{"reasoning": "...", "metrics": ["accounts_payable"]}])
+    text = "3M Company's accounts payable for the year ended December 31, 2022 were $111 million."
+
+    result = label_metrics_llm_fallback(text, client, lexicon=("accounts_payable",))
+
+    assert result == ()
+
+
 # --- tier 3: model fallback, only reached when the rules found nothing ---
 
 

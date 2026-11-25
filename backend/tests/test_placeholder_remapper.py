@@ -1,6 +1,8 @@
 """Placeholder remapper tests."""
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor
+
 from contracts.models import CanonicalIdentifiers, PlaceholderRegistryEntry, RequestContext
 from online.placeholders.remapper import remap_entity, remap_query, reverse_map
 
@@ -120,3 +122,58 @@ def test_reverse_map_is_a_noop_on_text_with_no_placeholders():
     ctx.placeholder_map["<ENT_1>"] = "Acme Corp"
 
     assert reverse_map("plain answer text, no tokens here", ctx) == "plain answer text, no tokens here"
+
+
+def test_concurrent_remap_entity_on_the_same_context_never_corrupts_the_map():
+    """Decision 38's defensive fix: `_placeholder_for`'s read-then-write on
+    `ctx.placeholder_map` is now guarded by a lock (online/placeholders/
+    remapper.py). Today's real pipeline call sites never call
+    `remap_entity` from more than one thread on the same `ctx` (all
+    remapping finishes before pipeline_c4.py's parallel loops start, see
+    its own comment on that) -- this test guards the function itself,
+    so that stays true even if a future caller calls it concurrently.
+
+    Many threads resolve a mix of a shared registry entity, several
+    distinct heuristic-fallback entities, and the SAME heuristic entity
+    repeated many times, all on one shared `ctx`. Without the lock, two
+    threads racing to mint a fresh `<ENT_n>` token for the same new
+    surface form could both see the token free and both write, leaving
+    one placeholder silently pointing at the wrong company, or the same
+    surface form resolving to two different tokens."""
+    ctx = _ctx()
+    registry = [
+        PlaceholderRegistryEntry(surface_form="3M Company", placeholder="<ENT_1>", canonical=CanonicalIdentifiers(ticker="MMM")),
+    ]
+    # 16 repeats of the registry entity, 16 repeats of one shared new
+    # surface, and 20 genuinely distinct new surfaces -- a real mix of
+    # "same token every time" and "mint it exactly once" pressure.
+    surfaces = (
+        ["3M Company"] * 16
+        + ["Acme Corp"] * 16
+        + [f"Beta{i} Inc" for i in range(20)]
+    )
+
+    results: dict[str, set[str]] = {}
+
+    def _resolve(surface: str) -> tuple[str, str]:
+        return surface, remap_entity(surface, ctx, registry=registry)
+
+    with ThreadPoolExecutor(max_workers=16) as executor:
+        for surface, placeholder in executor.map(_resolve, surfaces):
+            results.setdefault(surface, set()).add(placeholder)
+
+    # Every surface resolved to exactly one placeholder across every call,
+    # from every thread -- never two different tokens for the same company
+    # from a lost update racing the mint.
+    assert all(len(placeholders) == 1 for placeholders in results.values()), results
+    assert results["3M Company"] == {"<ENT_1>"}
+
+    # No two distinct surfaces ended up sharing one placeholder either.
+    placeholder_by_surface = {surface: next(iter(p)) for surface, p in results.items()}
+    assert len(set(placeholder_by_surface.values())) == len(placeholder_by_surface)
+
+    # The map itself is internally consistent: every placeholder this run
+    # minted reverse-maps back to exactly the surface that earned it.
+    for surface, placeholder in placeholder_by_surface.items():
+        assert ctx.placeholder_map[placeholder] == surface
+        assert reverse_map(placeholder, ctx) == surface

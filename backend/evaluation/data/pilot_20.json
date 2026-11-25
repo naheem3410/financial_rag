@@ -1,0 +1,290 @@
+{
+  "note": "Fixed 20-item pilot list for the three-setup comparison (Extended System, plain LLM baseline, naive RAG). See KNOWN_ISSUES.md decision 2.",
+  "built": "2026-11-16",
+  "split": {
+    "temporal": 7,
+    "metric": 7,
+    "entity": 6
+  },
+  "filing_coverage_summary": {
+    "items_touching_at_least_one_new_filing": 18,
+    "items_touching_at_least_one_old_filing": 4,
+    "items_touching_both_old_and_new_filing": 2,
+    "items_touching_only_old_filings": 2,
+    "new_filings_covered": [
+      "ADOBE_2022_10K",
+      "AES_2022_10K",
+      "AMERICANWATERWORKS_2020_10K",
+      "BESTBUY_2019_10K",
+      "BOEING_2022_10K",
+      "COSTCO_2021_10K",
+      "GENERALMILLS_2020_10K",
+      "GENERALMILLS_2022_10K",
+      "LOCKHEEDMARTIN_2020_10K",
+      "PEPSICO_2021_10K"
+    ],
+    "old_filings_covered_in_pilot": [
+      "3M_2018_10K",
+      "3M_2022_10K",
+      "ACTIVISIONBLIZZARD_2019_10K",
+      "ADOBE_2016_10K"
+    ]
+  },
+  "items": [
+    {
+      "collision_id": "fbc_ext2_temp_0007",
+      "collision_axis": "temporal",
+      "question": "What were Adobe's net income in FY2015 and FY2021? Report both figures separately.",
+      "companies": [
+        "Adobe"
+      ],
+      "filings_needed": [
+        "ADOBE_2016_10K",
+        "ADOBE_2022_10K"
+      ],
+      "filing_status": "mixed_old_and_new"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0011",
+      "collision_axis": "temporal",
+      "question": "What were Adobe's net income in FY2015 and FY2020? Report both figures separately.",
+      "companies": [
+        "Adobe"
+      ],
+      "filings_needed": [
+        "ADOBE_2016_10K",
+        "ADOBE_2022_10K"
+      ],
+      "filing_status": "mixed_old_and_new"
+    },
+    {
+      "collision_id": "fbc_ext_temp_0001",
+      "collision_axis": "temporal",
+      "question": "What were 3M's accounts payable in FY2018 and FY2022? Report both figures separately. (in USD millions)",
+      "companies": [
+        "3M"
+      ],
+      "filings_needed": [
+        "3M_2018_10K",
+        "3M_2022_10K"
+      ],
+      "filing_status": "old"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0025",
+      "collision_axis": "temporal",
+      "question": "What were PepsiCo's net income in FY2019 and FY2021? Report both figures separately. (in USD millions)",
+      "companies": [
+        "PepsiCo"
+      ],
+      "filings_needed": [
+        "PEPSICO_2021_10K"
+      ],
+      "filing_status": "new"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0028",
+      "collision_axis": "temporal",
+      "question": "What were Boeing's total revenue in FY2020 and FY2022? Report both figures separately. (in USD millions)",
+      "companies": [
+        "Boeing"
+      ],
+      "filings_needed": [
+        "BOEING_2022_10K"
+      ],
+      "filing_status": "new"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0030",
+      "collision_axis": "temporal",
+      "question": "What were AES's total revenue in FY2020 and FY2022? Report both figures separately. (in USD millions)",
+      "companies": [
+        "AES"
+      ],
+      "filings_needed": [
+        "AES_2022_10K"
+      ],
+      "filing_status": "new"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0032",
+      "collision_axis": "temporal",
+      "question": "What were American Water Works's total revenue in FY2018 and FY2020? Report both figures separately. (in USD millions)",
+      "companies": [
+        "American Water Works"
+      ],
+      "filings_needed": [
+        "AMERICANWATERWORKS_2020_10K"
+      ],
+      "filing_status": "new"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0009",
+      "collision_axis": "metric",
+      "question": "What were Adobe's gross profit and net income for FY2020? Report both figures separately. (in USD millions)",
+      "companies": [
+        "Adobe"
+      ],
+      "filings_needed": [
+        "ADOBE_2022_10K"
+      ],
+      "filing_status": "new"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0029",
+      "collision_axis": "metric",
+      "question": "What were General Mills's net income and total revenue for FY2018? Report both figures separately. (in USD millions)",
+      "companies": [
+        "General Mills"
+      ],
+      "filings_needed": [
+        "GENERALMILLS_2020_10K"
+      ],
+      "filing_status": "new"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0042",
+      "collision_axis": "metric",
+      "question": "What were General Mills's net income and total revenue for FY2021? Report both figures separately. (in USD millions)",
+      "companies": [
+        "General Mills"
+      ],
+      "filings_needed": [
+        "GENERALMILLS_2022_10K"
+      ],
+      "filing_status": "new"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0078",
+      "collision_axis": "metric",
+      "question": "What were Lockheed Martin's net income and total revenue for FY2018? Report both figures separately. (in USD millions)",
+      "companies": [
+        "Lockheed Martin"
+      ],
+      "filings_needed": [
+        "LOCKHEEDMARTIN_2020_10K"
+      ],
+      "filing_status": "new"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0113",
+      "collision_axis": "metric",
+      "question": "What were Best Buy's net income and total revenue for FY2017? Report both figures separately. (in USD millions)",
+      "companies": [
+        "Best Buy"
+      ],
+      "filings_needed": [
+        "BESTBUY_2019_10K"
+      ],
+      "filing_status": "new"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0122",
+      "collision_axis": "metric",
+      "question": "What were Costco's net income and total revenue for FY2019? Report both figures separately. (in USD millions)",
+      "companies": [
+        "Costco"
+      ],
+      "filings_needed": [
+        "COSTCO_2021_10K"
+      ],
+      "filing_status": "new"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0024",
+      "collision_axis": "metric",
+      "question": "What were Activision Blizzard's net income and operating income for FY2018? Report both figures separately. (in USD millions)",
+      "companies": [
+        "Activision Blizzard"
+      ],
+      "filings_needed": [
+        "ACTIVISIONBLIZZARD_2019_10K"
+      ],
+      "filing_status": "old"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0001",
+      "collision_axis": "entity",
+      "question": "What was Boeing's accounts payable for FY2022, and what was Lockheed Martin's accounts payable for FY2020? Report both figures separately. (in USD millions)",
+      "companies": [
+        "Boeing",
+        "Lockheed Martin"
+      ],
+      "filings_needed": [
+        "BOEING_2022_10K",
+        "LOCKHEEDMARTIN_2020_10K"
+      ],
+      "filing_status": "new"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0005",
+      "collision_axis": "entity",
+      "question": "What was PepsiCo's accounts receivable for FY2021, and what was General Mills's accounts receivable for FY2022? Report both figures separately. (in USD millions)",
+      "companies": [
+        "PepsiCo",
+        "General Mills"
+      ],
+      "filings_needed": [
+        "GENERALMILLS_2022_10K",
+        "PEPSICO_2021_10K"
+      ],
+      "filing_status": "new"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0009",
+      "collision_axis": "entity",
+      "question": "What was AES's accounts payable for FY2022, and what was American Water Works's accounts payable for FY2020? Report both figures separately. (in USD millions)",
+      "companies": [
+        "AES",
+        "American Water Works"
+      ],
+      "filings_needed": [
+        "AES_2022_10K",
+        "AMERICANWATERWORKS_2020_10K"
+      ],
+      "filing_status": "new"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0010",
+      "collision_axis": "entity",
+      "question": "What was AES's accounts receivable for FY2022, and what was American Water Works's accounts receivable for FY2020? Report both figures separately. (in USD millions)",
+      "companies": [
+        "AES",
+        "American Water Works"
+      ],
+      "filings_needed": [
+        "AES_2022_10K",
+        "AMERICANWATERWORKS_2020_10K"
+      ],
+      "filing_status": "new"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0013",
+      "collision_axis": "entity",
+      "question": "What was Best Buy's total current assets for FY2019, and what was Costco's total current assets for FY2021? Report both figures separately. (in USD millions)",
+      "companies": [
+        "Best Buy",
+        "Costco"
+      ],
+      "filings_needed": [
+        "BESTBUY_2019_10K",
+        "COSTCO_2021_10K"
+      ],
+      "filing_status": "new"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0014",
+      "collision_axis": "entity",
+      "question": "What was Best Buy's total current liabilities for FY2019, and what was Costco's total current liabilities for FY2021? Report both figures separately. (in USD millions)",
+      "companies": [
+        "Best Buy",
+        "Costco"
+      ],
+      "filings_needed": [
+        "BESTBUY_2019_10K",
+        "COSTCO_2021_10K"
+      ],
+      "filing_status": "new"
+    }
+  ]
+}

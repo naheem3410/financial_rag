@@ -14,6 +14,14 @@ from offline.indexing.metadata_store_postgres import PostgresMetadataStore
 
 _PLACEHOLDER_RE_PREFIX = "<ENT_"
 
+# Below this many metric-filtered hits, a match is "lone" and gets unioned
+# with the wider fallback rather than trusted on its own (decisions 26/27).
+# 2 is the line: a genuine metric label almost always recurs (current vs.
+# prior year, a note plus a statement line, etc.), so two-or-more already
+# looks like real, cross-checked support. Exactly one hit has no such
+# corroboration and is exactly the shape of a single bad or edge-case label.
+_MIN_TRUSTED_METRIC_MATCHES = 2
+
 
 def resolve_company(sub_query: SubQuery, ctx: RequestContext) -> Optional[str]:
     """The company string to filter on, or `None` for "no constraint"
@@ -48,9 +56,23 @@ def query_for_company(
             company=company, fiscal_year=fiscal_year, quarter=quarter,
             filing_type=filing_type, metrics=[sub_query.metric],
         )
-        if with_metric:
+        if len(with_metric) >= _MIN_TRUSTED_METRIC_MATCHES:
             return with_metric
-        # fallback: metric label missing/wrong -- company+year is still better than nothing
+        if with_metric:
+            # A real metric usually shows up more than once in a filing (this
+            # year, prior year, a note, a statement). Exactly one hit is the
+            # suspicious case -- it is as likely to be a single bad label as a
+            # real lone match (this is what hid General Mills' receivables
+            # behind one mislabelled proposition, decisions 26/27). Don't
+            # trust it alone: union it with the wider pool so it stays in the
+            # race for reranking without being able to block the real
+            # evidence if it is in fact wrong.
+            wide = metadata_store.query(
+                company=company, fiscal_year=fiscal_year, quarter=quarter, filing_type=filing_type
+            )
+            seen = {p.proposition_id for p in with_metric}
+            return list(with_metric) + [p for p in wide if p.proposition_id not in seen]
+        # zero matches: metric label missing/wrong -- company+year is still better than nothing
 
     return metadata_store.query(
         company=company, fiscal_year=fiscal_year, quarter=quarter, filing_type=filing_type
@@ -68,10 +90,17 @@ def filter_candidates(
 
     `enable_metric_filter=True` (step 1.4, decision 12) also filters by the
     sub-query's metric label, so a big company+year pile (hundreds of
-    unrelated facts) shrinks to the ones actually about that metric. If
-    that leaves nothing -- an unlabelled fact, or the wrong metric name --
-    this falls back to company+year alone rather than a silent empty
-    answer. If even that comes back too thin, "try again with other names"
+    unrelated facts) shrinks to the ones actually about that metric.
+    - Zero metric-filtered matches: falls back to company+year alone rather
+      than a silent empty answer (unlabelled fact, or wrong metric name).
+    - Two or more: trusted and returned narrowed, as a real metric usually
+      recurs across a filing -- this is the common, working case.
+    - Exactly one: not trusted alone (decisions 26/27 -- a single bad label
+      can permanently hide the real evidence behind it). Unioned with the
+      wider company+year pool instead of replacing it, so the lone match
+      stays in the running for reranking without being able to block
+      anything.
+    If even that comes back too thin, "try again with other names"
     (step 4.5, callers use `retry_with_other_names.filter_with_retry`
     instead of this function directly) can retry once more with another
     known name for the same company."""

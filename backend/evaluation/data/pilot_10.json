@@ -1,0 +1,27 @@
+{
+  "note": "Fixed 10-item subset of pilot_20.json for the real, paid three-setup comparison (plain_ai, c0, c4_plus) plus the C4+ RAGAS smoke test. Selected to keep pilot_20's 7/7/6 axis balance roughly proportional (4 temporal / 3 metric / 3 entity) and its weighting toward the newly-indexed filings. The first 3 items listed here are also the Part 1 RAGAS smoke-test items -- run once under c4_plus, never re-run.",
+  "built": "2026-11-17",
+  "split": {
+    "temporal": 4,
+    "metric": 3,
+    "entity": 3
+  },
+  "ragas_smoke_test_items": [
+    "fbc_ext2_temp_0028",
+    "fbc_ext2_temp_0032",
+    "fbc_ext2_metric_0078"
+  ],
+  "ragas_smoke_test_note": "fbc_ext2_temp_0007 was swapped out of this list after a real run: it abstained with zero retrieved evidence because of an Adobe-name-resolution bug (see KNOWN_ISSUES.md), so it has no context for RAGAS to score. The result is still kept as a real pilot_10 data point.",
+  "items": [
+    {"collision_id": "fbc_ext2_temp_0007"},
+    {"collision_id": "fbc_ext2_temp_0025"},
+    {"collision_id": "fbc_ext2_temp_0028"},
+    {"collision_id": "fbc_ext2_temp_0032"},
+    {"collision_id": "fbc_ext2_metric_0009"},
+    {"collision_id": "fbc_ext2_metric_0078"},
+    {"collision_id": "fbc_ext2_metric_0122"},
+    {"collision_id": "fbc_ext2_entity_0001"},
+    {"collision_id": "fbc_ext2_entity_0005"},
+    {"collision_id": "fbc_ext2_entity_0009"}
+  ]
+}

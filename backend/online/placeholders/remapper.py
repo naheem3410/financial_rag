@@ -19,9 +19,21 @@ module holds nothing between calls.
 from __future__ import annotations
 
 import re
+import threading
 from typing import Sequence
 
 from contracts.models import PlaceholderRegistryEntry, RequestContext
+
+# Decision 38: guards the read-then-write in `_placeholder_for` (check
+# `ctx.placeholder_map`, maybe mint a fresh token, write it back). Today
+# every real caller finishes all its remapping before any concurrent work
+# starts (see pipeline_c4.py's own note on this), so nothing actually
+# calls this function from two threads on the same `ctx` at once right
+# now -- this lock is here so that stays true if a future caller ever
+# does, instead of relying on it staying true by convention. One process-
+# wide lock, not one per `ctx`: placeholder assignment is rare and cheap,
+# so serializing it across unrelated requests too costs nothing real.
+_placeholder_lock = threading.Lock()
 
 _ENTITY_SUFFIXES = (
     "Corporation", "Incorporated", "Corp", "Inc", "Company", "Co",
@@ -52,24 +64,25 @@ def _placeholder_for(
     longest-alias form on first use. Otherwise reuses an earlier-assigned
     placeholder for that exact surface, or mints a fresh one that avoids
     every token in use or reserved by the registry."""
-    if surface in registry_by_surface:
-        placeholder = registry_by_surface[surface]
-        if placeholder not in ctx.placeholder_map:
-            ctx.placeholder_map[placeholder] = canonical_by_placeholder[placeholder]
-        return placeholder
-
-    for placeholder, real_name in ctx.placeholder_map.items():
-        if real_name == surface:
+    with _placeholder_lock:
+        if surface in registry_by_surface:
+            placeholder = registry_by_surface[surface]
+            if placeholder not in ctx.placeholder_map:
+                ctx.placeholder_map[placeholder] = canonical_by_placeholder[placeholder]
             return placeholder
 
-    reserved = set(ctx.placeholder_map.keys()) | set(registry_by_surface.values())
-    n = 1
-    placeholder = f"<ENT_{n}>"
-    while placeholder in reserved:
-        n += 1
+        for placeholder, real_name in ctx.placeholder_map.items():
+            if real_name == surface:
+                return placeholder
+
+        reserved = set(ctx.placeholder_map.keys()) | set(registry_by_surface.values())
+        n = 1
         placeholder = f"<ENT_{n}>"
-    ctx.placeholder_map[placeholder] = surface
-    return placeholder
+        while placeholder in reserved:
+            n += 1
+            placeholder = f"<ENT_{n}>"
+        ctx.placeholder_map[placeholder] = surface
+        return placeholder
 
 
 def remap_query(query: str, ctx: RequestContext, registry: Sequence[PlaceholderRegistryEntry] = ()) -> str:

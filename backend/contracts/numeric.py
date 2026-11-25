@@ -73,6 +73,20 @@ def strip_scale_word(text: str) -> str:
     return _SCALE_WORD_RE.sub("", text).strip()
 
 
+_SCALE_MULTIPLIERS: dict[str, Decimal] = {
+    "unit": Decimal(1),
+    "thousands": Decimal(1_000),
+    "millions": Decimal(1_000_000),
+    "billions": Decimal(1_000_000_000),
+}
+
+
+def value_in_base_units(value: float, scale: str) -> Decimal:
+    """`NumericRecord.value` scaled to ones, using its own `scale` field --
+    $2.07 billion and $2,065 million are the same fact, not two numbers."""
+    return Decimal(str(value)) * _SCALE_MULTIPLIERS.get(scale, Decimal(1))
+
+
 def _looks_quarterly_without_explicit_quarter(text: str) -> bool:
     return bool(_QUARTERLY_HINT_RE.search(text)) and not (_Q_THEN_FY_RE.search(text) or _FY_THEN_Q_RE.search(text))
 

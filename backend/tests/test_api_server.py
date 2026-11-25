@@ -1,8 +1,12 @@
+import threading
+
 import pytest
 
 pytest.importorskip("fastapi")
 
-from api.server import build_registry, build_response, make_name_restorer  # noqa: E402
+from fastapi.testclient import TestClient  # noqa: E402
+
+from api.server import Runtime, app, build_registry, build_response, make_name_restorer  # noqa: E402
 from contracts.models import RequestContext  # noqa: E402
 from offline.registry.entities import Entity  # noqa: E402
 from online.output.generator import AnswerValue  # noqa: E402
@@ -48,6 +52,43 @@ def test_restorer_swaps_known_placeholders_and_leaves_unknown_ones():
     assert restore("<ENT_99> is unknown") == "<ENT_99> is unknown"
 
 
+# --- /api/health and /api/info: no pipeline, no database, just the
+# runtime's static info dict, so a bare Runtime stub is enough. ---
+
+
+@pytest.fixture
+def info_client():
+    rt = Runtime(
+        config=None, embedder=None, reranker=None, bundle=None, registry=[], clients={}, models={},
+        restore_names=lambda s: s, lock=threading.Lock(),
+        info={
+            "pipeline": "c4_full",
+            "companies": ["3M Company"],
+            "documents": ["3M_2018_10K"],
+            "proposition_count": 42,
+            "models": {"generator": "m"},
+            "document_types": ["10-K"],
+        },
+    )
+    app.state.runtime = rt
+    return TestClient(app)
+
+
+def test_health_endpoint_returns_ok(info_client):
+    response = info_client.get("/api/health")
+    assert response.status_code == 200
+    assert response.json() == {"status": "ok"}
+
+
+def test_info_endpoint_returns_the_runtimes_info_dict(info_client):
+    response = info_client.get("/api/info")
+    assert response.status_code == 200
+    body = response.json()
+    assert body["pipeline"] == "c4_full"
+    assert body["companies"] == ["3M Company"]
+    assert body["proposition_count"] == 42
+
+
 def _result(**overrides):
     base = dict(
         question="q", abstained=False, abstention_message="", answerable=True,
@@ -63,6 +104,7 @@ def _result(**overrides):
             {"claim_id": "C1", "claim_text": "<ENT_1> accounts payable: 2,266", "is_numeric": True,
              "verdict": "match", "supporting_fff_ids": ["f1"]},
         ],
+        confidence_score=1.0,
     )
     base.update(overrides)
     return C4AnswerResult(**base)
@@ -86,6 +128,7 @@ def test_abstained_response_reports_zero_verified():
             {"claim_id": "c_1", "claim_text": "q", "is_numeric": True, "verdict": "unsupported",
              "supporting_fff_ids": []},
         ],
+        confidence_score=0.0,
     )
     out = build_response(result, {}, lambda s: s, lambda pid: "", 10)
     assert out.status == "abstained"

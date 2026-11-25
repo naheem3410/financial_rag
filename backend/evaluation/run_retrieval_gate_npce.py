@@ -70,7 +70,7 @@ def evaluate_question(
         fused = apply_time_weighting(fused, enabled=time_weighting)
         fused_props = [f.proposition for f in fused]
 
-        reranked = list(reranker.rerank(sq, fused_props[:top_k], k=rerank_top_k)) if fused_props else []
+        reranked = list(reranker.rerank(sq, fused_props[:top_k], k=rerank_top_k, ctx=ctx)) if fused_props else []
 
         hit_fused = 1.0 if gold_values and any(is_answer_present(p, gold_values) for p in fused_props[:top_k]) else 0.0
         hit_reranked = 1.0 if gold_values and any(is_answer_present(p, gold_values) for p in reranked) else 0.0

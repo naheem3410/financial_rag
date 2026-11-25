@@ -52,6 +52,22 @@ def test_plain_ai_baseline_config_loads_and_validates():
     assert cfg.llm.call_sites["plain_ai_baseline"].model == "gpt-4.1-mini-2025-04-14"
 
 
+def test_c4_plus_config_loads_and_validates():
+    """Step 5.2, decision 12. C4+ is C4 with retrieval.enable_metric_filter
+    turned on -- lives in config/comparison/, not config/experiments/, so
+    it never counts toward (or is found by) the "exactly five" check above."""
+    paths = glob.glob("config/experiments/*.yaml")
+    assert "config/comparison/c4_plus.yaml" not in paths
+    assert not any("c4_plus" in path for path in paths)
+
+    cfg = load_config("config/comparison/c4_plus.yaml")
+
+    assert cfg.experiment_id == "c4_plus"
+    assert cfg.enable_npce is True
+    assert cfg.enable_cove is True
+    assert cfg.retrieval.enable_metric_filter is True
+
+
 def test_corpus_path_is_configurable_not_hardcoded():
     cfg = ExperimentConfig.model_validate(
         {**_BASE, "corpus": {"pdf_dir": "somewhere/else", "required_docs_file": "somewhere/else/allowlist.txt"}}

@@ -5,9 +5,9 @@ import type { AskResponse, SystemInfo } from "@/lib/types";
 import { AnswerView } from "./AnswerView";
 import { LoadingCard } from "./LoadingCard";
 import { QueryPanel } from "./QueryPanel";
-import { UploadPanel } from "./UploadPanel";
+import { ResultsExplorer } from "./ResultsExplorer";
 
-type Tab = "ask" | "upload";
+type Tab = "ask" | "results";
 
 type Phase =
   | { kind: "idle" }
@@ -95,12 +95,16 @@ export function Workspace() {
         <TabButton active={tab === "ask"} onClick={() => setTab("ask")}>
           Ask a question
         </TabButton>
-        <TabButton active={tab === "upload"} onClick={() => setTab("upload")}>
-          Upload a document
+        <TabButton active={tab === "results"} onClick={() => setTab("results")}>
+          Experiment Results
         </TabButton>
       </nav>
 
-      {tab === "ask" ? (
+      {tab === "results" ? (
+        <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 sm:px-6">
+          <ResultsExplorer />
+        </main>
+      ) : (
         <main className="mx-auto grid w-full max-w-6xl flex-1 gap-6 px-4 py-6 sm:px-6 lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] lg:items-start">
           <QueryPanel info={info} busy={busy} disabled={connection === "offline"} onAsk={ask} />
 
@@ -110,10 +114,6 @@ export function Workspace() {
             {phase.kind === "error" && <ErrorCard message={phase.message} />}
             {phase.kind === "done" && <AnswerView data={phase.data} />}
           </section>
-        </main>
-      ) : (
-        <main className="mx-auto w-full max-w-2xl flex-1 px-4 py-6 sm:px-6">
-          <UploadPanel info={info} />
         </main>
       )}
 

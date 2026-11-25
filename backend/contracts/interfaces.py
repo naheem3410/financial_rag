@@ -2,7 +2,7 @@
 Swapping cells just rebinds QueryTransformer/Verifier; nothing else changes."""
 from __future__ import annotations
 
-from typing import Protocol, Sequence
+from typing import Optional, Protocol, Sequence
 
 from contracts.models import FFF, Proposition, RequestContext, SubQuery, VerifiedAnswer
 
@@ -13,7 +13,7 @@ class Retriever(Protocol):
 
 class Reranker(Protocol):
     def rerank(
-        self, sq: SubQuery, props: Sequence[Proposition], k: int
+        self, sq: SubQuery, props: Sequence[Proposition], k: int, ctx: Optional[RequestContext] = None
     ) -> Sequence[Proposition]: ...
 
 

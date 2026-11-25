@@ -148,6 +148,17 @@ def run_c4_question_once(
         usage, usage_lock, spend_state, max_spend_usd, collision_id, model=cove_model,
     )
 
+    # Decision 25: on-demand metric labeling only fires when the config flag is
+    # on AND the optional metric_label_fallback call site is actually configured
+    # -- the flag alone (with no call site) would otherwise crash building the client.
+    metric_label_llm_client = None
+    if config.retrieval.enable_ondemand_metric_labeling and "metric_label_fallback" in config.llm.call_sites:
+        metric_label_model = config.llm.call_sites["metric_label_fallback"].model
+        metric_label_llm_client = _tracked_client(
+            build_llm_client("metric_label_fallback", config),
+            usage, usage_lock, spend_state, max_spend_usd, collision_id, model=metric_label_model,
+        )
+
     start = time.monotonic()
     result = answer_question(
         record["question"], bundle, embedder, reranker,
@@ -156,6 +167,7 @@ def run_c4_question_once(
         config, registry=registry,
         fff_rewriter_model=fff_model, generator_model=generator_model,
         query_splitter_model=splitter_model, cove_verification_model=cove_model,
+        metric_label_llm_client=metric_label_llm_client,
     )
     elapsed = time.monotonic() - start
 

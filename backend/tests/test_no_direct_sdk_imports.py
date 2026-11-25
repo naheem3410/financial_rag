@@ -26,7 +26,14 @@ FORBIDDEN_SDK_ROOTS = {
 # llm/ is the one permitted seam. Everything else here is repo/tooling
 # noise, never a source of a real import.
 EXEMPT_TOP_LEVEL_DIRS = {"llm"}
-EXCLUDED_DIR_NAMES = {".git", ".pytest_cache", "__pycache__", ".venv", "venv", "node_modules"}
+EXCLUDED_DIR_NAMES = {
+    ".git", ".pytest_cache", "__pycache__", ".venv", "venv", "node_modules",
+    # ragas_env is a separate, isolated venv with its own interpreter
+    # (KNOWN_ISSUES.md decision 20) -- it never shares a process with the
+    # main codebase's LLMClient seam, so this scan's rule doesn't apply to
+    # it, same as .venv/venv above.
+    "ragas_env",
+}
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 

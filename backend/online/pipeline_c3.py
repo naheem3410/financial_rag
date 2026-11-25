@@ -238,7 +238,7 @@ def answer_question(
         fused_props: list[Proposition] = [f.proposition for f in fused]
 
         if config.retrieval.enable_reranker and fused_props:
-            reranked_props = list(reranker.rerank(sub_query, fused_props[:top_k], k=rerank_top_k))
+            reranked_props = list(reranker.rerank(sub_query, fused_props[:top_k], k=rerank_top_k, ctx=ctx))
         else:
             reranked_props = fused_props[:rerank_top_k]
         for p in reranked_props:

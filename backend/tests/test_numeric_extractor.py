@@ -46,6 +46,35 @@ def test_tier2_resolves_year_ended_phrasing():
     assert record.period.quarter is None
 
 
+def test_tier2_resolves_weeks_ended_phrasing():
+    """Regression (2026-11-17): 52/53-week fiscal year retailers (Costco)
+    state income-statement periods as "52 weeks ended <date>", not "year
+    ended <date>" -- tier2 only recognized the literal word "year"/"quarter"
+    before "ended", so every line in this phrasing got no period and no
+    fiscal_year tag at all (KNOWN_ISSUES.md, Costco FY2019 net income/total
+    revenue gap)."""
+    record = extract_tier2(
+        "Costco Wholesale Corporation had total revenue of $152,703 million "
+        "for the 52 weeks ended September 1, 2019."
+    )
+
+    assert record is not None
+    assert record.value == 152703.0
+    assert record.scale == "millions"
+    assert record.period.fiscal_year == 2019
+    assert record.period.quarter is None
+
+
+def test_tier2_resolves_53_weeks_ended_phrasing():
+    record = extract_tier2(
+        "Acme Corp had net sales of $10,000 million for the 53 weeks ended January 1, 2022."
+    )
+
+    assert record is not None
+    assert record.period.fiscal_year == 2022
+    assert record.period.quarter is None
+
+
 def test_tier2_resolves_quarter_ended_phrasing_via_calendar_month():
     record = extract_tier2("Acme Corp had segment revenue of $8.5 billion for the quarter ended June 30, 2023.")
 

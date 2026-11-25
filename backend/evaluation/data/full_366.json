@@ -1,0 +1,1102 @@
+{
+  "items": [
+    {
+      "collision_id": "fbc_temporal_pri_0002"
+    },
+    {
+      "collision_id": "fbc_temporal_pri_0006"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0021"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0022"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0023"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0024"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0025"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0026"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0027"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0028"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0029"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0030"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0031"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0032"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0033"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0034"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0035"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0036"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0037"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0038"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0039"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0040"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0041"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0042"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0043"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0044"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0046"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0048"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0050"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0052"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0054"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0056"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0058"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0060"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0061"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0062"
+    },
+    {
+      "collision_id": "fbc_metric_pri_0063"
+    },
+    {
+      "collision_id": "fbc_ext_temp_0001"
+    },
+    {
+      "collision_id": "fbc_ext_temp_0002"
+    },
+    {
+      "collision_id": "fbc_ext_temp_0003"
+    },
+    {
+      "collision_id": "fbc_ext_temp_0004"
+    },
+    {
+      "collision_id": "fbc_ext_temp_0005"
+    },
+    {
+      "collision_id": "fbc_ext_temp_0006"
+    },
+    {
+      "collision_id": "fbc_ext_temp_0007"
+    },
+    {
+      "collision_id": "fbc_ext_temp_0008"
+    },
+    {
+      "collision_id": "fbc_ext_temp_0009"
+    },
+    {
+      "collision_id": "fbc_ext_temp_0010"
+    },
+    {
+      "collision_id": "fbc_ext_temp_0011"
+    },
+    {
+      "collision_id": "fbc_ext_temp_0012"
+    },
+    {
+      "collision_id": "fbc_ext_temp_0013"
+    },
+    {
+      "collision_id": "fbc_ext_temp_0014"
+    },
+    {
+      "collision_id": "fbc_ext_temp_0015"
+    },
+    {
+      "collision_id": "fbc_ext_temp_0016"
+    },
+    {
+      "collision_id": "fbc_ext_temp_0017"
+    },
+    {
+      "collision_id": "fbc_ext_temp_0018"
+    },
+    {
+      "collision_id": "fbc_ext_entity_0001"
+    },
+    {
+      "collision_id": "fbc_ext_entity_0002"
+    },
+    {
+      "collision_id": "fbc_ext_entity_0003"
+    },
+    {
+      "collision_id": "fbc_ext_entity_0004"
+    },
+    {
+      "collision_id": "fbc_ext_entity_0005"
+    },
+    {
+      "collision_id": "fbc_ext_entity_0006"
+    },
+    {
+      "collision_id": "fbc_ext_entity_0007"
+    },
+    {
+      "collision_id": "fbc_ext_entity_0008"
+    },
+    {
+      "collision_id": "fbc_ext_entity_0009"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0001"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0002"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0003"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0004"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0005"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0006"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0007"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0008"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0009"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0010"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0011"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0012"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0013"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0014"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0015"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0016"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0017"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0018"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0019"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0020"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0021"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0022"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0023"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0024"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0025"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0026"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0027"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0028"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0029"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0030"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0031"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0032"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0033"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0034"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0035"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0036"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0037"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0038"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0039"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0040"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0041"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0042"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0043"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0044"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0045"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0046"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0047"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0048"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0049"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0050"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0051"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0052"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0053"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0054"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0055"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0056"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0057"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0058"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0059"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0060"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0061"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0062"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0063"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0064"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0065"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0066"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0067"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0068"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0069"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0070"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0071"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0072"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0073"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0074"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0075"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0076"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0077"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0078"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0079"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0080"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0081"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0082"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0083"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0084"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0085"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0086"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0087"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0088"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0089"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0090"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0091"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0092"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0093"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0094"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0095"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0096"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0097"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0098"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0099"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0100"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0101"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0102"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0103"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0104"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0105"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0106"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0107"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0108"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0109"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0110"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0111"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0112"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0113"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0114"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0115"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0116"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0117"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0118"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0119"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0120"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0121"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0122"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0123"
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0124"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0001"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0002"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0003"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0004"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0005"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0006"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0007"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0008"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0009"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0010"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0011"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0012"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0013"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0014"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0015"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0016"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0017"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0018"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0019"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0020"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0021"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0022"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0023"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0024"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0025"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0026"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0027"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0028"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0029"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0030"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0031"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0032"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0033"
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0034"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0001"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0002"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0003"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0004"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0005"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0006"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0007"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0008"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0009"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0010"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0011"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0012"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0013"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0014"
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0015"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0001"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0002"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0003"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0004"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0005"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0006"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0007"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0008"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0009"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0010"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0011"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0012"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0013"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0014"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0015"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0016"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0017"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0018"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0019"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0020"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0021"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0022"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0023"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0024"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0025"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0026"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0027"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0028"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0029"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0030"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0031"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0032"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0033"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0034"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0035"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0036"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0037"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0038"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0039"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0040"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0041"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0042"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0043"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0044"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0045"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0046"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0047"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0048"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0049"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0050"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0051"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0052"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0053"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0054"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0055"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0056"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0057"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0058"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0059"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0060"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0061"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0062"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0063"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0064"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0065"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0066"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0067"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0068"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0069"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0070"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0071"
+    },
+    {
+      "collision_id": "fbc_ext3_entity_0072"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0001"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0002"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0003"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0004"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0005"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0006"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0007"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0008"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0009"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0010"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0011"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0012"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0013"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0014"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0015"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0016"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0017"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0018"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0019"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0020"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0021"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0022"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0023"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0024"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0025"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0026"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0027"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0028"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0029"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0030"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0031"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0032"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0033"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0034"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0035"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0036"
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0037"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0001"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0002"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0003"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0004"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0005"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0006"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0007"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0008"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0009"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0010"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0011"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0012"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0013"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0014"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0015"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0016"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0017"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0018"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0019"
+    },
+    {
+      "collision_id": "fbc_ext3_metric_0020"
+    }
+  ]
+}

@@ -66,17 +66,54 @@ def test_other_surface_forms_empty_for_an_unregistered_placeholder():
 # --- filter_with_retry ---
 
 
-def test_a_non_empty_first_try_never_retries(clean_postgres):
+def test_a_non_empty_first_try_still_unions_the_sibling_name_decision_31(clean_postgres):
+    """Decision 31: a non-empty first try used to skip the retry entirely.
+    That hid Adobe's post-rename filing behind a stray same-year mention
+    under the pre-rename name (KNOWN_ISSUES.md decision 31) -- now the
+    sibling name is always queried too and unioned in. Here the sibling
+    ("Acme") matches nothing real, so the union is a no-op and the
+    candidates are unchanged, but `retried` now reports the attempt
+    honestly instead of claiming none was made."""
     store = _seeded_store(clean_postgres)
     ctx = RequestContext(request_id="r_1", config_hash="cfg", placeholder_map={"<ENT_1>": "Acme Corporation"})
     sub_query = SubQuery(sub_query_id="sq_1", entity="<ENT_1>", metric="", period=Period(fiscal_year=2024), period_label="FY2024")
 
     outcome = filter_with_retry(sub_query, ctx, store, REGISTRY)
 
-    assert outcome.retried is False
-    assert outcome.names_tried == ()
+    assert outcome.retried is True
+    assert outcome.names_tried == ("Acme",)  # queried, even though it found nothing
     assert outcome.found is True
     assert [p.proposition_id for p in outcome.candidates] == ["p_1"]
+    store.close()
+
+
+def test_a_non_empty_first_try_from_the_wrong_name_still_finds_the_sibling(clean_postgres):
+    """The exact Adobe-rename shape: the resolved name's own filing has a
+    real but unrelated hit for the same period (decision 31's lease-schedule
+    noise), which used to block the retry that would have found the
+    sibling name's real evidence. Now both are unioned."""
+    store = _seeded_store(clean_postgres)
+    noise = Proposition(
+        proposition_id="p_noise",
+        text="Acme Corporation's future minimum lease payment for FY2024 was 5 dollars.",
+        provenance_tier="retrieved", ingestion_path="A_unstructured",
+        numeric=NumericRecord(value=5.0, scale="unit", currency=None, unit="absolute", period=Period(fiscal_year=2024)),
+        confidence=Confidence(extraction_tier="rules"),
+        metadata=PropositionMetadata(
+            company="Acme", filing_type="10-K", filing_date="2024-11-05",
+            section="Notes", page=9, source_uri="acme_old.pdf",
+        ),
+    )
+    store.upsert(noise)
+    ctx = RequestContext(request_id="r_1", config_hash="cfg", placeholder_map={"<ENT_1>": "Acme"})
+    sub_query = SubQuery(sub_query_id="sq_1", entity="<ENT_1>", metric="", period=Period(fiscal_year=2024), period_label="FY2024")
+
+    outcome = filter_with_retry(sub_query, ctx, store, REGISTRY)
+
+    assert outcome.retried is True
+    assert outcome.found is True
+    ids = {p.proposition_id for p in outcome.candidates}
+    assert ids == {"p_noise", "p_1"}
     store.close()
 
 

@@ -1,7 +1,7 @@
-"""Try again with other names (step 4.5, decision 5 and 11): when the
-metadata filter's normal exact-match lookup comes back empty, retry once --
-and only once -- with another known name for the same company, before
-giving an honest "not found" instead of a silently weak answer.
+"""Try again with other names (step 4.5, decision 5 and 11; widened by
+decision 31): try every other known name for the same company and union
+whatever any of them finds in with the first name's result, before giving
+an honest "not found" instead of a silently weak answer.
 
 No model call: the alternate names tried are the same placeholder registry
 (step 2.1) every other part of the query pipeline already uses, never a
@@ -55,26 +55,49 @@ def filter_with_retry(
     enable_metric_filter: bool = False,
 ) -> RetryOutcome:
     """The entry point callers use in place of `filter_candidates` directly
-    when they want the retry road. One retry only (decision 11's cap) -- a
-    second empty result is an honest "not found", never a third try."""
+    when they want the retry road.
+
+    A company that renamed mid-corpus (decision 22's manual alias groups,
+    e.g. Adobe) has real filings filed under two different legal names. The
+    one name `resolve_company` picks (the longest alias) governs one era,
+    not the other -- a query for a period that falls under the OTHER name
+    can come back non-empty (a stray same-year mention in the right-named
+    filing) without ever containing the real evidence, which then silently
+    blocked the retry that would have found it (decision 31). So every
+    other known surface form is queried and unioned in, not just tried
+    when the first name comes back empty.
+
+    Decision 11's "one retry only" cap doesn't apply any more: these are
+    local Postgres lookups, not an LLM call, so there is no cost reason to
+    cap them, and decision 31 found that capping at exactly one (picking
+    the single longest alternate) can pick a synthetic possessive variant
+    ("Adobe Systems's") over the one alternate that is a real legal name on
+    file ("Adobe Inc.") -- length alone doesn't reliably sort "real other
+    name" ahead of "short-form/possessive reachability alias". Querying
+    every alternate is still cheap for every other company too: with only
+    one real legal name on file, the alternate surface forms are short-name
+    variants that match nothing in the metadata store, so this changes
+    nothing for them."""
     company = resolve_company(sub_query, ctx)
     first = query_for_company(sub_query, company, metadata_store, enable_metric_filter)
-    if first:
-        return RetryOutcome(candidates=tuple(first), retried=False, names_tried=(), found=True)
 
     if company is None:
         # NPCE-off passthrough -- nothing was resolved to retry with either.
-        return RetryOutcome(candidates=(), retried=False, names_tried=(), found=False)
+        return RetryOutcome(candidates=tuple(first), retried=False, names_tried=(), found=bool(first))
 
     alternates = other_surface_forms(sub_query.entity, registry, company)
     if not alternates:
-        return RetryOutcome(candidates=(), retried=False, names_tried=(), found=False)
+        return RetryOutcome(candidates=tuple(first), retried=False, names_tried=(), found=bool(first))
 
-    alternate_name = alternates[0]
-    retried_candidates = query_for_company(sub_query, alternate_name, metadata_store, enable_metric_filter)
+    seen = {p.proposition_id for p in first}
+    merged = list(first)
+    for alternate_name in alternates:
+        retried_candidates = query_for_company(sub_query, alternate_name, metadata_store, enable_metric_filter)
+        merged.extend(p for p in retried_candidates if p.proposition_id not in seen)
+        seen.update(p.proposition_id for p in retried_candidates)
     return RetryOutcome(
-        candidates=tuple(retried_candidates),
+        candidates=tuple(merged),
         retried=True,
-        names_tried=(alternate_name,),
-        found=bool(retried_candidates),
+        names_tried=tuple(alternates),  # every alternate actually queried, found or not
+        found=bool(merged),
     )

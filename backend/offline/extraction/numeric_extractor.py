@@ -38,9 +38,13 @@ _QUARTER_FY_RE = re.compile(r"\bQ(?P<quarter>[1-4])\s*FY\s*(?P<year>\d{4})\b", r
 _FY_ONLY_RE = re.compile(r"\bFY\s*(?P<year>\d{4})\b", re.IGNORECASE)
 _FISCAL_YEAR_WORDS_RE = re.compile(r"\bfiscal year\s+(?P<year>\d{4})\b", re.IGNORECASE)
 # "year ended December 31, 2018" style — what the segmenter's own prompt
-# actually produces, not "FY2018" shorthand.
+# actually produces, not "FY2018" shorthand. Also matches "52 weeks ended
+# <date>" / "53 weeks ended <date>", how 52/53-week fiscal year retailers
+# (Costco, and some of PepsiCo's phrasing) state the same thing -- missing
+# this left every income-statement line in that phrasing with no period at
+# all (regression 2026-11-17, see KNOWN_ISSUES.md).
 _PERIOD_ENDED_RE = re.compile(
-    r"\b(?P<period_word>year|quarter)\s+ended\s+(?P<month>[A-Za-z]+)\s+\d{1,2},\s*(?P<year>\d{4})\b",
+    r"\b(?P<period_word>year|quarter|\d+\s+weeks?)\s+ended\s+(?P<month>[A-Za-z]+)\s+\d{1,2},\s*(?P<year>\d{4})\b",
     re.IGNORECASE,
 )
 # balance-sheet snapshot phrasing ("at <date>" / "as of <date>") -- a
@@ -87,7 +91,10 @@ def _extract_period_tier2(text: str) -> Optional[Period]:
     match = _PERIOD_ENDED_RE.search(text)
     if match:
         year = int(match.group("year"))
-        if match.group("period_word").lower() == "year":
+        period_word = match.group("period_word").lower()
+        if period_word != "quarter":
+            # "year" or "N weeks" -- a 52/53-week fiscal year is still a
+            # full year, not a calendar quarter, so no quarter is inferred.
             return Period(fiscal_year=year)
         # calendar quarter from the filing's own stated month, so no
         # company-specific fiscal-year-end convention is needed.

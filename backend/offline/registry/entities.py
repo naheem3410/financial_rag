@@ -26,6 +26,24 @@ from infra.versioning import optimistic_update
 _CORPORATE_SUFFIXES = {
     "inc", "incorporated", "corp", "corporation", "company", "co", "ltd", "llc", "plc", "group", "holdings",
 }
+_LEADING_ARTICLES = {"the"}
+
+# Same real company, different legal name on file (e.g. a post-rename
+# filing) -- grouped here by hand so their short form isn't dropped as a
+# false collision. Narrow and manual on purpose: this does NOT generalize,
+# it only covers pairs someone has actually noticed and listed. See
+# KNOWN_ISSUES.md decision 22 for why, and check back there before adding
+# a filing for a company that might have renamed since an earlier one.
+_MANUAL_ALIAS_GROUPS: tuple[frozenset[str], ...] = (
+    frozenset({"Adobe Systems Incorporated", "Adobe Inc."}),  # Adobe's 2018 legal-name change
+)
+
+
+def _group_key(company: str) -> frozenset[str]:
+    for group in _MANUAL_ALIAS_GROUPS:
+        if company in group:
+            return group
+    return frozenset({company})
 
 
 @dataclass(frozen=True)
@@ -62,24 +80,44 @@ def _name_variants(company: str) -> set[str]:
     if trimmed:
         variants.add(" ".join(trimmed))
         variants.add(trimmed[0])
+        # "The Boeing Company" -> trimmed[0] is "The", not the real short
+        # name. Drop a leading article before taking the first word, same
+        # way a trailing suffix is dropped above, so "Boeing" is reachable.
+        core = trimmed[1:] if len(trimmed) > 1 and trimmed[0].lower() in _LEADING_ARTICLES else trimmed
+        if core:
+            variants.add(" ".join(core))
+            variants.add(core[0])
     with_possessive = variants | {f"{v}'s" for v in variants}
     return {v for v in with_possessive if len(v) <= len(company)}
 
 
 def build_registry(entities: Sequence[Entity]) -> list[PlaceholderRegistryEntry]:
-    """One placeholder per company. A short name shared by two companies is
-    dropped rather than guessed at."""
-    per_company = {e.company: _name_variants(e.company) for e in entities}
+    """One placeholder per company, or per manually-aliased group of legal
+    names for the same real company (`_MANUAL_ALIAS_GROUPS`). A short name
+    shared by two different companies is dropped rather than guessed at;
+    one shared only within a single alias group is kept, since it's the
+    same company either way."""
+    by_company = {e.company: e for e in entities}
+    group_companies: dict[frozenset[str], set[str]] = {}
+    for company in by_company:
+        group_companies.setdefault(_group_key(company), set()).add(company)
+
+    group_variants: dict[frozenset[str], set[str]] = {
+        key: set().union(*(_name_variants(c) for c in companies))
+        for key, companies in group_companies.items()
+    }
+
     seen: dict[str, int] = {}
-    for variants in per_company.values():
+    for variants in group_variants.values():
         for v in variants:
             seen[v] = seen.get(v, 0) + 1
 
-    tickers = {e.company: e.ticker for e in entities}
     result: list[PlaceholderRegistryEntry] = []
-    for i, company in enumerate(sorted(per_company), start=1):
-        canonical = CanonicalIdentifiers(ticker=tickers[company], cik=None)
-        for variant in sorted(per_company[company]):
-            if seen[variant] == 1 or variant == company:
+    for i, key in enumerate(sorted(group_variants, key=sorted), start=1):
+        companies = group_companies[key]
+        ticker = next((by_company[c].ticker for c in companies if by_company[c].ticker), None)
+        canonical = CanonicalIdentifiers(ticker=ticker, cik=None)
+        for variant in sorted(group_variants[key]):
+            if seen[variant] == 1 or variant in companies:
                 result.append(PlaceholderRegistryEntry(surface_form=variant, placeholder=f"<ENT_{i}>", canonical=canonical))
     return result

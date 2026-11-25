@@ -169,6 +169,24 @@ def test_a_short_name_shared_by_two_companies_is_dropped():
     assert "Delta Corp" in surface_forms
 
 
+def test_a_manually_aliased_short_name_is_kept_and_shares_one_placeholder():
+    """Adobe's 2018 legal-name change left two rows for one real company
+    (KNOWN_ISSUES.md decision 22) -- unlike the genuine Delta/Delta
+    collision above, "Adobe" must survive and both full legal names must
+    resolve to the same placeholder, so a question about either filing
+    reaches the right evidence."""
+    entities = [
+        Entity(company="Adobe Systems Incorporated", ticker=None, version=1),
+        Entity(company="Adobe Inc.", ticker=None, version=1),
+    ]
+
+    registry = build_registry(entities)
+
+    by_form = {e.surface_form: e.placeholder for e in registry}
+    assert "Adobe" in by_form
+    assert by_form["Adobe Systems Incorporated"] == by_form["Adobe Inc."] == by_form["Adobe"]
+
+
 def test_empty_entity_list_gives_an_empty_registry():
     assert build_registry([]) == []
 

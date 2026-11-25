@@ -43,7 +43,7 @@ from online.routing.how_it_happened import describe_how_it_happened
 logger = logging.getLogger("haqqai.api")
 
 BACKEND_ROOT = Path(__file__).resolve().parents[1]
-CONFIG_PATH = os.environ.get("HAQQAI_CONFIG", str(BACKEND_ROOT / "config/experiments/c4_full.yaml"))
+CONFIG_PATH = os.environ.get("HAQQAI_CONFIG", str(BACKEND_ROOT / "config/comparison/c4_plus.yaml"))
 DENSE_INDEX_PATH = os.environ.get("HAQQAI_DENSE_INDEX", str(BACKEND_ROOT / "data/index/dense_index_v2"))
 POSTGRES_DSN = os.environ.get(
     "HAQQAI_POSTGRES_DSN",
@@ -134,6 +134,7 @@ class AskResponse(BaseModel):
     answers: list[AnswerValueOut]
     citations: list[CitationOut]
     verification: VerificationOut
+    confidence_score: float
     pipeline: PipelineOut
     how_it_happened: HowItHappenedOut
 
@@ -258,8 +259,9 @@ def build_response(
             claims=claims,
             verified_count=verified,
             total_count=total,
-            score=round(verified / total, 4) if total else 0.0,
+            score=result.confidence_score,
         ),
+        confidence_score=result.confidence_score,
         pipeline=PipelineOut(
             name="c4_full",
             sub_query_count=result.sub_query_count,
@@ -329,7 +331,7 @@ def _load_runtime() -> Runtime:
     }
 
     info = {
-        "pipeline": "c4_full",
+        "pipeline": config.experiment_id,
         "companies": sorted(e.company for e in entities),
         "documents": sorted({p.metadata.source_uri for p in propositions}),
         "proposition_count": len(propositions),

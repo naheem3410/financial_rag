@@ -51,6 +51,22 @@ def test_gold_values_in_base_units_skips_null_entries():
     assert values == {Decimal("4532000000")}
 
 
+def test_gold_values_in_base_units_handles_mixed_by_period_scale():
+    """Regression: a cross-filing-era item (e.g. Adobe FY2015 reported in
+    thousands, FY2021 in millions) uses scale="mixed_by_period" and a
+    {"value", "scale"} dict per period instead of a bare number -- this
+    used to crash with decimal.InvalidOperation."""
+    gold = {"FY2015": {"value": 629551, "scale": "thousands"}, "FY2021": {"value": 4822, "scale": "millions"}}
+    values = gold_values_in_base_units(gold, "mixed_by_period")
+    assert values == {Decimal("629551000"), Decimal("4822000000")}
+
+
+def test_gold_values_in_base_units_mixed_by_period_skips_null_entries():
+    gold = {"FY2015": {"value": 629551, "scale": "thousands"}, "FY2021": None}
+    values = gold_values_in_base_units(gold, "mixed_by_period")
+    assert values == {Decimal("629551000")}
+
+
 def test_exact_match_true_when_both_metrics_reproduced():
     result = _make_result(answers=[
         AnswerValue(metric="accounts_receivable", value="$4,532 million", unit="millions"),
