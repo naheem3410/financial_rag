@@ -1,0 +1,28 @@
+[project]
+name = "financial-rag"
+version = "0.1.0"
+description = "Financial RAG with Noun-Phrase Collision Elimination and Chain-of-Verification"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.0",
+    "pyyaml>=6.0",
+    "openpyxl>=3.1",
+    "sentence-transformers>=3.0",
+    "psycopg[binary]==3.3.4",
+    "faiss-cpu==1.14.3",
+    "pdfplumber==0.11.4",
+    "numpy>=1.25",
+    "openai>=1.40",
+    "anthropic>=0.30",
+    "httpx>=0.27",
+    "pymongo>=4.6",
+    "redis>=5.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "reportlab>=5.0"]  # reportlab: test-fixture PDF generation only
+api = ["fastapi>=0.110", "uvicorn>=0.29", "httpx>=0.27", "python-multipart>=0.0.9"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

@@ -1,0 +1,64 @@
+networks:
+  haqqai:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  mongo_data:
+  redis_data:
+
+services:
+  postgres:
+    image: postgres:16.4
+    container_name: financial_rag_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: financial_rag
+      POSTGRES_USER: financial_rag
+      POSTGRES_PASSWORD: financial_rag_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U financial_rag -d financial_rag"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - haqqai
+
+  # Not used by any code yet. Reserved for the dictionary work (work package 2)
+  # and the document/upload tables (work package 3). Safe to leave stopped
+  # until then; starting early costs nothing but a little memory.
+  mongo:
+    image: mongo:7
+    container_name: financial_rag_mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - haqqai
+
+  redis:
+    image: redis:7
+    container_name: financial_rag_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - haqqai

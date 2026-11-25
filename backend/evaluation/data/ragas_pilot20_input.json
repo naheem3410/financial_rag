@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "collision_id": "fbc_ext2_temp_0007",
+      "question": "What were Adobe's net income in FY2015 and FY2021? Report both figures separately.",
+      "answer": "Adobe Systems Incorporated net income (FY2015): $629,551 thousand USD\nAdobe Systems Incorporated net income (FY2021): $4,822 million USD",
+      "contexts": [
+        "Adobe Inc. had net income of $4,822 million for the year ended December 3, 2021.",
+        "Adobe Systems Incorporated had net income of $629,551 thousand in fiscal year 2015.",
+        "Adobe Systems Incorporated had net income of $629,551 thousand in the year ended November 27, 2015.",
+        "Adobe Systems Incorporated had net income of $629,551 thousand for the year ended November 27, 2015.",
+        "Adobe Systems Incorporated had net income of $629,551 thousand in the year ended November 27, 2015.",
+        "Adobe Systems Incorporated had net income of $629,551 thousand for the year ended November 27, 2015."
+      ],
+      "reference": ""
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0011",
+      "question": "What were Adobe's net income in FY2015 and FY2020? Report both figures separately.",
+      "answer": "Adobe Systems Incorporated net income (FY2015): $629,551 thousand USD\nAdobe Systems Incorporated net income (FY2020): $5,260 million",
+      "contexts": [
+        "Adobe Inc. had net income of $5,260 million for the year ended November 27, 2020.",
+        "Adobe Systems Incorporated had net income of $629,551 thousand in fiscal year 2015.",
+        "Adobe Systems Incorporated had net income of $629,551 thousand in the year ended November 27, 2015.",
+        "Adobe Systems Incorporated had net income of $629,551 thousand for the year ended November 27, 2015.",
+        "Adobe Systems Incorporated had net income of $629,551 thousand in the year ended November 27, 2015.",
+        "Adobe Systems Incorporated had net income of $629,551 thousand for the year ended November 27, 2015."
+      ],
+      "reference": ""
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0025",
+      "question": "What were PepsiCo's net income in FY2019 and FY2021? Report both figures separately. (in USD millions)",
+      "answer": "PepsiCo, Inc. net income (FY2019): $7,353 million USD\nPepsiCo, Inc. net income (attributable to) (FY2021): $7,618 million USD\nPepsiCo, Inc. net income (net) (FY2021): $7,679 million USD",
+      "contexts": [
+        "PepsiCo, Inc. had net income of $7,353 million for the fiscal year ended December 28, 2019.",
+        "PepsiCo, Inc. had net income of $7,679 million for the fiscal year ended December 25, 2021.",
+        "PepsiCo, Inc. had net income attributable to PepsiCo of $7,618 million for the fiscal year ended December 25, 2021."
+      ],
+      "reference": ""
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0028",
+      "question": "What were Boeing's total revenue in FY2020 and FY2022? Report both figures separately. (in USD millions)",
+      "answer": "The Boeing Company total revenue (customers) (FY2020): $16,112 million USD\nThe Boeing Company total revenue (total) (FY2020): $58,158 million USD\nThe Boeing Company total revenue (customers) (FY2022): $25,750 million USD\nThe Boeing Company total revenue (total) (FY2022): $66,608 million USD",
+      "contexts": [
+        "The Boeing Company had total revenues of $58,158 million for the year ended December 31, 2020.",
+        "The Boeing Company had total revenues from contracts with customers of $25,750 million for the year ended December 31, 2022.",
+        "The Boeing Company had total revenues of $66,608 million for the year ended December 31, 2022.",
+        "The Boeing Company had total revenues from contracts with customers of $16,112 million for the year ended December 31, 2020."
+      ],
+      "reference": ""
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0030",
+      "question": "What were AES's total revenue in FY2020 and FY2022? Report both figures separately. (in USD millions)",
+      "answer": "The AES Corporation total revenue (total) (FY2020): not provided.\nThe AES Corporation total revenue (total (2)) (FY2020): $9,660 million USD\nThe AES Corporation total revenue (total) (FY2022): not provided.\nThe AES Corporation total revenue (total (2)) (FY2022): $12,617 million",
+      "contexts": [
+        "The AES Corporation had total revenue of $9,660 million in total for the year ended December 31, 2020.",
+        "For the year ended December 31, 2022, The AES Corporation had total revenue of $12,617 million."
+      ],
+      "reference": ""
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0032",
+      "question": "What were American Water Works's total revenue in FY2018 and FY2020? Report both figures separately. (in USD millions)",
+      "answer": "American Water Works Company, Inc. total revenue (unlabelled variant) (FY2018): $2,984 million USD\nAmerican Water Works Company, Inc. total revenue (total) (FY2018): $3,440 million USD\nAmerican Water Works Company, Inc. total revenue (customers) (FY2020): $3,743 million USD\nAmerican Water Works Company, Inc. total revenue (total) (FY2020): $3,777 million USD",
+      "contexts": [
+        "American Water Works Company, Inc. had total operating revenues of $3,440 million for the year ended December 31, 2018.",
+        "American Water Works Company, Inc. had total operating revenues of $3,777 million for the year ended December 31, 2020.",
+        "American Water Works Company, Inc. had operating revenues of $2,984 million for the year ended December 31, 2018.",
+        "American Water Works Company, Inc. had total operating revenues of $3,743 million from contracts with customers for the year ended December 31, 2020."
+      ],
+      "reference": ""
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0009",
+      "question": "What were Adobe's gross profit and net income for FY2020? Report both figures separately. (in USD millions)",
+      "answer": "Adobe Systems Incorporated gross profit (FY2020): $11,146 million USD\nAdobe Systems Incorporated net income (FY2020): $5,260 million USD",
+      "contexts": [
+        "Adobe Inc. had net income of $5,260 million for the year ended November 27, 2020.",
+        "Adobe Inc. had gross profit of $11,146 million for the year ended November 27, 2020."
+      ],
+      "reference": ""
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0029",
+      "question": "What were General Mills's net income and total revenue for FY2018? Report both figures separately. (in USD millions)",
+      "answer": "General Mills, Inc. net income (FY2018): not provided.\nGeneral Mills, Inc. total revenue (FY2018): $15,740.4 million USD",
+      "contexts": [
+        "General Mills, Inc. had total net sales of $15,740.4 million in fiscal year 2018."
+      ],
+      "reference": ""
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0042",
+      "question": "What were General Mills's net income and total revenue for FY2021? Report both figures separately. (in USD millions)",
+      "answer": "General Mills, Inc. net income (net) (FY2021): not provided.\nGeneral Mills, Inc. net income (attributable to) (FY2021): not provided.\nGeneral Mills, Inc. total revenue (FY2021): $18,127.0 million",
+      "contexts": [
+        "General Mills, Inc. had net sales of $18,127.0 million in fiscal year 2021.",
+        "General Mills, Inc. had total net sales of $18,127.0 million in fiscal year 2021."
+      ],
+      "reference": ""
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0078",
+      "question": "What were Lockheed Martin's net income and total revenue for FY2018? Report both figures separately. (in USD millions)",
+      "answer": "Lockheed Martin Corporation net income (FY2018): $5,046 million USD\nLockheed Martin Corporation total revenue (net) (FY2018): $45,005 million\nLockheed Martin Corporation total revenue (total) (FY2018): $53,762 million USD",
+      "contexts": [
+        "Lockheed Martin Corporation had net sales of products of $45,005 million in the year ended December 31, 2018.",
+        "Lockheed Martin Corporation had net earnings of $5,046 million for the year ended December 31, 2018.",
+        "Lockheed Martin Corporation had total net sales of $53,762 million in the year ended December 31, 2018."
+      ],
+      "reference": ""
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0113",
+      "question": "What were Best Buy's net income and total revenue for FY2017? Report both figures separately. (in USD millions)",
+      "answer": "Best Buy Co., Inc. net income (FY2017): $1,228 million USD\nBest Buy Co., Inc. total revenue (FY2017): $39,403 million USD",
+      "contexts": [
+        "Best Buy Co., Inc. had net earnings of $1,228 million for the fiscal year ended January 28, 2017.",
+        "Best Buy Co., Inc. had revenue of $39,403 million for the fiscal year 2017.",
+        "Best Buy Co., Inc. had revenue of $39,403 million for the fiscal year ended January 28, 2017."
+      ],
+      "reference": ""
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0122",
+      "question": "What were Costco's net income and total revenue for FY2019? Report both figures separately. (in USD millions)",
+      "answer": "Costco Wholesale Corporation net income (attributable to) (FY2019): $3,659 million USD\nCostco Wholesale Corporation net income (including noncontrolling interests) (FY2019): $3,704 million USD\nCostco Wholesale Corporation total revenue (net) (FY2019): $149,351 million\nCostco Wholesale Corporation total revenue (total) (FY2019): $152,703 million USD",
+      "contexts": [
+        "Costco Wholesale Corporation had net income attributable to Costco of $3,659 million for the 52 weeks ended September 1, 2019.",
+        "Costco Wholesale Corporation had total revenue of $152,703 million for the 52 weeks ended September 1, 2019.",
+        "Costco Wholesale Corporation had net sales of $149,351 million for the 52 weeks ended September 1, 2019.",
+        "Costco Wholesale Corporation had net income including noncontrolling interests of $3,704 million for the 52 weeks ended September 1, 2019."
+      ],
+      "reference": ""
+    },
+    {
+      "collision_id": "fbc_metric_pri_0024",
+      "question": "What were Activision Blizzard's net income and operating income for FY2018? Report both figures separately. (in USD millions)",
+      "answer": "Activision Blizzard, Inc. net income (FY2018): $1,848 million USD\nActivision Blizzard, Inc. operating income (FY2018): $1,988 million USD",
+      "contexts": [
+        "Activision Blizzard, Inc. had net income of $1,848 million for the year ended December 31, 2018.",
+        "Activision Blizzard, Inc. had operating income of $1,988 million for the year ended December 31, 2018."
+      ],
+      "reference": ""
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0001",
+      "question": "What was Boeing's accounts payable for FY2022, and what was Lockheed Martin's accounts payable for FY2020? Report both figures separately. (in USD millions)",
+      "answer": "The Boeing Company accounts payable (FY2022): $10,200 million\nThe Boeing Company accounts payable (FY2020): not provided.\nLockheed Martin Corporation accounts payable (FY2022): not provided.\nLockheed Martin Corporation accounts payable (FY2020): $880 million",
+      "contexts": [
+        "Lockheed Martin Corporation had accounts payable of $880 million at December 31, 2020.",
+        "The Boeing Company had accounts payable of $10,200 million at December 31, 2022."
+      ],
+      "reference": ""
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0005",
+      "question": "What was PepsiCo's accounts receivable for FY2021, and what was General Mills's accounts receivable for FY2022? Report both figures separately. (in USD millions)",
+      "answer": "PepsiCo, Inc. accounts receivable (unlabelled variant) (FY2021): not provided.\nPepsiCo, Inc. accounts receivable (unlabelled variant (2)) (FY2021): not provided.\nPepsiCo, Inc. accounts receivable (FY2022): not provided.\nGeneral Mills, Inc. accounts receivable (FY2021): not provided.\nGeneral Mills, Inc. accounts receivable (FY2022): $1,720.4 million",
+      "contexts": [
+        "General Mills, Inc. had customers receivables of $1,720.4 million at May 29, 2022."
+      ],
+      "reference": ""
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0009",
+      "question": "What was AES's accounts payable for FY2022, and what was American Water Works's accounts payable for FY2020? Report both figures separately. (in USD millions)",
+      "answer": "The AES Corporation accounts payable (unlabelled variant) (FY2022): $33 million USD\nThe AES Corporation accounts payable (unlabelled variant (2)) (FY2022): $1,730 million\nThe AES Corporation accounts payable (FY2020): not provided.\nAmerican Water Works Company, Inc. accounts payable (FY2022): not provided.\nAmerican Water Works Company, Inc. accounts payable (FY2020): $189 million",
+      "contexts": [
+        "The AES Corporation had accounts payable of $1,730 million at December 31, 2022.",
+        "American Water Works Company, Inc. had accounts payable of $189 million at December 31, 2020.",
+        "The AES Corporation had accounts payable of $33 million at December 31, 2022."
+      ],
+      "reference": ""
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0010",
+      "question": "What was AES's accounts receivable for FY2022, and what was American Water Works's accounts receivable for FY2020? Report both figures separately. (in USD millions)",
+      "answer": "The AES Corporation accounts receivable (net) (FY2022): $1,799 million USD\nThe AES Corporation accounts receivable (unlabelled variant) (FY2022): $301 million USD\nThe AES Corporation accounts receivable (FY2020): not provided.\nAmerican Water Works Company, Inc. accounts receivable (FY2022): not provided.\nAmerican Water Works Company, Inc. accounts receivable (FY2020): $321 million USD",
+      "contexts": [
+        "The AES Corporation had accounts receivable - noncurrent with a carrying amount of $301 million and a fair value of $340 million at December 31, 2022.",
+        "American Water Works Company, Inc. had accounts receivable, net of allowance for uncollectible accounts of $60 million, of $321 million at December 31, 2020.",
+        "The AES Corporation had accounts receivable, net of allowance for doubtful accounts of $5 million, of $1,799 million at December 31, 2022."
+      ],
+      "reference": ""
+    }
+  ]
+}

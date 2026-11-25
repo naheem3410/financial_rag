@@ -1,0 +1,420 @@
+{
+  "completed": {
+    "fbc_ext2_temp_0007": {
+      "collision_id": "fbc_ext2_temp_0007",
+      "question": "What were Adobe's net income in FY2015 and FY2021? Report both figures separately.",
+      "verification_status": "verified",
+      "exact_match": true,
+      "abstained": false,
+      "answerable": true,
+      "answers": [
+        {
+          "metric": "Net income FY2015",
+          "value": "629,551",
+          "unit": "thousands USD"
+        },
+        {
+          "metric": "Net income FY2021",
+          "value": "4,822",
+          "unit": "millions USD"
+        }
+      ],
+      "answer_text": "Adobe's net income in FY2015 was $629,551 thousand and in FY2021 was $4,822 million.",
+      "citations": [
+        {
+          "proposition_id": "c_992f07712380",
+          "source_uri": "C:\\Users\\NAHEEM.QUADRI\\Documents\\R&D\\financial_rag\\backend\\data\\pdfs\\ADOBE_2016_10K.pdf",
+          "filing_type": "10-K",
+          "filing_date": "2016",
+          "page": 61,
+          "provenance_tier": "retrieved"
+        },
+        {
+          "proposition_id": "c_a2b8e026df81",
+          "source_uri": "C:\\Users\\NAHEEM.QUADRI\\Documents\\R&D\\financial_rag\\backend\\data\\pdfs\\ADOBE_2022_10K.pdf",
+          "filing_type": "10-K",
+          "filing_date": "2022",
+          "page": 53,
+          "provenance_tier": "retrieved"
+        }
+      ],
+      "retrieved_chunk_count": 5,
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 3139,
+      "output_tokens": 199,
+      "cost_usd": 0.0015739999999999999,
+      "elapsed_seconds": 4.394831199999317
+    },
+    "fbc_ext2_temp_0025": {
+      "collision_id": "fbc_ext2_temp_0025",
+      "question": "What were PepsiCo's net income in FY2019 and FY2021? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "exact_match": false,
+      "abstained": false,
+      "answerable": true,
+      "answers": [
+        {
+          "metric": "Net income FY2019",
+          "value": "7,353",
+          "unit": "USD millions"
+        },
+        {
+          "metric": "Net income FY2021",
+          "value": "7,679",
+          "unit": "USD millions"
+        }
+      ],
+      "answer_text": "PepsiCo's net income was $7,353 million in FY2019 and $7,679 million in FY2021.",
+      "citations": [
+        {
+          "proposition_id": "c_29cddd9b0dc0",
+          "source_uri": "C:\\Users\\NAHEEM.QUADRI\\Documents\\R&D\\financial_rag\\backend\\data\\pdfs\\PEPSICO_2021_10K.pdf",
+          "filing_type": "10-K",
+          "filing_date": "2021",
+          "page": 61,
+          "provenance_tier": "retrieved"
+        },
+        {
+          "proposition_id": "c_94b3d56a4dbd",
+          "source_uri": "C:\\Users\\NAHEEM.QUADRI\\Documents\\R&D\\financial_rag\\backend\\data\\pdfs\\PEPSICO_2021_10K.pdf",
+          "filing_type": "10-K",
+          "filing_date": "2021",
+          "page": 60,
+          "provenance_tier": "retrieved"
+        },
+        {
+          "proposition_id": "c_105cc52373de",
+          "source_uri": "C:\\Users\\NAHEEM.QUADRI\\Documents\\R&D\\financial_rag\\backend\\data\\pdfs\\PEPSICO_2021_10K.pdf",
+          "filing_type": "10-K",
+          "filing_date": "2021",
+          "page": 62,
+          "provenance_tier": "retrieved"
+        }
+      ],
+      "retrieved_chunk_count": 5,
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 2473,
+      "output_tokens": 201,
+      "cost_usd": 0.0013108,
+      "elapsed_seconds": 4.173696700003347
+    },
+    "fbc_ext2_temp_0028": {
+      "collision_id": "fbc_ext2_temp_0028",
+      "question": "What were Boeing's total revenue in FY2020 and FY2022? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "exact_match": true,
+      "abstained": false,
+      "answerable": true,
+      "answers": [
+        {
+          "metric": "Total revenue FY2020",
+          "value": "58,158",
+          "unit": "USD millions"
+        },
+        {
+          "metric": "Total revenue FY2022",
+          "value": "66,608",
+          "unit": "USD millions"
+        }
+      ],
+      "answer_text": "Boeing's total revenue was $58,158 million in FY2020 and $66,608 million in FY2022.",
+      "citations": [
+        {
+          "proposition_id": "c_397fd54cff83",
+          "source_uri": "C:\\Users\\NAHEEM.QUADRI\\Documents\\R&D\\financial_rag\\backend\\data\\pdfs\\BOEING_2022_10K.pdf",
+          "filing_type": "10-K",
+          "filing_date": "2022",
+          "page": 61,
+          "provenance_tier": "retrieved"
+        },
+        {
+          "proposition_id": "c_8e605d30e94c",
+          "source_uri": "C:\\Users\\NAHEEM.QUADRI\\Documents\\R&D\\financial_rag\\backend\\data\\pdfs\\BOEING_2022_10K.pdf",
+          "filing_type": "10-K",
+          "filing_date": "2022",
+          "page": 54,
+          "provenance_tier": "retrieved"
+        },
+        {
+          "proposition_id": "c_7e1da379dbd9",
+          "source_uri": "C:\\Users\\NAHEEM.QUADRI\\Documents\\R&D\\financial_rag\\backend\\data\\pdfs\\BOEING_2022_10K.pdf",
+          "filing_type": "10-K",
+          "filing_date": "2022",
+          "page": 23,
+          "provenance_tier": "retrieved"
+        }
+      ],
+      "retrieved_chunk_count": 5,
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 3131,
+      "output_tokens": 208,
+      "cost_usd": 0.0015852000000000002,
+      "elapsed_seconds": 4.254786200006492
+    },
+    "fbc_ext2_temp_0032": {
+      "collision_id": "fbc_ext2_temp_0032",
+      "question": "What were American Water Works's total revenue in FY2018 and FY2020? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "exact_match": true,
+      "abstained": false,
+      "answerable": true,
+      "answers": [
+        {
+          "metric": "Total revenue FY2018",
+          "value": "3440",
+          "unit": "USD millions"
+        },
+        {
+          "metric": "Total revenue FY2020",
+          "value": "3777",
+          "unit": "USD millions"
+        }
+      ],
+      "answer_text": "American Water Works's total revenue was $3,440 million in FY2018 and $3,777 million in FY2020.",
+      "citations": [
+        {
+          "proposition_id": "c_0078439b81d2",
+          "source_uri": "C:\\Users\\NAHEEM.QUADRI\\Documents\\R&D\\financial_rag\\backend\\data\\pdfs\\AMERICANWATERWORKS_2020_10K.pdf",
+          "filing_type": "10-K",
+          "filing_date": "2020",
+          "page": 83,
+          "provenance_tier": "retrieved"
+        }
+      ],
+      "retrieved_chunk_count": 5,
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 2699,
+      "output_tokens": 178,
+      "cost_usd": 0.0013644,
+      "elapsed_seconds": 4.756511100000353
+    },
+    "fbc_ext2_metric_0009": {
+      "collision_id": "fbc_ext2_metric_0009",
+      "question": "What were Adobe's gross profit and net income for FY2020? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "exact_match": true,
+      "abstained": false,
+      "answerable": true,
+      "answers": [
+        {
+          "metric": "Gross Profit",
+          "value": "11,146",
+          "unit": "USD millions"
+        },
+        {
+          "metric": "Net Income",
+          "value": "5,260",
+          "unit": "USD millions"
+        }
+      ],
+      "answer_text": "Adobe's gross profit for FY2020 was $11,146 million and net income was $5,260 million.",
+      "citations": [
+        {
+          "proposition_id": "c_a2b8e026df81",
+          "source_uri": "C:\\Users\\NAHEEM.QUADRI\\Documents\\R&D\\financial_rag\\backend\\data\\pdfs\\ADOBE_2022_10K.pdf",
+          "filing_type": "10-K",
+          "filing_date": "2022",
+          "page": 53,
+          "provenance_tier": "retrieved"
+        }
+      ],
+      "retrieved_chunk_count": 5,
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 3017,
+      "output_tokens": 191,
+      "cost_usd": 0.0015124000000000001,
+      "elapsed_seconds": 4.152905900002224
+    },
+    "fbc_ext2_metric_0078": {
+      "collision_id": "fbc_ext2_metric_0078",
+      "question": "What were Lockheed Martin's net income and total revenue for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "exact_match": true,
+      "abstained": false,
+      "answerable": true,
+      "answers": [
+        {
+          "metric": "Net Income",
+          "value": "5046",
+          "unit": "USD millions"
+        },
+        {
+          "metric": "Total Revenue",
+          "value": "53762",
+          "unit": "USD millions"
+        }
+      ],
+      "answer_text": "Lockheed Martin's net income for FY2018 was $5,046 million and total revenue was $53,762 million.",
+      "citations": [
+        {
+          "proposition_id": "c_bd3d23962834",
+          "source_uri": "C:\\Users\\NAHEEM.QUADRI\\Documents\\R&D\\financial_rag\\backend\\data\\pdfs\\LOCKHEEDMARTIN_2020_10K.pdf",
+          "filing_type": "10-K",
+          "filing_date": "2020",
+          "page": 66,
+          "provenance_tier": "retrieved"
+        }
+      ],
+      "retrieved_chunk_count": 5,
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 3246,
+      "output_tokens": 168,
+      "cost_usd": 0.0015672000000000001,
+      "elapsed_seconds": 7.734322099990095
+    },
+    "fbc_ext2_metric_0122": {
+      "collision_id": "fbc_ext2_metric_0122",
+      "question": "What were Costco's net income and total revenue for FY2019? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "exact_match": true,
+      "abstained": false,
+      "answerable": true,
+      "answers": [
+        {
+          "metric": "Net Income",
+          "value": "3,659",
+          "unit": "USD millions"
+        },
+        {
+          "metric": "Total Revenue",
+          "value": "152,703",
+          "unit": "USD millions"
+        }
+      ],
+      "answer_text": "Costco's net income for FY2019 was $3,659 million and total revenue was $152,703 million.",
+      "citations": [
+        {
+          "proposition_id": "c_1689dbc0aa50",
+          "source_uri": "C:\\Users\\NAHEEM.QUADRI\\Documents\\R&D\\financial_rag\\backend\\data\\pdfs\\COSTCO_2021_10K.pdf",
+          "filing_type": "10-K",
+          "filing_date": "2021",
+          "page": 35,
+          "provenance_tier": "retrieved"
+        }
+      ],
+      "retrieved_chunk_count": 5,
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 2646,
+      "output_tokens": 162,
+      "cost_usd": 0.0013176,
+      "elapsed_seconds": 4.648253399995156
+    },
+    "fbc_ext2_entity_0001": {
+      "collision_id": "fbc_ext2_entity_0001",
+      "question": "What was Boeing's accounts payable for FY2022, and what was Lockheed Martin's accounts payable for FY2020? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "exact_match": true,
+      "abstained": false,
+      "answerable": true,
+      "answers": [
+        {
+          "metric": "Boeing's accounts payable for FY2022",
+          "value": "10,200",
+          "unit": "USD millions"
+        },
+        {
+          "metric": "Lockheed Martin's accounts payable for FY2020",
+          "value": "880",
+          "unit": "USD millions"
+        }
+      ],
+      "answer_text": "Boeing's accounts payable for FY2022 was $10,200 million. Lockheed Martin's accounts payable for FY2020 was $880 million.",
+      "citations": [
+        {
+          "proposition_id": "c_878ccbad7441",
+          "source_uri": "C:\\Users\\NAHEEM.QUADRI\\Documents\\R&D\\financial_rag\\backend\\data\\pdfs\\BOEING_2022_10K.pdf",
+          "filing_type": "10-K",
+          "filing_date": "2022",
+          "page": 56,
+          "provenance_tier": "retrieved"
+        },
+        {
+          "proposition_id": "c_ed7e8d1b539e",
+          "source_uri": "C:\\Users\\NAHEEM.QUADRI\\Documents\\R&D\\financial_rag\\backend\\data\\pdfs\\LOCKHEEDMARTIN_2020_10K.pdf",
+          "filing_type": "10-K",
+          "filing_date": "2020",
+          "page": 68,
+          "provenance_tier": "retrieved"
+        }
+      ],
+      "retrieved_chunk_count": 5,
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 2767,
+      "output_tokens": 235,
+      "cost_usd": 0.0014828,
+      "elapsed_seconds": 4.105686800001422
+    },
+    "fbc_ext2_entity_0005": {
+      "collision_id": "fbc_ext2_entity_0005",
+      "question": "What was PepsiCo's accounts receivable for FY2021, and what was General Mills's accounts receivable for FY2022? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "exact_match": false,
+      "abstained": false,
+      "answerable": true,
+      "answers": [
+        {
+          "metric": "PepsiCo accounts receivable FY2021",
+          "value": "8680",
+          "unit": "USD millions"
+        }
+      ],
+      "answer_text": "PepsiCo's accounts receivable for FY2021 was $8,680 million. General Mills's accounts receivable for FY2022 is not provided in the passages.",
+      "citations": [
+        {
+          "proposition_id": "c_b46f493921ca",
+          "source_uri": "C:\\Users\\NAHEEM.QUADRI\\Documents\\R&D\\financial_rag\\backend\\data\\pdfs\\PEPSICO_2021_10K.pdf",
+          "filing_type": "10-K",
+          "filing_date": "2021",
+          "page": 64,
+          "provenance_tier": "retrieved"
+        }
+      ],
+      "retrieved_chunk_count": 5,
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 3406,
+      "output_tokens": 181,
+      "cost_usd": 0.0016520000000000003,
+      "elapsed_seconds": 4.421120799990604
+    },
+    "fbc_ext2_entity_0009": {
+      "collision_id": "fbc_ext2_entity_0009",
+      "question": "What was AES's accounts payable for FY2022, and what was American Water Works's accounts payable for FY2020? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "exact_match": false,
+      "abstained": false,
+      "answerable": true,
+      "answers": [
+        {
+          "metric": "American Water Works accounts payable for FY2020",
+          "value": "189",
+          "unit": "USD millions"
+        }
+      ],
+      "answer_text": "American Water Works's accounts payable for FY2020 was $189 million. AES's accounts payable for FY2022 is not provided in the passages.",
+      "citations": [
+        {
+          "proposition_id": "c_65a4122965ff",
+          "source_uri": "C:\\Users\\NAHEEM.QUADRI\\Documents\\R&D\\financial_rag\\backend\\data\\pdfs\\AMERICANWATERWORKS_2020_10K.pdf",
+          "filing_type": "10-K",
+          "filing_date": "2020",
+          "page": 81,
+          "provenance_tier": "retrieved"
+        },
+        {
+          "proposition_id": "c_1ad3a2ab0e4f",
+          "source_uri": "C:\\Users\\NAHEEM.QUADRI\\Documents\\R&D\\financial_rag\\backend\\data\\pdfs\\AMERICANWATERWORKS_2020_10K.pdf",
+          "filing_type": "10-K",
+          "filing_date": "2020",
+          "page": 82,
+          "provenance_tier": "retrieved"
+        }
+      ],
+      "retrieved_chunk_count": 5,
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 2775,
+      "output_tokens": 191,
+      "cost_usd": 0.0014156000000000001,
+      "elapsed_seconds": 5.016766100001405
+    }
+  }
+}

@@ -1,0 +1,651 @@
+{
+  "completed": {
+    "fbc_ext2_temp_0007": {
+      "collision_id": "fbc_ext2_temp_0007",
+      "question": "What were Adobe's net income in FY2015 and FY2021? Report both figures separately.",
+      "verification_status": "verified",
+      "exact_match": false,
+      "abstained": true,
+      "answerable": false,
+      "answers": [],
+      "answer_text": "Adobe net income (FY2015): not provided.\nAdobe net income (FY2021): not provided.",
+      "citations": [],
+      "verification_trace": [
+        {
+          "claim_id": "c_1",
+          "claim_text": "What were Adobe's net income in FY2015 and FY2021? Report both figures separately.",
+          "is_numeric": true,
+          "verdict": "unsupported",
+          "supporting_fff_ids": []
+        }
+      ],
+      "sub_query_count": 2,
+      "fff_count": 0,
+      "query_splitter_model": "gpt-4.1-mini-2025-04-14",
+      "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "cove_verification_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 529,
+      "output_tokens": 112,
+      "cost_usd": 0.0003908,
+      "elapsed_seconds": 4.6321819000004325
+    },
+    "fbc_ext2_temp_0028": {
+      "collision_id": "fbc_ext2_temp_0028",
+      "question": "What were Boeing's total revenue in FY2020 and FY2022? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "exact_match": true,
+      "abstained": false,
+      "answerable": true,
+      "answers": [
+        {
+          "metric": "total revenue",
+          "value": "$58,158 million",
+          "unit": "USD"
+        },
+        {
+          "metric": "total revenues",
+          "value": "$66,608 million",
+          "unit": "USD"
+        }
+      ],
+      "answer_text": "The Boeing Company total revenue (FY2020): $58,158 million USD\nThe Boeing Company total revenue (FY2022): $66,608 million USD",
+      "citations": [
+        {
+          "proposition_id": "p_389444db369e",
+          "source_uri": "BOEING_2022_10K",
+          "filing_type": "10-K",
+          "filing_date": "2022-12-31",
+          "page": 54,
+          "provenance_tier": "retrieved"
+        },
+        {
+          "proposition_id": "p_f40ec8e5bc7e",
+          "source_uri": "BOEING_2022_10K",
+          "filing_type": "10-K",
+          "filing_date": "2022-12-31",
+          "page": 54,
+          "provenance_tier": "retrieved"
+        }
+      ],
+      "verification_trace": [
+        {
+          "claim_id": "c1",
+          "claim_text": "<ENT_12> total revenue (FY2020): $58,158 million USD",
+          "is_numeric": true,
+          "verdict": "match",
+          "supporting_fff_ids": [
+            "f_6e5c215ec0a6"
+          ]
+        },
+        {
+          "claim_id": "c2",
+          "claim_text": "<ENT_12> total revenue (FY2022): $66,608 million USD",
+          "is_numeric": true,
+          "verdict": "match",
+          "supporting_fff_ids": [
+            "f_6052fe23eda2"
+          ]
+        }
+      ],
+      "sub_query_count": 2,
+      "fff_count": 2,
+      "query_splitter_model": "gpt-4.1-mini-2025-04-14",
+      "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "cove_verification_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 5526,
+      "output_tokens": 1118,
+      "cost_usd": 0.0039992000000000005,
+      "elapsed_seconds": 34.128467099988484
+    },
+    "fbc_ext2_temp_0032": {
+      "collision_id": "fbc_ext2_temp_0032",
+      "question": "What were American Water Works's total revenue in FY2018 and FY2020? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "exact_match": true,
+      "abstained": false,
+      "answerable": true,
+      "answers": [
+        {
+          "metric": "total revenue",
+          "value": "$3,440 million",
+          "unit": "USD"
+        },
+        {
+          "metric": "total revenue",
+          "value": "$3,777 million",
+          "unit": "USD"
+        }
+      ],
+      "answer_text": "American Water Works Company, Inc. total revenue (FY2018): $3,440 million USD\nAmerican Water Works Company, Inc. total revenue (FY2020): $3,777 million USD",
+      "citations": [
+        {
+          "proposition_id": "p_de63ceb3f81e",
+          "source_uri": "AMERICANWATERWORKS_2020_10K",
+          "filing_type": "10-K",
+          "filing_date": "2020-12-31",
+          "page": 54,
+          "provenance_tier": "retrieved"
+        },
+        {
+          "proposition_id": "p_060bcb2d0b32",
+          "source_uri": "AMERICANWATERWORKS_2020_10K",
+          "filing_type": "10-K",
+          "filing_date": "2020-12-31",
+          "page": 99,
+          "provenance_tier": "retrieved"
+        }
+      ],
+      "verification_trace": [
+        {
+          "claim_id": "c1",
+          "claim_text": "<ENT_5> total revenue (FY2018): $3,440 million USD",
+          "is_numeric": true,
+          "verdict": "match",
+          "supporting_fff_ids": [
+            "f_cd6db698f98f"
+          ]
+        },
+        {
+          "claim_id": "c2",
+          "claim_text": "<ENT_5> total revenue (FY2020): $3,777 million USD",
+          "is_numeric": true,
+          "verdict": "match",
+          "supporting_fff_ids": [
+            "f_29fde5d34d93"
+          ]
+        }
+      ],
+      "sub_query_count": 2,
+      "fff_count": 2,
+      "query_splitter_model": "gpt-4.1-mini-2025-04-14",
+      "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "cove_verification_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 5555,
+      "output_tokens": 1131,
+      "cost_usd": 0.004031600000000001,
+      "elapsed_seconds": 30.084162500003004
+    },
+    "fbc_ext2_metric_0078": {
+      "collision_id": "fbc_ext2_metric_0078",
+      "question": "What were Lockheed Martin's net income and total revenue for FY2018? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "exact_match": false,
+      "abstained": true,
+      "answerable": true,
+      "answers": [
+        {
+          "metric": "net income",
+          "value": "$5,046 million",
+          "unit": "USD"
+        }
+      ],
+      "answer_text": "Lockheed Martin Corporation net income (FY2018): $5,046 million USD\nLockheed Martin Corporation total revenue (FY2018): not provided.",
+      "citations": [
+        {
+          "proposition_id": "p_58c30be382d8",
+          "source_uri": "LOCKHEEDMARTIN_2020_10K",
+          "filing_type": "10-K",
+          "filing_date": "2020-12-31",
+          "page": 67,
+          "provenance_tier": "retrieved"
+        },
+        {
+          "proposition_id": "p_8c7356321a99",
+          "source_uri": "LOCKHEEDMARTIN_2020_10K",
+          "filing_type": "10-K",
+          "filing_date": "2020-12-31",
+          "page": 69,
+          "provenance_tier": "retrieved"
+        },
+        {
+          "proposition_id": "p_26dc73d32be2",
+          "source_uri": "LOCKHEEDMARTIN_2020_10K",
+          "filing_type": "10-K",
+          "filing_date": "2020-12-31",
+          "page": 70,
+          "provenance_tier": "retrieved"
+        }
+      ],
+      "verification_trace": [
+        {
+          "claim_id": "C1",
+          "claim_text": "<ENT_9> net income (FY2018): $5,046 million USD",
+          "is_numeric": true,
+          "verdict": "match",
+          "supporting_fff_ids": [
+            "f_c4ab92d21b51",
+            "f_a4d1247aa29d",
+            "f_52df1027dff7"
+          ]
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "<ENT_9> total revenue (FY2018): not provided",
+          "is_numeric": false,
+          "verdict": "unsupported",
+          "supporting_fff_ids": [
+            "f_c4ab92d21b51",
+            "f_a4d1247aa29d",
+            "f_52df1027dff7"
+          ]
+        }
+      ],
+      "sub_query_count": 2,
+      "fff_count": 3,
+      "query_splitter_model": "gpt-4.1-mini-2025-04-14",
+      "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "cove_verification_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 5169,
+      "output_tokens": 1050,
+      "cost_usd": 0.0037476000000000002,
+      "elapsed_seconds": 35.20650320001005
+    },
+    "fbc_ext2_temp_0025": {
+      "collision_id": "fbc_ext2_temp_0025",
+      "question": "What were PepsiCo's net income in FY2019 and FY2021? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "exact_match": false,
+      "abstained": false,
+      "answerable": true,
+      "answers": [
+        {
+          "metric": "net income",
+          "value": "$7,353 million",
+          "unit": "USD"
+        },
+        {
+          "metric": "net income",
+          "value": "$7,679 million",
+          "unit": "USD"
+        }
+      ],
+      "answer_text": "PepsiCo, Inc. net income (FY2019): $7,353 million USD\nPepsiCo, Inc. net income (FY2021): $7,679 million USD",
+      "citations": [
+        {
+          "proposition_id": "p_33d72251348c",
+          "source_uri": "PEPSICO_2021_10K",
+          "filing_type": "10-K",
+          "filing_date": "2021-12-25",
+          "page": 62,
+          "provenance_tier": "retrieved"
+        },
+        {
+          "proposition_id": "p_ad38635f4716",
+          "source_uri": "PEPSICO_2021_10K",
+          "filing_type": "10-K",
+          "filing_date": "2021-12-25",
+          "page": 62,
+          "provenance_tier": "retrieved"
+        }
+      ],
+      "verification_trace": [
+        {
+          "claim_id": "C1",
+          "claim_text": "<ENT_10> net income (FY2019): $7,353 million USD",
+          "is_numeric": true,
+          "verdict": "match",
+          "supporting_fff_ids": [
+            "f_b8c77f935d9d"
+          ]
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "<ENT_10> net income (FY2021): $7,679 million USD",
+          "is_numeric": true,
+          "verdict": "match",
+          "supporting_fff_ids": [
+            "f_cf041043f6c2"
+          ]
+        }
+      ],
+      "sub_query_count": 2,
+      "fff_count": 2,
+      "query_splitter_model": "gpt-4.1-mini-2025-04-14",
+      "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "cove_verification_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 5579,
+      "output_tokens": 1080,
+      "cost_usd": 0.003959600000000001,
+      "elapsed_seconds": 30.386930399996345
+    },
+    "fbc_ext2_metric_0009": {
+      "collision_id": "fbc_ext2_metric_0009",
+      "question": "What were Adobe's gross profit and net income for FY2020? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "exact_match": false,
+      "abstained": true,
+      "answerable": false,
+      "answers": [],
+      "answer_text": "Adobe gross profit (FY2020): not provided.\nAdobe net income (FY2020): not provided.",
+      "citations": [],
+      "verification_trace": [
+        {
+          "claim_id": "c_1",
+          "claim_text": "What were Adobe's gross profit and net income for FY2020? Report both figures separately. (in USD millions)",
+          "is_numeric": true,
+          "verdict": "unsupported",
+          "supporting_fff_ids": []
+        }
+      ],
+      "sub_query_count": 2,
+      "fff_count": 0,
+      "query_splitter_model": "gpt-4.1-mini-2025-04-14",
+      "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "cove_verification_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 533,
+      "output_tokens": 96,
+      "cost_usd": 0.0003668,
+      "elapsed_seconds": 3.4078319999971427
+    },
+    "fbc_ext2_metric_0122": {
+      "collision_id": "fbc_ext2_metric_0122",
+      "question": "What were Costco's net income and total revenue for FY2019? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "exact_match": false,
+      "abstained": true,
+      "answerable": false,
+      "answers": [],
+      "answer_text": "Costco Wholesale Corporation net income (FY2019): not provided.\nCostco Wholesale Corporation total revenue (FY2019): not provided.",
+      "citations": [],
+      "verification_trace": [
+        {
+          "claim_id": "c_1",
+          "claim_text": "What were Costco's net income and total revenue for FY2019? Report both figures separately. (in USD millions)",
+          "is_numeric": true,
+          "verdict": "unsupported",
+          "supporting_fff_ids": []
+        }
+      ],
+      "sub_query_count": 2,
+      "fff_count": 0,
+      "query_splitter_model": "gpt-4.1-mini-2025-04-14",
+      "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "cove_verification_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 2899,
+      "output_tokens": 217,
+      "cost_usd": 0.0015068,
+      "elapsed_seconds": 14.019847899995511
+    },
+    "fbc_ext2_entity_0001": {
+      "collision_id": "fbc_ext2_entity_0001",
+      "question": "What was Boeing's accounts payable for FY2022, and what was Lockheed Martin's accounts payable for FY2020? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "exact_match": false,
+      "abstained": true,
+      "answerable": true,
+      "answers": [
+        {
+          "metric": "accounts payable",
+          "value": "$10,200 million",
+          "unit": "USD"
+        },
+        {
+          "metric": "accounts payable",
+          "value": "$880 million",
+          "unit": ""
+        }
+      ],
+      "answer_text": "The Boeing Company accounts payable (FY2022): $10,200 million USD\nThe Boeing Company accounts payable (FY2020): not provided.\nLockheed Martin Corporation accounts payable (FY2022): not provided.\nLockheed Martin Corporation accounts payable (FY2020): $880 million",
+      "citations": [
+        {
+          "proposition_id": "p_c24fe9ec4f1f",
+          "source_uri": "BOEING_2022_10K",
+          "filing_type": "10-K",
+          "filing_date": "2022-12-31",
+          "page": 56,
+          "provenance_tier": "retrieved"
+        },
+        {
+          "proposition_id": "p_3f3d3be2666c",
+          "source_uri": "LOCKHEEDMARTIN_2020_10K",
+          "filing_type": "10-K",
+          "filing_date": "2020-12-31",
+          "page": 68,
+          "provenance_tier": "retrieved"
+        }
+      ],
+      "verification_trace": [
+        {
+          "claim_id": "c1",
+          "claim_text": "<ENT_12> accounts payable (FY2022): $10,200 million USD",
+          "is_numeric": true,
+          "verdict": "match",
+          "supporting_fff_ids": [
+            "f_99d48aa4794d"
+          ]
+        },
+        {
+          "claim_id": "c2",
+          "claim_text": "<ENT_12> accounts payable (FY2020): not provided.",
+          "is_numeric": false,
+          "verdict": "unsupported",
+          "supporting_fff_ids": [
+            "f_99d48aa4794d",
+            "f_96d94cbaed6b"
+          ]
+        },
+        {
+          "claim_id": "c3",
+          "claim_text": "<ENT_9> accounts payable (FY2022): not provided.",
+          "is_numeric": false,
+          "verdict": "unsupported",
+          "supporting_fff_ids": [
+            "f_96d94cbaed6b"
+          ]
+        },
+        {
+          "claim_id": "c4",
+          "claim_text": "<ENT_9> accounts payable (FY2020): $880 million",
+          "is_numeric": true,
+          "verdict": "match",
+          "supporting_fff_ids": [
+            "f_96d94cbaed6b"
+          ]
+        }
+      ],
+      "sub_query_count": 4,
+      "fff_count": 2,
+      "query_splitter_model": "gpt-4.1-mini-2025-04-14",
+      "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "cove_verification_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 7665,
+      "output_tokens": 1446,
+      "cost_usd": 0.0053796,
+      "elapsed_seconds": 34.1311907999916
+    },
+    "fbc_ext2_entity_0005": {
+      "collision_id": "fbc_ext2_entity_0005",
+      "question": "What was PepsiCo's accounts receivable for FY2021, and what was General Mills's accounts receivable for FY2022? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "exact_match": false,
+      "abstained": true,
+      "answerable": true,
+      "answers": [
+        {
+          "metric": "accounts and notes receivable, net",
+          "value": "$8,680 million",
+          "unit": "USD"
+        },
+        {
+          "metric": "accounts receivable",
+          "value": "$1,638.5 million",
+          "unit": "USD"
+        },
+        {
+          "metric": "accounts receivable",
+          "value": "$1,720.4 million",
+          "unit": "USD"
+        }
+      ],
+      "answer_text": "PepsiCo, Inc. accounts receivable (FY2021): $8,680 million USD\nPepsiCo, Inc. accounts receivable (FY2022): not provided.\nGeneral Mills, Inc. accounts receivable (FY2021): $1,638.5 million USD\nGeneral Mills, Inc. accounts receivable (FY2022): $1,720.4 million USD",
+      "citations": [
+        {
+          "proposition_id": "p_65873a8b0a44",
+          "source_uri": "PEPSICO_2021_10K",
+          "filing_type": "10-K",
+          "filing_date": "2021-12-25",
+          "page": 64,
+          "provenance_tier": "retrieved"
+        },
+        {
+          "proposition_id": "p_080aab85d443",
+          "source_uri": "GENERALMILLS_2022_10K",
+          "filing_type": "10-K",
+          "filing_date": "2021-05-30",
+          "page": 85,
+          "provenance_tier": "retrieved"
+        },
+        {
+          "proposition_id": "p_36e987ffbb29",
+          "source_uri": "GENERALMILLS_2022_10K",
+          "filing_type": "10-K",
+          "filing_date": "2021-05-30",
+          "page": 85,
+          "provenance_tier": "retrieved"
+        }
+      ],
+      "verification_trace": [
+        {
+          "claim_id": "c1",
+          "claim_text": "<ENT_10> accounts receivable (FY2021): $8,680 million USD",
+          "is_numeric": true,
+          "verdict": "match",
+          "supporting_fff_ids": [
+            "f_06d59911ea8f"
+          ]
+        },
+        {
+          "claim_id": "c2",
+          "claim_text": "<ENT_10> accounts receivable (FY2022): not provided.",
+          "is_numeric": false,
+          "verdict": "unsupported",
+          "supporting_fff_ids": []
+        },
+        {
+          "claim_id": "c3",
+          "claim_text": "<ENT_8> accounts receivable (FY2021): $1,638.5 million USD",
+          "is_numeric": true,
+          "verdict": "match",
+          "supporting_fff_ids": [
+            "f_d341458d3ee9"
+          ]
+        },
+        {
+          "claim_id": "c4",
+          "claim_text": "<ENT_8> accounts receivable (FY2022): $1,720.4 million USD",
+          "is_numeric": true,
+          "verdict": "match",
+          "supporting_fff_ids": [
+            "f_e2d88b3329d3"
+          ]
+        }
+      ],
+      "sub_query_count": 4,
+      "fff_count": 7,
+      "query_splitter_model": "gpt-4.1-mini-2025-04-14",
+      "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "cove_verification_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 10843,
+      "output_tokens": 2408,
+      "cost_usd": 0.00819,
+      "elapsed_seconds": 46.82322420000855
+    },
+    "fbc_ext2_entity_0009": {
+      "collision_id": "fbc_ext2_entity_0009",
+      "question": "What was AES's accounts payable for FY2022, and what was American Water Works's accounts payable for FY2020? Report both figures separately. (in USD millions)",
+      "verification_status": "verified",
+      "exact_match": false,
+      "abstained": true,
+      "answerable": true,
+      "answers": [
+        {
+          "metric": "accounts payable",
+          "value": "$1,730 million",
+          "unit": "USD"
+        },
+        {
+          "metric": "accounts payable",
+          "value": "$189 million",
+          "unit": ""
+        }
+      ],
+      "answer_text": "The AES Corporation accounts payable (FY2022): $1,730 million USD\nThe AES Corporation accounts payable (FY2020): not provided.\nAmerican Water Works Company, Inc. accounts payable (FY2022): not provided.\nAmerican Water Works Company, Inc. accounts payable (FY2020): $189 million",
+      "citations": [
+        {
+          "proposition_id": "p_31c690a199f0",
+          "source_uri": "AES_2022_10K",
+          "filing_type": "10-K",
+          "filing_date": "2022-12-31",
+          "page": 129,
+          "provenance_tier": "retrieved"
+        },
+        {
+          "proposition_id": "p_d2748fdb2539",
+          "source_uri": "AMERICANWATERWORKS_2020_10K",
+          "filing_type": "10-K",
+          "filing_date": "2020-12-31",
+          "page": 82,
+          "provenance_tier": "retrieved"
+        }
+      ],
+      "verification_trace": [
+        {
+          "claim_id": "C1",
+          "claim_text": "<ENT_11> accounts payable (FY2022): $1,730 million USD",
+          "is_numeric": true,
+          "verdict": "match",
+          "supporting_fff_ids": [
+            "f_9ac73bc46617"
+          ]
+        },
+        {
+          "claim_id": "C2",
+          "claim_text": "<ENT_11> accounts payable (FY2020): not provided.",
+          "is_numeric": false,
+          "verdict": "unsupported",
+          "supporting_fff_ids": [
+            "f_9ac73bc46617",
+            "f_71ebd8a83363"
+          ]
+        },
+        {
+          "claim_id": "C3",
+          "claim_text": "<ENT_5> accounts payable (FY2022): not provided.",
+          "is_numeric": false,
+          "verdict": "unsupported",
+          "supporting_fff_ids": [
+            "f_71ebd8a83363"
+          ]
+        },
+        {
+          "claim_id": "C4",
+          "claim_text": "<ENT_5> accounts payable (FY2020): $189 million",
+          "is_numeric": true,
+          "verdict": "match",
+          "supporting_fff_ids": [
+            "f_71ebd8a83363"
+          ]
+        }
+      ],
+      "sub_query_count": 4,
+      "fff_count": 2,
+      "query_splitter_model": "gpt-4.1-mini-2025-04-14",
+      "fff_rewriter_model": "gpt-4.1-mini-2025-04-14",
+      "generator_model": "gpt-4.1-mini-2025-04-14",
+      "cove_verification_model": "gpt-4.1-mini-2025-04-14",
+      "input_tokens": 7651,
+      "output_tokens": 1514,
+      "cost_usd": 0.0054828,
+      "elapsed_seconds": 36.99841909999668
+    }
+  }
+}

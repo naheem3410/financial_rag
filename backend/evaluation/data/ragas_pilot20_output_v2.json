@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "collision_id": "fbc_ext2_temp_0007",
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.9083285288778199,
+      "judge_cost_usd_batch_total": 0.0335932,
+      "judge_tokens_batch_total": 43093
+    },
+    {
+      "collision_id": "fbc_ext3_temp_0011",
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.9136021006740999,
+      "judge_cost_usd_batch_total": 0.0335932,
+      "judge_tokens_batch_total": 43093
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0025",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.885384259550476,
+      "judge_cost_usd_batch_total": 0.0335932,
+      "judge_tokens_batch_total": 43093
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0028",
+      "faithfulness": NaN,
+      "answer_relevancy": 0.8652729674419365,
+      "judge_cost_usd_batch_total": 0.0335932,
+      "judge_tokens_batch_total": 43093
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0030",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8882046168268692,
+      "judge_cost_usd_batch_total": 0.0335932,
+      "judge_tokens_batch_total": 43093
+    },
+    {
+      "collision_id": "fbc_ext2_temp_0032",
+      "faithfulness": NaN,
+      "answer_relevancy": 0.9051682964192985,
+      "judge_cost_usd_batch_total": 0.0335932,
+      "judge_tokens_batch_total": 43093
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0009",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9111381353134048,
+      "judge_cost_usd_batch_total": 0.0335932,
+      "judge_tokens_batch_total": 43093
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0029",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8448108138689815,
+      "judge_cost_usd_batch_total": 0.0335932,
+      "judge_tokens_batch_total": 43093
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0042",
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.8462712238814621,
+      "judge_cost_usd_batch_total": 0.0335932,
+      "judge_tokens_batch_total": 43093
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0078",
+      "faithfulness": 0.6666666666666666,
+      "answer_relevancy": 0.9201688744762703,
+      "judge_cost_usd_batch_total": 0.0335932,
+      "judge_tokens_batch_total": 43093
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0113",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8891232031673434,
+      "judge_cost_usd_batch_total": 0.0335932,
+      "judge_tokens_batch_total": 43093
+    },
+    {
+      "collision_id": "fbc_ext2_metric_0122",
+      "faithfulness": 0.75,
+      "answer_relevancy": 0.8694315488820535,
+      "judge_cost_usd_batch_total": 0.0335932,
+      "judge_tokens_batch_total": 43093
+    },
+    {
+      "collision_id": "fbc_metric_pri_0024",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9319670646161562,
+      "judge_cost_usd_batch_total": 0.0335932,
+      "judge_tokens_batch_total": 43093
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0001",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9066935312841996,
+      "judge_cost_usd_batch_total": 0.0335932,
+      "judge_tokens_batch_total": 43093
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0005",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7732939161452747,
+      "judge_cost_usd_batch_total": 0.0335932,
+      "judge_tokens_batch_total": 43093
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0009",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8763630290263666,
+      "judge_cost_usd_batch_total": 0.0335932,
+      "judge_tokens_batch_total": 43093
+    },
+    {
+      "collision_id": "fbc_ext2_entity_0010",
+      "faithfulness": 0.6666666666666666,
+      "answer_relevancy": 0.848582387402892,
+      "judge_cost_usd_batch_total": 0.0335932,
+      "judge_tokens_batch_total": 43093
+    }
+  ]
+}
